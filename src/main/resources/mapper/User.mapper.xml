@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qianfeng.md.dao.IUserMapper">
+    <resultMap id="baseResult" type="com.qianfeng.md.bean.TbUser">
+        <id property="userId" column="user_id" javaType="java.lang.Integer"/>
+        <result property="payId" column="pay_id" javaType="java.lang.Integer"/>
+        <result property="userName" column="user_name" javaType="java.lang.String"/>
+        <result property="userTel" column="user_tel" javaType="java.lang.String"/>
+        <result property="userIdentity" column="user_identity" javaType="java.lang.String"/>
+    </resultMap>
+    <select id="checkUsername" resultMap="baseResult">
+            select  user_id,pay_id,user_name,user_identity,user_tel,email,role,password from tb_user where user_name=#{userName}
+    </select>
+</mapper>
