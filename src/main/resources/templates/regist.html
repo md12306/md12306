@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8" />
+	<base th:href="${#request.getContextPath()}+'/'"/>
+	<meta name="keywords" content="团子出行,长途汽车票,四川汽车票,贵州汽车票,云南汽车票,重庆汽车票,旅行,汽车时刻表,汽车站查询,汽车时刻表查询"/>
+	<meta name="description" content="团子出行，可为您提供云、贵、川、渝的汽车票查询、预订等服务，7*24小时服务热线：400-660-8787，预订有保障的官方汽车票尽在团子出行官网。"/>
+	<link rel="stylesheet" type="text/css" href="css/new_file_24.css" />
+<link rel="Shortcut Icon" href="https://image.tz12306.com/favicon.ico" type="image/x-icon" />
+<script src="js/jquery-1.6.min_24.js"></script>
+<script src="js/common_24.js"></script>
+<script type="text/javascript" src="js/zzsc_24.js"></script>
+<!-- 相关第三方埋点 -->
+	<script src="js/hm_22.js" language="JavaScript"></script>
+	<script src="js/validate_15.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/func_15.js"></script>
+	<script type="text/javascript">
+		ctxx = "https://www.tz12306.com";
+		G.domain = ctxx;
+		var targetUrl = "";
+		var reg = new RegExp("targetUrl=(.*)");
+		var r = window.location.href.match(reg);
+		if (r != null)
+			targetUrl = r[1];
+		window.OPENVERCODE = true;//验证码开关
+	   	setInterval(func);
+	</script>
+	<script type="text/javascript" src="js/constants_24.js"></script>
+	<script type="text/javascript" src="js/utils_24.js"></script>
+	<script src="js/regindex_15.js" type="text/javascript"></script>
+	<meta charset="UTF-8">
+	<title>tz12306注册</title>
+	<link rel="stylesheet" type="text/css" href="css/new_file_24.css" />
+</head>
+<style>
+body {
+	background: #F5F5F5;
+}
+.reg_title{
+	font-size: 22px;
+	font-weight: normal;
+	line-height: 46px;
+	position: relative;
+	left: 50%;
+}
+
+.contains{
+	overflow: hidden;
+	background: #fff;
+	margin: 30px auto;
+	height: 700px;
+}
+.head_font_I {
+	color: #3e3e3e;
+	font-size:26px;
+	position: relative;
+	top: -1px;
+	padding: 24px;
+}
+.reg_btn {
+    width: 300px;
+    padding: 9px 0;
+    margin-right: 31px;
+    background: #F38F3E;
+    cursor:pointer;
+}
+.reg_btn:HOVER{background:#f1ac33;}
+.mr20 {
+    margin-right: 70px;
+    font-size: 14px;
+}
+.reg_ul li {
+    padding: 8px 0;
+}
+.get_check {
+    color: #0070c3;
+    display: inline-block;
+    font-size: 14px;
+    padding: 10px 15px 12px 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.sawLine{border-right: 1px solid #cccc;padding: 10px;position: relative;top: -5px}
+</style>
+<body>
+<div class="" style="background: #fff">
+		<div class="login_header_logo" style="height: 80px"> 
+			<a href="https://www.tz12306.com"><img style="position: relative;top: 5px"
+				src="picture/-3.png" /></a> <span class="sawLine"></span><span
+				class="head_font_I" >注册</span>
+		</div>
+	</div>
+	<div class="contains" >
+		<div class="reg_cont_left mt40 fl" style="position: relative;left: 25%">
+			<h4 class="reg_title">用户注册</h4>
+			<p style="position: relative;left: 120px">
+				已有团子出行、四川汽车票、贵州好行的账号,<a href="https://www.tz12306.com/login/index.html">直接登录</a>
+			</p>
+			<ul class="reg_ul">
+				<li>
+					<div class="la">
+						<label> 手机号码：</label><input id="txtusername" maxlength="11" style="height: 40px"
+							class="reginput_01" type="text" name="username"
+							placeholder="请输入您的手机号" onblur="checkUserName()"> <font
+							color="red">*</font>
+						<div class="err">
+							<span class="red" id='username_error'></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="la">
+						<label> 登录密码：</label><input id="txtpwd" class="reginput_01" style="height: 40px"
+							name="password1" type="password" maxlength="16" value=""
+							onblur="checkPwd()" placeholder="请输入6至16位密码，建议数字和字母组合" onpaste="return false"
+							oncontextmenu="return false" oncopy="return false"
+							oncut="return false"> <font color="red">*</font>
+						<div class="err">
+							<span class="red" id='password1_error'></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="la">
+						<label> 确认密码：</label><input class="reginput_01" id="txtpwd2" style="height: 40px"
+							type="password" name="password2" maxlength="16" value=""
+							onblur="confirmPwd()" placeholder="请再次输入您设置的密码"
+							onpaste="return false" oncontextmenu="return false"
+							oncopy="return false" oncut="return false"> <font
+							color="red">*</font>
+						<div class="err">
+							<span class="red" id='password2_error'></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="la" id="imgCheckCode" style='position: relative; top: -15px;'>
+						<label> 验证码：</label> <input type="text" maxlength="10" 
+							name="checkCode1" id="checkCode1" value="" class=""
+							placeholder="请输入校验码"
+							style="width: 141px; position: relative; left: -4px;height: 40px"
+							onblur="checkCode()" /> <font color="red"
+							style="position: relative; left: -5px">*</font> <img
+							id="txt_check_code1"
+							onclick="this.setAttribute('src','https://www.tz12306.com/common/checkCode.html.html?d='+Math.random());"
+							src="picture/checkcode_15.html" alt="验证码"
+							style="margin: 0 5px; height: 40px; width: 65px; cursor: pointer; position: relative; top: 15px">
+						<a href="javascript:;"
+							style="float: right; line-height: 37px; position: relative; left: -30px; top: 15px"
+							onclick="$(this).prev().attr('src','https://www.tz12306.com/common/checkCode.html.html?d='+Math.random());">换一张
+						</a>
+
+						<div class="err">
+							<span class="red" id='codeErr1'></span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="la" style="position: relative; top: -20px">
+						<label> 短信验证码：</label><input class="reginput_01 check" type="text" style="height: 40px"
+							autocomplete="off" maxlength="10" id="code" name="code"
+							onblur="checkSmsCode()" placeholder="请输入短信校验码"><font color="red" style="position: relative; left: 4px">*</font> <span
+							class="get_check" onclick="registe_message()" id="sendcode">免费获取校验码</span>
+
+						<div class="err">
+							<span class="red" id='code_error'></span>
+						</div>
+					</div>
+				</li>
+				<input type="hidden" name="dxtoken" id="dxtoken" value="POvWnGMMpeHfNrPqQx"/>
+				<li>
+					<div class="la tr mr20">
+						<input type="checkbox" name="" id="" class="reg_check" value=""
+							onpropertychange="agreeement_check(this)"
+							onchange="agreeement_check(this)"
+							onmouseover="this.style.cursor='pointer';this.style.cursor='hand';"/>
+
+						<a href="https://www.tz12306.com/article/code_pc_reg_protocol.html" target="_blank">《注册须知服务条款》</a>
+					</div>
+				</li>
+
+				<li>
+					<div class="la tr">
+						<button class="reg_btn" id="regSub" onclick="reg()">同意协议并注册</button>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<style>
+.footer {
+	position: relative;
+	margin-bottom: initial;
+	margin: 0 auto;
+	height: 100px;
+	bottom: 0px;
+	background-color: #F5F5F5;
+}
+</style>
+<div class="footer">
+	<div class="copyright">
+		<p>增值电信业务经营许可证：川B2-20110154 <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51019002001334" style="color: #a3a3a3;font-size: 12px; line-height: 22px;margin-left: 7px;"> <img src="picture/ghs_24.png" style="top: -2px;position: relative;" /> 川公网安备 51019002001334号</a>
+			<span class="server_line" onclick="meiqia()">在线客服</span>
+			<span class="youmengBtn" style="float:right; position:relative; top:-10px; left: -5px;" >
+				<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1271582149'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1271582149%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+			</span>
+		</p>
+		<p>Copyright © 2012-2018 tz12306.com Inc. All Rights Reserved.
+			<a class="pay_icons first_icon_5"></a>  <!-- <img src="picture/bottom_ico_5_dark_24.png"> -->
+			<a class="pay_icons first_icon_4"></a>
+			<a class="pay_icons first_icon_3"></a>
+			<a class="pay_icons first_icon_2"></a>
+			<a class="pay_icons first_icon_1"></a>
+		</p>
+		<p><span>四川倍施特科技股份有限公司   </span>&nbsp;&nbsp;<img src="picture/phone_24.png" style="margin-top: -5px;"> &nbsp;<span>028-66878787</span><a href="https://www.tz12306.com/sitemap.xml"  style="font-size: 12px;margin-left: 6px;color: #a3a3a3;" target="_blank">XML</a></p>
+	</div>
+</div>
+<script type="text/javascript">
+	window.CTXXdomain = "https://www.tz12306.com";
+	$.getJSON(window.CTXXdomain + "/footer.html?r=" + Math.random(), function(
+			json) {
+		$.each(json.data, function(key, value) {
+			$("#links_list").append(
+					"<a href=" + value +" target='_blank'><div class='linkAdress'>"
+							+ key + "</div></a>");
+		});
+	});
+</script>
+<script src="js/meiqia_24.js" type="text/javascript"></script></body>
+</html>

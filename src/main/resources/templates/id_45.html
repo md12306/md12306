@@ -1,0 +1,538 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8" />
+	<base th:href="${#request.getContextPath()}+'/'"/>
+	<title>保险须知|蒙多出行</title>
+   		<link rel="stylesheet" type="text/css" href="css/new_file_21.css" />
+<link rel="Shortcut Icon" href="https://image.tz12306.com/favicon.ico" type="image/x-icon" />
+<script src="js/jquery-1.6.min_21.js"></script>
+<script src="js/common_21.js"></script>
+<script type="text/javascript" src="js/zzsc_21.js"></script>
+<script src="js/common_21.js"></script>
+	<link rel="stylesheet" href="css/originalhtmlcss_12.css">
+	<link rel="stylesheet" href="css/layui_21.css">
+	<link rel="stylesheet" href="css/common_33.css">
+	<link rel="stylesheet" href="css/titleitem_12.css">
+	<!--[if lt IE 9]>
+	<script src="js/html5.min_12.js"></script>
+	<script src="js/respond.min_12.js"></script>
+	<![endif]-->
+	<meta name="keywords" content="保险须知,团子出行"/> 
+   		<meta name="description" content="团子出行，可为您提供云、贵、川、渝的汽车票查询、预订等服务，7*24小时服务热线：400-660-8787，预订有保障的官方汽车票尽在团子出行官网。"/>
+   		</head>
+<body >
+	<link rel="stylesheet" href="css/picadaptive_21.css">
+<link rel="stylesheet" href="css/layui_21.css">
+<script src="js/jquery.kinslideshow-1.2.1.min_21.js" type="text/javascript"></script>
+<script src="js/cookie_21.js" type="text/javascript"></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?c9beffc738813888c9e19ea250946a9f":"https://jspassport.ssl.qhimg.com/11.0.1.js?c9beffc738813888c9e19ea250946a9f";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+
+<div style="background-color: #fff;">
+    <div class="header" style="font-family: 'Microsoft YaHei'" >
+        <div class="header_top">
+            <div class="nav">
+                <div id="logo">
+                    <a href="https://www.tz12306.com"><img id="provinceLogo" src="picture/-3.png"/></a>
+                </div>
+                <div id="region">
+                    <div style="float: left;position: relative; top:1px;" class="header-cityBox" id="headerCityBox">
+                    </div>
+                    <div style="float: left;" id="tzSelectBox">
+                            <a style="margin-left:0 !important;color:#00A2FF;" href="https://www.tz12306.com/qichepiao/" id="qichepiaoHead">汽车票</a>
+                            <a href="https://www.tz12306.com/chezhan/" id="qichezhanHead">汽车站</a>
+                            <a href="https://www.tz12306.com/help/" id="helpHead">帮助中心</a>
+                    </div>
+                </div>
+                <div class="head_user_msg_div" style="margin-right: -16px; padding-left: 22px;">
+                    <div id="head_user_msg" style='width: 145px;padding-top: 10px;'>
+                        <!-- <a href="#" class="btn_l b_login">登录</a>
+                        <a href="#" class="btn_l b_kszc">快速注册</a> -->
+                    </div>
+                    <div class="head_user_msg_data" style="margin-left:-22px; display: none">
+                        <a href="https://www.tz12306.com/user/index.html?type=busOrder" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center;"
+                           onmouseover="switchColor('#0483E5',this)" onmouseout="switchColor('black',this)">我的订单</a>
+                        <a href="https://www.tz12306.com/user/index.html?type=getContacts" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center; " onmouseover="switchColor('#0483E5',this)"
+                           onmouseout="switchColor('black',this)">常用乘车人管理</a>
+                        <a href="https://www.tz12306.com/user/index.html?type=userInfo" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center;" onmouseover="switchColor('#0483E5',this)"
+                           onmouseout="switchColor('black',this)">基本资料</a>
+                        <a href="https://www.tz12306.com/login/logout.html" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center;" onmouseover="switchColor('#0483E5',this)"
+                           onmouseout="switchColor('black',this)">退出登录</a>
+                    </div>
+                </div>
+                <div id="head_phone">
+                    <img src="picture/phone_21.png" style="margin-top: -5px;" />
+                    <a class="ico_phone head_font_I" style="cursor:default">400-660-8787（可退保险）</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+	window.CTXXdomain = "https://www.tz12306.com";
+	window.currCityInfoCityNo = "510000";
+	window.CTXXstaticdomain = "https://image.tz12306.com";
+	window.headLight ="0";
+</script>
+<script src="js/header_21.js" type="text/javascript"></script>
+<div class="type-area origHtmlCss">
+		<div class="title-content">
+			<div class="title-main">
+				<div class="name"><h1>保险须知</h1></div>
+				<div class="title-msg">
+					<span>时间: 2017-12-09 00:15:53</span>发布者: 团子出行</div>
+			</div>
+			<div class="text-content-main">
+				<p></p><p></p><p></p><p><!--[if gte mso 9]><xml><w:LatentStyles DefLockedState="false"  DefUnhideWhenUsed="true"  DefSemiHidden="true"  DefQFormat="false"  DefPriority="99"  LatentStyleCount="260" >
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Normal" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="heading 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="heading 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="heading 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="heading 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="heading 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="heading 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="heading 7" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="heading 8" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="heading 9" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="index 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="index 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="index 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="index 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="index 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="index 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="index 7" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="index 8" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="index 9" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="toc 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="toc 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="toc 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="toc 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="toc 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="toc 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="toc 7" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="toc 8" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="toc 9" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Normal Indent" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="footnote text" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="annotation text" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="header" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="footer" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="index heading" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="caption" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="table of figures" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="envelope address" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="envelope return" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="footnote reference" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="annotation reference" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="line number" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="page number" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="endnote reference" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="endnote text" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="table of authorities" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="macro" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="toa heading" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Bullet" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Number" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Bullet 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Bullet 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Bullet 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Bullet 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Number 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Number 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Number 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Number 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Title" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Closing" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Signature" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Default Paragraph Font" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Body Text" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Body Text Indent" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Continue" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Continue 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Continue 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Continue 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Continue 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Message Header" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Subtitle" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Salutation" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Date" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Body Text First Indent" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Body Text First Indent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Note Heading" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Body Text 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Body Text 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Body Text Indent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Body Text Indent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Block Text" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Hyperlink" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="FollowedHyperlink" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Strong" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Emphasis" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Document Map" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Plain Text" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="E-mail Signature" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Normal (Web)" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="HTML Acronym" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="HTML Address" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="HTML Cite" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="HTML Code" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="HTML Definition" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="HTML Keyboard" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="HTML Preformatted" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="HTML Sample" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="HTML Typewriter" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="HTML Variable" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Normal Table" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="annotation subject" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="No List" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Simple 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Simple 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Simple 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Classic 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Classic 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Classic 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Classic 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Colorful 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Colorful 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Colorful 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Columns 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Columns 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Columns 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Columns 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Columns 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Grid 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Grid 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Grid 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Grid 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Grid 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Grid 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Grid 7" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Grid 8" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table List 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table List 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table List 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table List 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table List 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table List 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table List 7" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table List 8" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table 3D effects 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table 3D effects 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table 3D effects 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Contemporary" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Elegant" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Professional" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Subtle 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Subtle 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Web 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Web 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Web 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Balloon Text" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Grid" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Table Theme" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Shading" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light List" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Grid" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Dark List" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Shading" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful List" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Grid" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Shading Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light List Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Grid Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 1 Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 2 Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 1 Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 2 Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 1 Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 2 Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 3 Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Dark List Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Shading Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful List Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Grid Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Shading Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light List Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Grid Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 1 Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 2 Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 1 Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 2 Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 1 Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 2 Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 3 Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Dark List Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Shading Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful List Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Grid Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Shading Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light List Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Grid Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 1 Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 2 Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 1 Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 2 Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 1 Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 2 Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 3 Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Dark List Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Shading Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful List Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Grid Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Shading Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light List Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Grid Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 1 Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 2 Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 1 Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 2 Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 1 Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 2 Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 3 Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Dark List Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Shading Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful List Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Grid Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Shading Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light List Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Grid Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 1 Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 2 Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 1 Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 2 Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 1 Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 2 Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 3 Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Dark List Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Shading Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful List Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Grid Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Shading Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light List Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Light Grid Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 1 Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Shading 2 Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 1 Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium List 2 Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 1 Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 2 Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Medium Grid 3 Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Dark List Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Shading Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful List Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Colorful Grid Accent 6" ></w:LsdException>
+</w:LatentStyles></xml><![endif]--><style>
+@font-face{
+font-family:"Times New Roman";
+}
+
+@font-face{
+font-family:"宋体";
+}
+
+@font-face{
+font-family:"Calibri";
+}
+
+p.MsoNormal{
+mso-style-name:正文;
+mso-style-parent:"";
+mso-style-next:引文目录;
+margin:0pt;
+margin-bottom:.0001pt;
+mso-pagination:none;
+text-align:justify;
+text-justify:inter-ideograph;
+font-family:Calibri;
+mso-fareast-font-family:宋体;
+mso-bidi-font-family:'Times New Roman';
+font-size:10.5000pt;
+mso-font-kerning:1.0000pt;
+}
+
+span.10{
+font-family:'Times New Roman';
+}
+
+span.15{
+font-family:'Times New Roman';
+color:rgb(0,0,255);
+text-decoration:underline;
+text-underline:single;
+}
+
+span.16{
+font-family:'Times New Roman';
+color:rgb(128,0,128);
+text-decoration:underline;
+text-underline:single;
+}
+
+p.MsoToa{
+mso-style-name:引文目录;
+mso-style-next:正文;
+margin-left:21.0000pt;
+mso-para-margin-left:2.0000gd;
+mso-pagination:none;
+text-align:justify;
+text-justify:inter-ideograph;
+font-family:Calibri;
+mso-fareast-font-family:宋体;
+mso-bidi-font-family:'Times New Roman';
+font-size:10.5000pt;
+mso-font-kerning:1.0000pt;
+}
+
+span.msoIns{
+mso-style-type:export-only;
+mso-style-name:"";
+text-decoration:underline;
+text-underline:single;
+color:blue;
+}
+
+span.msoDel{
+mso-style-type:export-only;
+mso-style-name:"";
+text-decoration:line-through;
+color:red;
+}
+
+table.MsoNormalTable{
+mso-style-name:普通表格;
+mso-style-parent:"";
+mso-style-noshow:yes;
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-padding-alt:0.0000pt 5.4000pt 0.0000pt 5.4000pt;
+mso-para-margin:0pt;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-family:'Times New Roman';
+font-size:10.0000pt;
+mso-ansi-language:#0400;
+mso-fareast-language:#0400;
+mso-bidi-language:#0400;
+}
+@page{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}@page Section0{
+}
+div.Section0{page:Section0;}</style></p><div><p>中国太平洋人寿保险股份有限公司</p><p>乘客人身意外伤害保险条款</p><p>阅 读 指 引</p><p>本阅读指引有助于您理解条款，对本合同内容的解释以条款为准。</p><p>您拥有的重要权益</p><p>v&nbsp;本合同提供的保障在保险责任条款中列明………………………………………………………………………2.4</p><p>v&nbsp;您有退保的权利……………………………………………………………………………………………………5.1</p><p>您应当特别注意的事项</p><p>v&nbsp;本合同有比例给付的约定，请您注意……………………………………………………………………………2.4</p><p>v&nbsp;本合同有责任免除条款，请您注意………………………………………………………………………………2.5</p><p>v&nbsp;保险事故发生后，请您及时通知我们……………………………………………………………………………3.2</p><p>v&nbsp;持有效客票进站并登上交通工具后，您不能要求解除合同……………………………………………………5.1</p><p>v&nbsp;您有如实告知的义务………………………………………………………………………………………………6.1</p><p>v&nbsp;我们对一些重要术语进行了解释，并作了显著标识，请您注意…………………………………………………7</p><p>保险条款是保险合同的重要内容，为充分保障您的权益，请仔细阅读本保险条款。</p><p>条款目录</p></div><p class="MsoNormal" align="justify"><br clear="all"></p><div><p>1．您与我们订立的合同</p><p>1.1合同构成</p><p>1.2 合同成立与生效</p><p>1.3 投保范围</p><p>2．我们提供的保障</p><p>2.1 保险金额</p><p>2.2 未成年人身故保险金限制</p><p>2.3 保险期间</p><p>2.4 保险责任</p><p>2.5 责任免除</p><p>3．保险金的申请</p><p>3.1 受益人</p><p>3.2 保险事故通知</p><p>3.3 保险金申请</p><p>3.4 保险金给付</p><p>3.5 诉讼时效</p><p>4. 保险费的支付</p><p>4.1 保险费的支付</p><p>5．合同解除</p><p>5.1 您解除合同的手续</p><p>6．其他需要关注的事项</p><p>6.1 明确说明与如实告知</p><p>6.2 联系方式变更</p><p>6.3 合同内容变更</p><p>6.4 争议处理</p><p>7．释义</p><p>7.1 经营客运业务的公共交通工具</p><p>7.2 意外伤害</p><p>7.3 合理且必要的医疗费用</p><p>7.4 醉酒</p><p>7.5 斗殴</p><p>7.6 毒品</p><p>7.7 医疗事故</p><p>7.8 非处方药</p><p>7.9 有效身份证件</p><p>7.10 情形复杂</p><p>7.11 现金价值</p><p>附录</p><p>人身保险伤残评定标准（行业标准）</p></div><p class="MsoNormal" align="justify"><br clear="all"><br clear="all"></p><div><p>中国太平洋人寿保险股份有限公司</p><p>乘客人身意外伤害保险条款</p><p>（2013年8月呈报中国保险监督管理委员会备案）</p><p></p><p>“乘客人身意外伤害保险”简称“乘意险”。在本保险条款中，“您”指投保人，“我们”指中国太平洋人寿保险股份有限公司，“本合同”指您与我们之间订立的“乘客人身意外伤害保险合同”。</p><p></p><table cellspacing="0" cellpadding="0" width="636"><tbody><tr><td width="57" valign="middle">1．</td><td width="579" valign="middle" colspan="2">您与我们订立的合同</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>1.1</td><td>合同构成</td><td>本合同是您与我们约定保险权利义务关系的协议，包括本保险条款、保险单、投保单及其他投保文件、合法有效的声明、批注、批单及其他您与我们共同认可的书面协议。</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>1.2</td><td>合同成立与生效</td><td>您提出保险申请、我们同意承保，本合同成立。合同生效日期在保险单上载明。</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>1.3</td><td>投保范围</td><td>持有效客票乘坐火车、汽车、轮船、地铁、轻轨等经营客运业务的公共交通工具的乘客可以作为本合同的被保险人。</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>2</td><td width="579" valign="middle" colspan="2">我们提供的保障</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>2.1</td><td>保险金额</td><td>本合同的意外伤害保险金额、意外伤害医疗保险金额由您在投保时与我们约定，并在保险单上载明。</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>2.2</td><td>未成年人身故保险金限制</td><td>为未成年子女投保的人身保险，因被保险人身故给付的保险金总和不得超过国务院保险监督管理机构规定的限额，身故给付的保险金额总和约定也不得超过前述限额。</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>2.3</td><td>保险期间</td><td>本合同的保险期间自被保险人办理保险手续、支付保险费并持有效客票进站、登上交通工具时起，至被保险人到达所持客票载明的行程终点站并离开所乘交通工具时止。在客票有效期间内，被保险人中途自行离开所乘交通工具的，保险责任终止。因故转乘客运部门安排的其他交通工具的，保险责任继续有效，至到达客票终点站并离开所乘交通工具时止。</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>2.4</td><td>保险责任</td><td>在本合同保险期间内，且本合同有效的前提下，我们按如下约定承担保险责任：</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td></td><td>身故保险金</td><td>若被保险人遭受意外伤害，自意外伤害发生之日起180日内以该次意外伤害为直接原因导致身故，我们按意外伤害保险金额给付身故保险金，本合同终止。</td></tr><tr><td></td><td>残疾保险金</td><td>若被保险人遭受意外伤害，并自意外伤害发生之日起180日内以该次意外伤害为直接原因导致伤残，且属于《人身保险伤残评定标准（行业标准）》（中保协发〔2013〕88号，详见附录）中所列的伤残条目，我们依照该标准规定的评定原则进行评定，并按评定结果所对应该标准规定的给付比例乘以意外伤害保险金额给付残疾保险金。自意外伤害发生之日起180日内治疗仍未结束的，则按该意外伤害发生之日起第180日的身体情况进行鉴定，并据此给付残疾保险金。</td></tr><tr></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td></td><td></td><td>在任何情况下，我们对被保险人给付身故保险金和残疾保险金的金额总和，以意外伤害保险金额为限。</td></tr><tr></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td></td><td>医疗保险金</td><td>对被保险人因意外伤害而实际支出的符合保单签发地政府基本医疗保险管理规定的、合理且必要的医疗费用，我们按80％的比例予以补偿但以意外伤害医疗保险金额为限。若被保险人从其所参加的基本医疗保险、其他保险计划或从任何其他途径取得医疗费用补偿或赔偿，我们给付的医疗保险金以被保险人实际支出的符合保单签发地政府基本医疗保险管理规定的剩余部分医疗费用金额为限。</td></tr><tr></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>2.5</td><td>责任免除</td><td><p>因下列情形之一，导致被保险人身故、伤残或支出医疗费用的，我们不承担给付保险金的责任：</p><ul><li>(1)投保人对被保险人的故意杀害、故意伤害；</li><br><li>(2)被保险人故意犯罪或抗拒依法采取的刑事强制措施；</li><br><li>(3)被保险人自杀，但被保险人自杀时为无民事行为能力人的除外；</li><br><li>(4)被保险人醉酒，斗殴，主动吸食或注射毒品；</li><br><li>(5)被保险人因妊娠（含宫外孕）、流产、分娩（含剖宫产）导致的伤害；</li><br><li>(6)被保险人因医疗事故、药物过敏导致的伤害；</li><br><li>(7)被保险人因精神疾患导致的意外；</li><br><li>(8)被保险人未遵医嘱，私自使用药物，但按使用说明的规定使用非处方药的除外；</li><br><li>(9)战争、军事冲突、暴乱或武装叛乱；</li><br><li>(10)核爆炸、核辐射或核污染；</li><br><li>(11)被保险人不遵守客运部门的规章制度，攀爬、跳跃交通工具。</li></ul><p>发生上述情形之一导致被保险人身故的，本合同终止。</p></td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>3.</td><td width="579" valign="middle" colspan="2">保险金的申请</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>3.1</td><td>受益人</td><td><p>您或者被保险人可以指定一人或多人为身故保险金受益人。</p><p>身故保险金受益人为多人时，可以确定受益顺序和受益份额；如果没有确定份额，各受益人按照相等份额享有受益权。</p><p>被保险人为无民事行为能力人或限制民事行为能力人的，可以由其监护人指定受益人。</p><p>您或者被保险人可以变更身故保险金受益人并书面通知我们。我们收到变更受益人的书面通知后，在保险单或其他保险凭证上批注或附贴批单。</p><p>您在指定和变更身故保险金受益人时，必须经过被保险人同意。</p><p>被保险人身故后，有下列情形之一的，保险金作为被保险人的遗产，由我们依照《中华人民共和国继承法》的规定履行给付保险金的义务：</p><ul><li>(1)没有指定受益人，或者受益人指定不明无法确定的；</li><li>(2)受益人先于被保险人身故，没有其他受益人的；</li><li>(3)受益人依法丧失受益权或者放弃受益权，没有其他受益人的。受益人与被保险人在同一事件中身故，且不能确定身故先后顺序的，推定受益人身故在先。</li></ul><p>受益人故意造成被保险人身故、伤残的，或者故意杀害被保险人未遂的，该受益人丧失受益权。</p><p>除另有指定外，残疾保险金、医疗保险金的受益人为被保险人本人。</p></td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>3.2</td><td>保险事故通知</td><td>您、被保险人或受益人知道保险事故后应当在10日内通知我们。如果您、被保险人或受益人故意或者因重大过失未及时通知，致使保险事故的性质、原因、损失程度等难以确定的，我们对无法确定的部分，不承担给付保险金的责任，但我们通过其他途径已经及时知道或者应当及时知道保险事故发生或者虽未及时通知但不影响我们确定保险事故的性质、原因、损失程度的除外。</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>3.3</td><td>保险金申请</td><td>在申请保险金时，请按照下列方式办理：</td></tr><tr></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td></td><td>身故保险金申请</td><td><p>申请人须填写保险金给付申请书，并提供下列证明和资料：</p><ul><li>(1)保险合同及当次交通客票；</li><li>(2)申请人的有效身份证件；</li><li>(3)卫生行政部门认定的医疗机构、公安部门或其他相关机构出具的被保险人的死亡证明；</li><li>(4)公安等有权部门出具的意外事故证明；</li><li>(5)所能提供的与确认保险事故的性质、原因等有关的其他证明和资料。</li></ul><p>保险金作为被保险人遗产时，必须提供可证明合法继承权的相关权利文件。</p><p>若申请人与我们对被保险人的死因有争议，双方均有权提请司法鉴定机构对被保险人进行死因鉴定，另一方应当予以配合。</p></td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td></td><td>残疾保险金申请</td><td><p>申请人须填写保险金给付申请书，并提供下列证明和资料：</p><ul><li>(1)保险合同及当次交通客票；</li><li>(2)申请人的有效身份证件；</li><li>(3)卫生行政部门认定的二级以上医院或者由双方认可的医疗机构(或鉴定机构)出具的被保险人伤残程度的资料或身体伤残程度鉴定书；</li><li>(4)公安等有权部门出具的意外事故证明；</li><li>(5)所能提供的与确认保险事故的性质、原因、伤害程度等有关的其他证明和资料。</li></ul></td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td></td><td>医疗保险金申请</td><td><p>申请人须填写保险金给付申请书，并提供下列证明和资料：</p><ul><li>(1)保险合同及当次交通客票；</li><li>(2)申请人的有效身份证件；</li><li>(3)卫生行政部门认定的二级以上医院出具的诊断证明、处方及医疗、医药费原始单据。</li><li>(4)公安等有权部门出具的意外事故证明；</li><li>(5)所能提供的与确认保险事故的性质、原因、伤害或损失程度等有关的其他证明和资料。</li></ul></td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td></td><td></td><td>以上各项保险金申请的证明和资料不完整的，我们将及时一次性通知申请人补充提供有关证明和资料。</td></tr><tr><td>3.4</td><td>保险金给付</td><td><p>我们在收到保险金给付申请书及合同约定的证明和资料后，将在5个工作日内作出核定；情形复杂的，在30日内作出核定。对属于保险责任的，我们在与受益人达成给付保险金的协议后10日内，履行给付保险金义务。</p><p>我们未及时履行前款规定义务的，除支付保险金外，应当赔偿受益人因此受到的损失。前述“损失”是指根据中国人民银行公布的同时期的人民币活期存款基准利率计算的利息损失。</p><p>对不属于保险责任的，我们自作出核定之日起3日内向受益人发出拒绝给付保险金通知书并说明理由。</p><p>我们在收到保险金给付申请书及有关证明和资料之日起60日内，对给付保险金的数额不能确定的，根据已有证明和资料可以确定的数额先予支付；我们最终确定给付保险金的数额后，将支付相应的差额。</p></td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>3.5</td><td>诉讼时效</td><td>受益人向我们请求给付保险金的诉讼时效期间为2年，自其知道或者应当知道保险事故发生之日起计算。</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>4.</td><td width="579" valign="middle" colspan="2">保险费的支付</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>4.1</td><td>保险费的支付</td><td>您应在投保时一次性支付全部保险费。</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>5.</td><td width="579" valign="middle" colspan="2">合同解除</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>5.1</td><td>您解除合同的手续</td><td><p>本合同成立后，您可以要求解除本合同但被保险人持有效客票进站并登上交通工具后，您不能要求解除合同。</p><p>如您申请解除本合同，请填写解除合同申请书并向我们提供下列资料：</p><ul><li>(1)保险合同；</li><li>(2)您的有效身份证件。</li></ul><p>自我们收到解除合同申请书时起，本合同终止。我们自收到解除合同申请书之日起30日内向您退还保险单的现金价值。</p></td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>6.</td><td width="579" valign="middle" colspan="2">其他需要关注的事项</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>6.1</td><td>明确说明与如实告知</td><td><p>订立本合同时，我们应向您说明本合同的内容。</p><p>对保险条款中免除我们责任的条款，我们在订立合同时应当在投保单、保险单或者其他保险凭证上作出足以引起您注意的提示，并对该条款的内容以书面或者口头形式向您作出明确说明，未作提示或者明确说明的，该条款不产生效力。</p><p>我们就您和被保险人的有关情况提出询问，您应当如实告知。如果您故意或者因重大过失未履行前款规定的如实告知义务，足以影响我们决定是否同意承保或者提高保险费率的，我们有权解除本合同。</p><p>如果您故意不履行如实告知义务，对于本合同解除前发生的保险事故，我们不承担给付保险金的责任，并不退还保险费。</p><p>如果您因重大过失未履行如实告知义务，对保险事故的发生有严重影响的，对于本合同解除前发生的保险事故，我们不承担给付保险金的责任，但应当退还保险费。</p><p>我们在合同订立时已经知道您未如实告知的情况的，我们不得解除合同；发生保险事故的，我们承担给付保险金的责任。</p></td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>6.2</td><td>联系方式变更</td><td>为了保障您的合法权益，您的住所、通讯地址或电话等联系方式变更时，请及时以书面形式或双方认可的其他形式通知我们。若您未以书面形式或双方认可的其他形式通知我们，我们按本合同载明的最后住所、通讯地址或电话等联系方式发送的有关通知，均视为已送达给您。</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>6.3</td><td>合同内容变更</td><td>在合同有效期内，经您和我们协商，可以变更本合同的有关内容。变更本合同的由我们在原保险单或者其他保险凭证上批注或者附贴批单，或由您与我们订立书面的变更协议。</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>6.4</td><td>争议处理</td><td><p>本合同履行过程中，双方发生争议时，可以从下列两种方式中选择一种争议处理方式：</p><ul><li>(1)因履行本合同发生的争议，由双方协商解决，协商不成的，提交本合同约定的仲裁委员会仲裁；</li><li>(2)因履行本合同发生的争议，由双方协商解决，协商不成的，依法向人民法院起诉。</li></ul></td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>7.</td><td width="579" valign="middle" colspan="2">释义</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>7.1</td><td>经营客运业务的公共交通工具</td><td>指经相关政府部门登记许可的以客运为目的的公共交通工具。</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>7.2</td><td>意外伤害</td><td><p>指遭受外来的、突发的、非本意的、非疾病的客观事件直接致使身体受到的伤害。</p><p>本合同所述的因意外伤害导致的身故，不包括猝死。猝死是指貌似健康的人因潜在疾病、机能障碍或其他原因在出现症状后24小时内发生的非暴力性突然死亡。猝死的认定，如有司法机关的法律文件、医疗机构的诊断书等，则以上述法律文件、诊断书等为准。</p></td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>7.3</td><td>合理且必要的医疗费用</td><td><p>指意外伤害治疗期间发生的符合保单签发地政府当时适用的《城镇职工基本医疗保险药品目录》、《城镇职工基本医疗保险诊疗项目目录》、《城镇职工基本医疗保险医疗服务设施项目范围》及相关规定的医疗费用，不含以下费用：</p><ul><li>(1)按规定使用某些药品、进行特殊检查和特殊治疗时，需个人先行自付一定比例的医疗费用；</li><br><li>(2)按规定转外就医需个人提高自负一定比例的医疗费用；</li><br><li>(3)基本医疗保险管理规定以外的个人自费的医疗费用；</li><br><li>(4)与保险事故无关的医疗费用。</li></ul></td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>7.4</td><td>醉酒</td><td>指因饮酒而表现出动作不协调、意识紊乱、舌重口吃或其他不能清醒地控制自己行为的状态。醉酒的认定，如有司法机关、公安部门的有关法律文件、医院的诊断书等，则以上述法律文件、诊断书等为准。</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>7.5</td><td>斗殴</td><td>指双方或多方通过拳脚、器械等武力以求制胜的行为。斗殴的认定，如有司法机关、公安部门的有关法律文件，则以上述法律文件为准。</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>7.6</td><td>毒品</td><td>指中华人民共和国刑法规定的鸦片、海洛因、甲基苯丙胺（冰毒）、吗啡、大麻、可卡因以及国家规定管制的其他能够使人形成瘾癖的麻醉药品和精神药品，但不包括由医生开具并遵医嘱使用的用于治疗疾病但含有毒品成分的处方药品。</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>7.7</td><td>医疗事故</td><td>指医疗机构及其医务人员在医疗活动中，违反医疗卫生管理法律、行政法规、部门规章和诊疗护理规范、常规，过失造成患者人身损害的事故。</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>7.8</td><td>非处方药</td><td>指由国务院药品监督管理部门公布的，不需要凭执业医师和执业助理医师处方，消费者可以自行判断、购买和使用的药品。</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>7.9</td><td>有效身份证件</td><td>指由政府主管部门规定的证明其身份的证件，如：居民身份证、按规定可使用的有效护照、军官证、警官证、士兵证、户口簿等证件。</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>7.10</td><td>情形复杂</td><td>指保险事故的性质、原因、伤害或损失程度等在我们收到保险金给付申请书及合同约定的证明和资料后5个工作日内无法确定，需要进一步核实。</td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td></tr><tr><td>7.11</td><td>现金价值</td><td>指本合同保险单所具有的价值，通常体现为解除合同时，根据精算原理计算的，由我们退还的那部分金额。现金价值＝本合同保险费。</td></tr></tbody></table><p>附录：人身保险伤残评定标准(行业标准)</p><p>前言</p><p>本标准制定过程中参照世界卫生组织《国际功能、残疾和健康分类》（以下简称“ICF”）的理论与方法，建立新的残疾标准的理论架构、术语体系和分类方法。</p><p>本标准制定过程中参考了国内重要的伤残评定标准，如《劳动能力鉴定，职工工伤与职业病致残等级》、《道路交通事故受伤人员伤残评定》等，符合国内相关的残疾政策，同时参考了国际上其他国家地区的伤残分级原则和标准。</p><p>本标准建立了保险行业人身保险伤残评定和保险金给付比例的基础，各保险公司应根据自身的业务特点，根据本标准的方法、内容和结构，开发保险产品，提供保险服务。</p><p>本标准负责起草单位：中国保险行业协会。</p><p>根据保险行业业务发展要求，制订本标准。</p><br><p>1 适用范围</p><p>本标准适用于意外险产品或包括意外责任的保险产品中的伤残保障，用于评定由于意外伤害因素引起的伤残程度。</p><br><p>2 术语和定义</p><p>下列术语和定义适用于本标准。</p><p>2.1 伤残：因意外伤害损伤所致的人体残疾。</p><p>2.2 身体结构：指身体的解剖部位，如器官、肢体及其组成部分。</p><p>2.3 身体功能：指身体各系统的生理功能。</p><br><p>3 标准的内容和结构</p><p>本标准参照ICF有关功能和残疾的分类理论与方法，建立“神经系统的结构和精神功能”、“眼，耳和有关的结构和功能”、“发声和言语的结构和功能”、“心血管，免疫和呼吸系统的结构和功能”、“消化、代谢和内分泌系统有关的结构和功能”、“泌尿和生殖系统有关的结构和功能”、“神经肌肉骨骼和运动有关的结构和功能”和“皮肤和有关的结构和功能” 8大类，共281项人身保险伤残条目。</p><p>本标准对功能和残疾进行了分类和分级，将人身保险伤残程度划分为一至十级，最重为第一级，最轻为第十级。</p><p>与人身保险伤残程度等级相对应的保险金给付比例分为十档，伤残程度第一级对应的保险金给付比例为100%，伤残程度第十级对应的保险金给付比例为10%，每级相差10%。</p><br><p>4 伤残的评定原则</p><p>4.1 确定伤残类别：评定伤残时，应根据人体的身体结构与功能损伤情况确定所涉及的伤残类别。</p><p>4.2 确定伤残等级：应根据伤残情况，在同类别伤残下，确定伤残等级。</p><p>4.3 确定保险金给付比例：应根据伤残等级对应的百分比，确定保险金给付比例。</p><p>4.4 多处伤残的评定原则：当同一保险事故造成两处或两处以上伤残时，应首先对各处伤残程度分别进行评定，如果几处伤残等级不同，以最重的伤残等级作为最终的评定结论；如果两处或两处以上伤残等级相同，伤残等级在原评定基础上最多晋升一级，最高晋升至第一级。同一部位和性质的伤残，不应采用本标准条文两条以上或者同一条文两次以上进行评定。</p><br><p>5 说明</p><p>本标准中“以上”均包括本数值或本部位。</p><p>人身保险伤残评定标准（行业标准）</p><p>说明：本标准对功能和残疾进行了分类和分级，将人身保险伤残程度划分为一至十级，最重为第一级，最轻为第十级。与人身保险伤残程度等级相对应的保险金给付比例分为十档，伤残程度第一级对应的保险金给付比例为100%，伤残程度第十级对应的保险金给付比例为10%，每级相差10%。</p><p>1神经系统的结构和精神功能</p><p>1.1脑膜的结构损伤</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>外伤性脑脊液鼻漏或耳漏</td><td>10级</td></tr></tbody></table><p>1.2脑的结构损伤，智力功能障碍</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>颅脑损伤导致极度智力缺损（智商小于等于20），日常生活完全不能自理，处于完全护理依赖状态</td><td>1级</td></tr><tr><td>颅脑损伤导致重度智力缺损（智商小于等于34），日常生活需随时有人帮助才能完成，处于完全护理依赖状态</td><td>2级</td></tr><tr><td>颅脑损伤导致重度智力缺损（智商小于等于34），不能完全独立生活，需经常有人监护，处于大部分护理依赖状态</td><td>3级</td></tr><tr><td>颅脑损伤导致中度智力缺损（智商小于等于49），日常生活能力严重受限，间或需要帮助，处于大部分护理依赖状态</td><td>4级</td></tr></tbody></table><p>注：1护理依赖：应用“基本日常生活活动能力”的丧失程度来判断护理依赖程度。</p><p>2基本日常生活活动是指：（1）穿衣：自己能够穿衣及脱衣；（2）移动：自己从一个房间到另一个房间；（3）行动：自己上下床或上下轮椅；（4）如厕：自己控制进行大小便；（5）进食：自己从已准备好的碗或碟中取食物放入口中；（6）洗澡：自己进行淋浴或盆浴。</p><p>3护理依赖的程度分三级：（1）完全护理依赖指生活完全不能自理，上述六项基本日常生活活动均需护理者；（2）大部分护理依赖指生活大部不能自理，上述六项基本日常生活活动中三项或三项以上需要护理者；（3）部分护理依赖指部分生活不能自理，上述六项基本日常生活活动中一项或一项以上需要护理者。</p><p>1.3意识功能障碍</p><p>意识功能是指意识和警觉状态下的一般精神功能，包括清醒和持续的觉醒状态。本标准中的意识功能障碍是指颅脑损伤导致植物状态。</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>颅脑损伤导致植物状态</td><td>1级</td></tr></tbody></table><p>注：植物状态指由于严重颅脑损伤造成认知功能丧失，无意识活动，不能执行命令，保持自主呼吸和血压，有睡眠-醒觉周期，不能理解和表达语言，能自动睁眼或刺激下睁眼，可有无目的性眼球跟踪运动，丘脑下部及脑干功能基本保存。</p><p>2眼，耳和有关的结构和功能</p><p>2.1眼球损伤或视功能障碍</p><p>视功能是指与感受存在的光线和感受视觉刺激的形式、大小、形状和颜色等有关的感觉功能。本标准中的视功能障碍是指眼盲目或低视力。</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>双侧眼球缺失</td><td>1级</td></tr><tr><td>一侧眼球缺失，且另一侧眼盲目5级</td><td>1级</td></tr><tr><td>一侧眼球缺失，且另一侧眼盲目4级</td><td>2级</td></tr><tr><td>一侧眼球缺失，且另一侧眼盲目3级</td><td>3级</td></tr><tr><td>一侧眼球缺失，且另一侧眼低视力2级</td><td>4级</td></tr><tr><td>一侧眼球缺失，且另一侧眼低视力1级</td><td>5级</td></tr><tr><td>一侧眼球缺失</td><td>7级</td></tr></tbody></table><p>2.2视功能障碍</p><p>除眼盲目和低视力外，本标准中的视功能障碍还包括视野缺损。</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>双眼盲目5级</td><td>2级</td></tr><tr><td>双眼视野缺损，直径小于5°</td><td>2级</td></tr><tr><td>双眼盲目大于等于4级</td><td>3级</td></tr><tr><td>双眼视野缺损，直径小于10°</td><td>3级</td></tr><tr><td>双眼盲目大于等于3级</td><td>4级</td></tr><tr><td>双眼视野缺损，直径小于20°</td><td>4级</td></tr><tr><td>双眼低视力大于等于2级</td><td>5级</td></tr><tr><td>双眼低视力大于等于1级</td><td>6级</td></tr><tr><td>双眼视野缺损，直径小于60°</td><td>6级</td></tr><tr><td>一眼盲目5级</td><td>7级</td></tr><tr><td>一眼视野缺损，直径小于5°</td><td>7级</td></tr><tr><td>一眼盲目大于等于4级</td><td>8级</td></tr><tr><td>一眼视野缺损，直径小于10°</td><td>8级</td></tr><tr><td>一眼盲目大于等于3级</td><td>9级</td></tr><tr><td>一眼视野缺损，直径小于20°</td><td>9级</td></tr><tr><td>一眼低视力大于等于1级</td><td>10级</td></tr><tr><td>一眼视野缺损，直径小于60°</td><td>10级</td></tr></tbody></table><p>注：①视力和视野</p><table cellpadding="0" cellspacing="0"><tbody><tr><td width="170" colspan="2">级别</td><td width="385" colspan="2"><p>低视力及盲目分级标准</p><p>最好矫正视力</p><p>最好矫正视力低于最低矫正视力等于或优于</p></td></tr><tr><td width="118">低视力</td><td><p>1</p><p>2</p></td><td width="170"><p>0.3</p><p>0.1</p></td><td width="170"><p>0.1</p><p>0.05（三米指数）</p></td></tr><tr><td width="118">盲目</td><td><p>3</p><p>4</p><p>5</p></td><td colspan="2"><p>0.050.02（一米指数）</p><p>0.02光感</p><p>无光感</p></td></tr></tbody></table><p>如果中心视力好而视野缩小，以中央注视点为中心，视野直径小于20°而大于10°者为盲目3级；如直径小于10°者为盲目4级。</p><p>本标准视力以矫正视力为准，经治疗而无法恢复者。</p><p>2视野缺损指因损伤导致眼球注视前方而不转动所能看到的空间范围缩窄，以致难以从事正常工作、学习或其他活动。</p><br><p>2.3眼球的晶状体结构损伤</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>外伤性白内障</td><td>10级</td></tr></tbody></table><p>注：外伤性白内障：凡未做手术者，均适用本条；外伤性白内障术后遗留相关视功能障碍，参照有关条款评定伤残等级。</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>双侧眼睑显著缺损</td><td>8级</td></tr><tr><td>双侧眼睑外翻</td><td>8级</td></tr><tr><td>双侧眼睑闭合不全</td><td>8级</td></tr><tr><td>一侧眼睑显著缺损</td><td>9级</td></tr><tr><td>一侧眼睑外翻</td><td>9级</td></tr><tr><td>一侧眼睑闭合不全</td><td>9级</td></tr></tbody></table><p>注：眼睑显著缺损指闭眼时眼睑不能完全覆盖角膜。</p><p>2.5耳廓结构损伤或听功能障碍</p><p>听功能是指与感受存在的声音和辨别方位、音调、音量和音质有关的感觉功能。</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>双耳听力损失大于等于91dB，且双侧耳廓缺失</td><td>2级</td></tr><tr><td>双耳听力损失大于等于91dB，且一侧耳廓缺失</td><td>3级</td></tr><tr><td>一耳听力损失大于等于91dB，另一耳听力损失大于等于71dB，且一侧耳廓缺失，另一侧耳廓缺失大于等于50%</td><td>3级</td></tr><tr><td>双耳听力损失大于等于71dB，且双侧耳廓缺失</td><td>3级</td></tr><tr><td>双耳听力损失大于等于71dB，且一侧耳廓缺失</td><td>4级</td></tr><tr><td>双耳听力损失大于等于56dB，且双侧耳廓缺失</td><td>4级</td></tr><tr><td>一耳听力损失大于等于91dB，另一耳听力损失大于等于71dB，且一侧耳廓缺失大于等于50%</td><td>4级</td></tr><tr><td>双耳听力损失大于等于71dB，且一侧耳廓缺失大于等于50%</td><td>5级</td></tr><tr><td>双耳听力损失大于等于56dB，且一侧耳廓缺失</td><td>5级</td></tr><tr><td>双侧耳廓缺失</td><td>5级</td></tr><tr><td>一侧耳廓缺失，且另一侧耳廓缺失大于等于50%</td><td>6级</td></tr><tr><td>一侧耳廓缺失</td><td>8级</td></tr><tr><td>一侧耳廓缺失大于等于50%</td><td>9级</td></tr></tbody></table><p>2.6听功能障碍</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>双耳听力损失大于等于91dB</td><td>4级</td></tr><tr><td>双耳听力损失大于等于81dB</td><td>5级</td></tr><tr><td>一耳听力损失大于等于91dB，且另一耳听力损失大于等于71dB</td><td>5级</td></tr><tr><td>双耳听力损失大于等于71dB</td><td>6级</td></tr><tr><td>一耳听力损失大于等于91dB，且另一耳听力损失大于等于56dB</td><td>6级</td></tr><tr><td>一耳听力损失大于等于91dB，且另一耳听力损失大于等于41dB</td><td>7级</td></tr><tr><td>一耳听力损失大于等于71dB，且另一耳听力损失大于等于56dB</td><td>7级</td></tr><tr><td>一耳听力损失大于等于71dB，且另一耳听力损失大于等于41dB</td><td>8级</td></tr><tr><td>一耳听力损失大于等于91dB</td><td>8级</td></tr><tr><td>一耳听力损失大于等于56dB，且另一耳听力损失大于等于41dB</td><td>9级</td></tr><tr><td>一耳听力损失大于等于71dB</td><td>9级</td></tr><tr><td>双耳听力损失大于等于26dB</td><td>10级</td></tr><tr><td>一耳听力损失大于等于56dB</td><td>10级</td></tr></tbody></table><p>3发声和言语的结构和功能</p><p>3.1鼻的结构损伤</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>外鼻部完全缺失</td><td>5级</td></tr><tr><td>外鼻部大部分缺损</td><td>7级</td></tr><tr><td>鼻尖及一侧鼻翼缺损</td><td>8级</td></tr><tr><td>双侧鼻腔或鼻咽部闭锁</td><td>8级</td></tr><tr><td>一侧鼻翼缺损</td><td>9级</td></tr><tr><td>单侧鼻腔或鼻孔闭锁</td><td>10级</td></tr></tbody></table><p>3.2口腔的结构损伤</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>舌缺损大于全舌的2/3</td><td>3级</td></tr><tr><td>舌缺损大于全舌的1/3</td><td>6级</td></tr><tr><td>口腔损伤导致牙齿脱落大于等于16枚</td><td>9级</td></tr><tr><td>口腔损伤导致牙齿脱落大于等于8枚</td><td>10级</td></tr></tbody></table><p>3.3发声和言语的功能障碍</p><p>本标准中的发声和言语的功能障碍是指语言功能丧失。</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>语言功能完全丧失</td><td>8级</td></tr></tbody></table><p>注：语言功能完全丧失指构成语言的口唇音、齿舌音、口盖音和喉头音的四种语言功能中，有三种以上不能构声、或声带全部切除，或因大脑语言中枢受伤害而患失语症，并须有资格的耳鼻喉科医师出具医疗诊断证明，但不包括任何心理障碍引致的失语。</p><br><p>4心血管，免疫和呼吸系统的结构和功能</p><p>4.1心脏的结构损伤或功能障碍</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>胸部损伤导致心肺联合移植</td><td>1级</td></tr><tr><td>胸部损伤导致心脏贯通伤修补术后，心电图有明显改变</td><td>3级</td></tr><tr><td>胸部损伤导致心肌破裂修补</td><td>8级</td></tr></tbody></table><p>4.2脾结构损伤</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>腹部损伤导致脾切除</td><td>8级</td></tr><tr><td>腹部损伤导致脾部分切除</td><td>9级</td></tr><tr><td>腹部损伤导致脾破裂修补</td><td>10级</td></tr></tbody></table><p>4.3肺的结构损伤</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>胸部损伤导致一侧全肺切除</td><td>4级</td></tr><tr><td>胸部损伤导致双侧肺叶切除</td><td>4级</td></tr><tr><td>胸部损伤导致同侧双肺叶切除</td><td>5级</td></tr><tr><td>胸部损伤导致肺叶切除</td><td>7级</td></tr></tbody></table><p>4.4胸廓的结构损伤</p><p>本标准中的胸廓的结构损伤是指肋骨骨折或缺失。</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>胸部损伤导致大于等于12根肋骨骨折</td><td>8级</td></tr><tr><td>胸部损伤导致大于等于8根肋骨骨折</td><td>9级</td></tr><tr><td>胸部损伤导致大于等于4根肋骨缺失</td><td>9级</td></tr><tr><td>胸部损伤导致大于等于4根肋骨骨折</td><td>10级</td></tr><tr><td>胸部损伤导致大于等于2根肋骨缺失</td><td>10级</td></tr></tbody></table><p>5消化、代谢和内分泌系统有关的结构和功能</p><p>5.1咀嚼和吞咽功能障碍</p><p>咀嚼是指用后牙（如磨牙）碾、磨或咀嚼食物的功能。吞咽是指通过口腔、咽和食道把食物和饮料以适宜的频率和速度送入胃中的功能。</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>咀嚼、吞咽功能完全丧失</td><td>1级</td></tr></tbody></table><p>5.2肠的结构损伤</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>腹部损伤导致小肠切除大于等于90%</td><td>1级</td></tr><tr><td>腹部损伤导致小肠切除大于等于75%，合并短肠综合症</td><td>2级</td></tr><tr><td>腹部损伤导致小肠切除大于等于75%</td><td>4级</td></tr><tr><td>腹部或骨盆部损伤导致全结肠、直肠、肛门结构切除，回肠造瘘</td><td>4级</td></tr><tr><td>腹部或骨盆部损伤导致直肠、肛门切除，且结肠部分切除，结肠造瘘</td><td>5级</td></tr><tr><td>腹部损伤导致小肠切除大于等于50%,且包括回盲部切除</td><td>6级</td></tr><tr><td>腹部损伤导致小肠切除大于等于50%</td><td>7级</td></tr><tr><td>腹部损伤导致结肠切除大于等于50%</td><td>7级</td></tr><tr><td>腹部损伤导致结肠部分切除</td><td>8级</td></tr><tr><td>骨盆部损伤导致直肠、肛门损伤，且遗留永久性乙状结肠造口</td><td>9级</td></tr><tr><td>骨盆部损伤导致直肠、肛门损伤，且瘢痕形成</td><td>10级</td></tr></tbody></table><p>5.3胃结构损伤</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>腹部损伤导致全胃切除</td><td>4级</td></tr><tr><td>腹部损伤导致胃切除大于等于50%</td><td>7级</td></tr></tbody></table><p>5.4胰结构损伤或代谢功能障碍</p><p>本标准中的代谢功能障碍是指胰岛素依赖。</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>腹部损伤导致胰完全切除</td><td>1级</td></tr><tr><td>腹部损伤导致胰切除大于等于50%，且伴有胰岛素依赖</td><td>3级</td></tr><tr><td>腹部损伤导致胰头、十二指肠切除</td><td>4级</td></tr><tr><td>腹部损伤导致胰切除大于等于50%</td><td>6级</td></tr><tr><td>腹部损伤导致胰部分切除</td><td>8级</td></tr></tbody></table><p>5.5肝结构损伤</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>腹部损伤导致肝切除大于等于75%</td><td>2级</td></tr><tr><td>腹部损伤导致肝切除大于等于50%</td><td>5级</td></tr><tr><td>腹部损伤导致肝部分切除</td><td>8级</td></tr></tbody></table><p>6泌尿和生殖系统有关的结构和功能</p><p>6.1泌尿系统的结构损伤</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>腹部损伤导致双侧肾切除</td><td>1级</td></tr><tr><td>腹部损伤导致孤肾切除</td><td>1级</td></tr><tr><td>骨盆部损伤导致双侧输尿管缺失</td><td>5级</td></tr><tr><td>骨盆部损伤导致双侧输尿管闭锁</td><td>5级</td></tr><tr><td>骨盆部损伤导致一侧输尿管缺失，另一侧输尿管闭锁</td><td>5级</td></tr><tr><td>骨盆部损伤导致膀胱切除</td><td>5级</td></tr><tr><td>骨盆部损伤导致尿道闭锁</td><td>5级</td></tr><tr><td>骨盆部损伤导致一侧输尿管缺失，另一侧输尿管严重狭窄</td><td>7级</td></tr><tr><td>骨盆部损伤导致一侧输尿管闭锁，另一侧输尿管严重狭窄</td><td>7级</td></tr><tr><td>腹部损伤导致一侧肾切除</td><td>8级</td></tr><tr><td>骨盆部损伤导致双侧输尿管严重狭窄</td><td>8级</td></tr><tr><td>骨盆部损伤导致一侧输尿管缺失，另一侧输尿管狭窄</td><td>8级</td></tr><tr><td>骨盆部损伤导致一侧输尿管闭锁，另一侧输尿管狭窄</td><td>8级</td></tr><tr><td>腹部损伤导致一侧肾部分切除</td><td>9级</td></tr><tr><td>骨盆部损伤导致一侧输尿管缺失</td><td>9级</td></tr><tr><td>骨盆部损伤导致一侧输尿管闭锁</td><td>9级</td></tr><tr><td>骨盆部损伤导致尿道狭窄</td><td>9级</td></tr><tr><td>骨盆部损伤导致膀胱部分切除</td><td>9级</td></tr><tr><td>腹部损伤导致肾破裂修补</td><td>10级</td></tr><tr><td>骨盆部损伤导致一侧输尿管严重狭窄</td><td>10级</td></tr><tr><td>骨盆部损伤导致膀胱破裂修补</td><td>10级</td></tr></tbody></table><p>6.2生殖系统的结构损伤</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>会阴部损伤导致双侧睾丸缺失</td><td>3级</td></tr><tr><td>会阴部损伤导致双侧睾丸完全萎缩</td><td>3级</td></tr><tr><td>会阴部损伤导致一侧睾丸缺失，另一侧睾丸完全萎缩</td><td>3级</td></tr><tr><td>会阴部损伤导致阴茎体完全缺失</td><td>4级</td></tr><tr><td>会阴部损伤导致阴道闭锁</td><td>5级</td></tr><tr><td>会阴部损伤导致阴茎体缺失大于50%</td><td>5级</td></tr><tr><td>会阴部损伤导致双侧输精管缺失</td><td>6级</td></tr><tr><td>会阴部损伤导致双侧输精管闭锁</td><td>6级</td></tr><tr><td>会阴部损伤导致一侧输精管缺失，另一侧输精管闭锁</td><td>6级</td></tr><tr><td>胸部损伤导致女性双侧乳房缺失</td><td>7级</td></tr><tr><td>骨盆部损伤导致子宫切除</td><td>7级</td></tr><tr><td>胸部损伤导致女性一侧乳房缺失，另一侧乳房部分缺失</td><td>8级</td></tr><tr><td>胸部损伤导致女性一侧乳房缺失</td><td>9级</td></tr><tr><td>骨盆部损伤导致子宫部分切除</td><td>9级</td></tr><tr><td>骨盆部损伤导致子宫破裂修补</td><td>10级</td></tr><tr><td>会阴部损伤导致一侧睾丸缺失</td><td>10级</td></tr><tr><td>会阴部损伤导致一侧睾丸完全萎缩</td><td>10级</td></tr><tr><td>会阴部损伤导致一侧输精管缺失</td><td>10级</td></tr><tr><td>会阴部损伤导致一侧输精管闭锁</td><td>10级</td></tr></tbody></table><p>7神经肌肉骨骼和运动有关的结构和功能</p><p>7.1头颈部的结构损伤</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>双侧上颌骨完全缺失</td><td>2级</td></tr><tr><td>双侧下颌骨完全缺失</td><td>2级</td></tr><tr><td>一侧上颌骨及对侧下颌骨完全缺失</td><td>2级</td></tr><tr><td>同侧上、下颌骨完全缺失</td><td>3级</td></tr><tr><td>上颌骨、下颌骨缺损，且牙齿脱落大于等于24枚</td><td>3级</td></tr><tr><td>一侧上颌骨完全缺失</td><td>3级</td></tr><tr><td>一侧下颌骨完全缺失</td><td>3级</td></tr><tr><td>一侧上颌骨缺损大于等于50%，且口腔、颜面部软组织缺损大于20cm2</td><td>4级</td></tr><tr><td>一侧下颌骨缺损大于等于6cm，且口腔、颜面部软组织缺损大于20cm2</td><td>4级</td></tr><tr><td>面颊部洞穿性缺损大于20cm2</td><td>4级</td></tr><tr><td>上颌骨、下颌骨缺损，且牙齿脱落大于等于20枚</td><td>5级</td></tr><tr><td>一侧上颌骨缺损大于25%，小于50%，且口腔、颜面部软组织缺损大于10cm2</td><td>5级</td></tr><tr><td>一侧下颌骨缺损大于等于4cm，且口腔、颜面部软组织缺损大于10cm2</td><td>5级</td></tr><tr><td>一侧上颌骨缺损等于25%，且口腔、颜面部软组织缺损大于10cm2</td><td>6级</td></tr><tr><td>面部软组织缺损大于20cm2，且伴发涎瘘</td><td>6级</td></tr><tr><td>上颌骨、下颌骨缺损，且牙齿脱落大于等于16枚</td><td>7级</td></tr><tr><td>上颌骨、下颌骨缺损，且牙齿脱落大于等于12枚</td><td>8级</td></tr><tr><td>上颌骨、下颌骨缺损，且牙齿脱落大于等于8枚</td><td>9级</td></tr><tr><td>上颌骨、下颌骨缺损，且牙齿脱落大于等于4枚</td><td>10级</td></tr><tr><td>颅骨缺损大于等于6cm2</td><td>10级</td></tr></tbody></table><p>7.2头颈部关节功能障碍</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>单侧颞下颌关节强直，张口困难Ⅲ度</td><td>6级</td></tr><tr><td>双侧颞下颌关节强直，张口困难Ⅲ度</td><td>6级</td></tr><tr><td>双侧颞下颌关节强直，张口困难Ⅱ度</td><td>8级</td></tr><tr><td>一侧颞下颌关节强直，张口困难I度</td><td>10级</td></tr></tbody></table><p>注：张口困难判定及测量方法是以患者自身的食指、中指、无名指并列垂直置入上、下中切牙切缘间测量。正常张口度指张口时上述三指可垂直置入上、下切牙切缘间（相当于4.5cm左右）；张口困难I度指大张口时，只能垂直置入食指和中指（相当于3cm左右）；张口困难II度指大张口时，只能垂直置入食指（相当于1.7cm左右）；张口困难III度指大张口时，上、下切牙间距小于食指之横径。</p><br><p>7.3上肢的结构损伤，手功能或关节功能障碍</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>双手完全缺失</td><td>4级</td></tr><tr><td>双手完全丧失功能</td><td>4级</td></tr><tr><td>一手完全缺失，另一手完全丧失功能</td><td>4级</td></tr><tr><td>双手缺失（或丧失功能）大于等于90%</td><td>5级</td></tr><tr><td>双手缺失（或丧失功能）大于等于70%</td><td>6级</td></tr><tr><td>双手缺失（或丧失功能）大于等于50%</td><td>7级</td></tr><tr><td>一上肢三大关节中，有两个关节完全丧失功能</td><td>7级</td></tr><tr><td>一上肢三大关节中，有一个关节完全丧失功能</td><td>8级</td></tr><tr><td>双手缺失（或丧失功能）大于等于30%</td><td>8级</td></tr><tr><td>双手缺失（或丧失功能）大于等于10%</td><td>9级</td></tr><tr><td>双上肢长度相差大于等于10cm</td><td>9级</td></tr><tr><td>双上肢长度相差大于等于4cm</td><td>10级</td></tr><tr><td>一上肢三大关节中，因骨折累及关节面导致一个关节功能部分丧失</td><td>10级</td></tr></tbody></table><p>注：手缺失和丧失功能的计算：一手拇指占一手功能的36%，其中末节和近节指节各占18%；食指、中指各占一手功能的18%，其中末节指节占8%，中节指节占7%，近节指节占3%；无名指和小指各占一手功能的9%，其中末节指节占4%，中节指节占3%，近节指节占2%。一手掌占一手功能的10%，其中第一掌骨占4%，第二、第三掌骨各占2%，第四、第五掌骨各占1%。本标准中，双手缺失或丧失功能的程度是按前面方式累加计算的结果。</p><br><p>7.4骨盆部的结构损伤</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>骨盆环骨折，且两下肢相对长度相差大于等于8cm</td><td>7级</td></tr><tr><td>髋臼骨折，且两下肢相对长度相差大于等于8cm</td><td>7级</td></tr><tr><td>骨盆环骨折，且两下肢相对长度相差大于等于6cm</td><td>8级</td></tr><tr><td>髋臼骨折，且两下肢相对长度相差大于等于6cm</td><td>8级</td></tr><tr><td>骨盆环骨折，且两下肢相对长度相差大于等于4cm</td><td>9级</td></tr><tr><td>髋臼骨折，且两下肢相对长度相差大于等于4cm</td><td>9级</td></tr><tr><td>骨盆环骨折，且两下肢相对长度相差大于等于2cm</td><td>10级</td></tr><tr><td>髋臼骨折，且两下肢相对长度相差大于等于2cm</td><td>10级</td></tr></tbody></table><p>7.5下肢的结构损伤，足功能或关节功能障碍</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>双足跗跖关节以上缺失</td><td>6级</td></tr><tr><td>双下肢长度相差大于等于8cm</td><td>7级</td></tr><tr><td>一下肢三大关节中，有两个关节完全丧失功能</td><td>7级</td></tr><tr><td>双足足弓结构完全破坏</td><td>7级</td></tr><tr><td>一足跗跖关节以上缺失</td><td>7级</td></tr><tr><td>双下肢长度相差大于等于6cm</td><td>8级</td></tr><tr><td>一足足弓结构完全破坏，另一足足弓结构破坏大于等于1/3</td><td>8级</td></tr><tr><td>双足十趾完全缺失</td><td>8级</td></tr><tr><td>一下肢三大关节中，有一个关节完全丧失功能</td><td>8级</td></tr><tr><td>双足十趾完全丧失功能</td><td>8级</td></tr><tr><td>双下肢长度相差大于等于4cm</td><td>9级</td></tr><tr><td>一足足弓结构完全破坏</td><td>9级</td></tr><tr><td>双足十趾中，大于等于五趾缺失</td><td>9级</td></tr><tr><td>一足五趾完全丧失功能</td><td>9级</td></tr><tr><td>一足足弓结构破坏大于等于1/3</td><td>10级</td></tr><tr><td>双足十趾中，大于等于两趾缺失</td><td>10级</td></tr><tr><td>双下肢长度相差大于等于2cm</td><td>10级</td></tr><tr><td>一下肢三大关节中，因骨折累及关节面导致一个关节功能部分丧失</td><td>10级</td></tr></tbody></table><p>注： ① 足弓结构破坏：指意外损伤导致的足弓缺失或丧失功能。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;② 足弓结构完全破坏指足的内、外侧纵弓和横弓结构完全破坏，包括缺失和丧失功能；足弓1/3结构破坏指足三弓的任一弓的结构破坏。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;③ 足趾缺失：指自趾关节以上完全切断。</p><br><p>7.6四肢的结构损伤，肢体功能或关节功能障碍</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>三肢以上缺失(上肢在腕关节以上,下肢在踝关节以上)</td><td>1级</td></tr><tr><td>三肢以上完全丧失功能</td><td>1级</td></tr><tr><td>二肢缺失（上肢在腕关节以上，下肢在踝关节以上），且第三肢完全丧失功能</td><td>1级</td></tr><tr><td>一肢缺失（上肢在腕关节以上，下肢在踝关节以上），且另二肢完全丧失功能</td><td>1级</td></tr><tr><td>二肢缺失(上肢在肘关节以上，下肢在膝关节以上)</td><td>2级</td></tr><tr><td>一肢缺失（上肢在肘关节以上，下肢在膝关节以上），且另一肢完全丧失功能</td><td>2级</td></tr><tr><td>二肢完全丧失功能</td><td>2级</td></tr><tr><td>一肢缺失（上肢在腕关节以上，下肢在踝关节以上），且另一肢完全丧失功能</td><td>3级</td></tr><tr><td>二肢缺失(上肢在腕关节以上，下肢在踝关节以上)</td><td>3级</td></tr><tr><td>两上肢、或两下肢、或一上肢及一下肢，各有三大关节中的两个关节完全丧失功能</td><td>4级</td></tr><tr><td>一肢缺失(上肢在肘关节以上，下肢在膝关节以上)</td><td>5级</td></tr><tr><td>一肢完全丧失功能</td><td>5级</td></tr><tr><td>一肢缺失(上肢在腕关节以上，下肢在踝关节以上)</td><td>6级</td></tr><tr><td>四肢长骨一骺板以上粉碎性骨折</td><td>9级</td></tr></tbody></table><p>注：① 骺板：骺板的定义只适用于儿童，四肢长骨骺板骨折可能影响肢体发育，如果存在肢体发育障碍的，应当另行评定伤残等级。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;② 肢体丧失功能指意外损伤导致肢体三大关节（上肢腕关节、肘关节、肩关节或下肢踝关节、膝关节、髋关节）功能的丧失。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;③ 关节功能的丧失指关节永久完全僵硬、或麻痹、或关节不能随意识活动。</p><br><p>7.7脊柱结构损伤和关节活动功能障碍</p><p>本标准中的脊柱结构损伤是指颈椎或腰椎的骨折脱位，本标准中的关节活动功能障碍是指颈部或腰部活动度丧失。</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>脊柱骨折脱位导致颈椎或腰椎畸形愈合，且颈部或腰部活动度丧失大于等于75%</td><td>7级</td></tr><tr><td>脊柱骨折脱位导致颈椎或腰椎畸形愈合，且颈部或腰部活动度丧失大于等于50%</td><td>8级</td></tr><tr><td>脊柱骨折脱位导致颈椎或腰椎畸形愈合，且颈部或腰部活动度丧失大于等于25%</td><td>9级</td></tr></tbody></table><p>7.8肌肉力量功能障碍</p><p>肌肉力量功能是指与肌肉或肌群收缩产生力量有关的功能。本标准中的肌肉力量功能障碍是指四肢瘫、偏瘫、截瘫或单瘫。</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>四肢瘫（三肢以上肌力小于等于3级)</td><td>1级</td></tr><tr><td>截瘫(肌力小于等于2级)且大便和小便失禁</td><td>1级</td></tr><tr><td>四肢瘫（二肢以上肌力小于等于2级)</td><td>2级</td></tr><tr><td>偏瘫（肌力小于等于2级)</td><td>2级</td></tr><tr><td>截瘫（肌力小于等于2级)</td><td>2级</td></tr><tr><td>四肢瘫（二肢以上肌力小于等于3级)</td><td>3级</td></tr><tr><td>偏瘫（肌力小于等于3级)</td><td>3级</td></tr><tr><td>截瘫（肌力小于等于3级)</td><td>3级</td></tr><tr><td>四肢瘫（二肢以上肌力小于等于4级)</td><td>4级</td></tr><tr><td>偏瘫（一肢肌力小于等于2级)</td><td>5级</td></tr><tr><td>截瘫（一肢肌力小于等于2级)</td><td>5级</td></tr><tr><td>单瘫（肌力小于等于2级)</td><td>5级</td></tr><tr><td>偏瘫（一肢肌力小于等于3级)</td><td>6级</td></tr><tr><td>截瘫（一肢肌力小于等于3级)</td><td>6级</td></tr><tr><td>单瘫（肌力小于等于3级)</td><td>6级</td></tr><tr><td>偏瘫（一肢肌力小于等于4级)</td><td>7级</td></tr><tr><td>截瘫（一肢肌力小于等于4级)</td><td>7级</td></tr><tr><td>单瘫（肌力小于等于4级)</td><td>8级</td></tr></tbody></table><p>注：① 偏瘫指一侧上下肢的瘫痪。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;② 截瘫指脊髓损伤后，受伤平面以下双侧肢体感觉、运动、反射等消失和膀胱、肛门括约肌功能丧失的病症。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;③ 单瘫指一个肢体或肢体的某一部分瘫痪。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;④ 肌力：为判断肢体瘫痪程度，将肌力分级划分为0-5级。</p><p>0级：肌肉完全瘫痪，毫无收缩。</p><p>1级：可看到或触及肌肉轻微收缩，但不能产生动作。</p><p>2级：肌肉在不受重力影响下，可进行运动，即肢体能在床面上移动，但不能抬高。</p><p>3级：在和地心引力相反的方向中尚能完成其动作，但不能对抗外加的阻力。</p><p>4级：能对抗一定的阻力，但较正常人为低。</p><p>5级：正常肌力。</p><br><p>8皮肤和有关的结构和功能</p><p>8.1头颈部皮肤结构损伤和修复功能障碍</p><p>皮肤的修复功能是指修复皮肤破损和其他损伤的功能。本标准中的皮肤修复功能障碍是指瘢痕形成。</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>头颈部III度烧伤，面积大于等于全身体表面积的8%</td><td>2级</td></tr><tr><td>面部皮肤损伤导致瘢痕形成，且瘢痕面积大于等于面部皮肤面积的90%</td><td>2级</td></tr><tr><td>颈部皮肤损伤导致瘢痕形成，颈部活动度完全丧失</td><td>3级</td></tr><tr><td>面部皮肤损伤导致瘢痕形成，且瘢痕面积大于等于面部皮肤面积的80%</td><td>3级</td></tr><tr><td>颈部皮肤损伤导致瘢痕形成，颈部活动度丧失大于等于75%</td><td>4级</td></tr><tr><td>面部皮肤损伤导致瘢痕形成，且瘢痕面积大于等于面部皮肤面积的60%</td><td>4级</td></tr><tr><td>头颈部III度烧伤，面积大于等于全身体表面积的5%，且小于8%</td><td>5级</td></tr><tr><td>颈部皮肤损伤导致瘢痕形成，颈部活动度丧失大于等于50%</td><td>5级</td></tr><tr><td>面部皮肤损伤导致瘢痕形成，且瘢痕面积大于等于面部皮肤面积的40%</td><td>5级</td></tr><tr><td>面部皮肤损伤导致瘢痕形成，且瘢痕面积大于等于面部皮肤面积的20%</td><td>6级</td></tr><tr><td>头部撕脱伤后导致头皮缺失，面积大于等于头皮面积的20%</td><td>6级</td></tr><tr><td>颈部皮肤损伤导致颈前三角区瘢痕形成，且瘢痕面积大于等于颈前三角区面积的75%</td><td>7级</td></tr><tr><td>面部皮肤损伤导致瘢痕形成，且瘢痕面积大于等于24cm2</td><td>7级</td></tr><tr><td>头颈部III度烧伤，面积大于等于全身体表面积的2%，且小于5%</td><td>8级</td></tr><tr><td>颈部皮肤损伤导致颈前三角区瘢痕形成，且瘢痕面积大于等于颈前三角区面积的50%</td><td>8级</td></tr><tr><td>面部皮肤损伤导致瘢痕形成，且瘢痕面积大于等于18cm2</td><td>8级</td></tr><tr><td>面部皮肤损伤导致瘢痕形成，且瘢痕面积大于等于12cm2或面部线条状瘢痕大于等于20cm</td><td>9级</td></tr><tr><td>面部皮肤损伤导致瘢痕形成，且瘢痕面积大于等于6cm2或面部线条状瘢痕大于等于10cm</td><td>10级</td></tr></tbody></table><p>注：① 瘢痕：指创面愈合后的增生性瘢痕，不包括皮肤平整、无明显质地改变的萎缩性瘢痕或疤痕。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;② 面部的范围和瘢痕面积的计算：面部的范围指上至发际、下至下颌下缘、两侧至下颌支后缘之间的区域，包括额部、眼部、眶部、鼻部、口唇部、颏部、颧部、颊部和腮腺咬肌部。面部瘢痕面积的计算采用全面部和5等分面部以及实测瘢痕面积的方法，分别计算瘢痕面积。面部多处瘢痕，其面积可以累加计算。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;③ 颈前三角区：两边为胸锁乳突肌前缘，底为舌骨体上缘及下颌骨下缘。</p><br><p>8.2各部位皮肤结构损伤和修复功能障碍</p><table cellpadding="0" cellspacing="0"><tbody><tr><td>皮肤损伤导致瘢痕形成，且瘢痕面积大于等于全身体表面积的90%</td><td>1级</td></tr><tr><td>躯干及四肢III度烧伤，面积大于等于全身皮肤面积的60%</td><td>1级</td></tr><tr><td>皮肤损伤导致瘢痕形成，且瘢痕面积大于等于全身体表面积的80%</td><td>2级</td></tr><tr><td>皮肤损伤导致瘢痕形成，且瘢痕面积大于等于全身体表面积的70%</td><td>3级</td></tr><tr><td>躯干及四肢III度烧伤，面积大于等于全身皮肤面积的40%</td><td>3级</td></tr><tr><td>皮肤损伤导致瘢痕形成，且瘢痕面积大于等于全身体表面积的60%</td><td>4级</td></tr><tr><td>皮肤损伤导致瘢痕形成，且瘢痕面积大于等于全身体表面积的50%</td><td>5级</td></tr><tr><td>躯干及四肢III度烧伤，面积大于等于全身皮肤面积的20%</td><td>5级</td></tr><tr><td>皮肤损伤导致瘢痕形成，且瘢痕面积大于等于全身体表面积的40%</td><td>6级</td></tr><tr><td>腹部损伤导致腹壁缺损面积大于等于腹壁面积的25%</td><td>6级</td></tr><tr><td>皮肤损伤导致瘢痕形成，且瘢痕面积大于等于全身体表面积的30%</td><td>7级</td></tr><tr><td>躯干及四肢III度烧伤，面积大于等于全身皮肤面积的10%</td><td>7级</td></tr><tr><td>皮肤损伤导致瘢痕形成，且瘢痕面积大于等于全身体表面积的20%</td><td>8级</td></tr><tr><td>皮肤损伤导致瘢痕形成，且瘢痕面积大于等于全身体表面积的5%</td><td>9级</td></tr></tbody></table><p>注：① 全身皮肤瘢痕面积的计算：按皮肤瘢痕面积占全身体表面积的百分数来计算，即中国新九分法：在100%的体表总面积中：头颈部占9%（9×1）（头部、面部、颈部各占3%）；双上肢占18%（9×2）（双上臂7%，双前臂6%，双手5%）；躯干前后包括会阴占27%（9×3）（前躯13%，后躯13%，会阴1%）；双下肢（含臀部）占46%（双臀5%，双大腿21%，双小腿13%，双足7%）（9×5+1）（女性双足和臀各占6%）。</p><p>② 烧伤面积和烧伤深度：烧伤面积的计算按中国新九分法，烧伤深度按三度四分法。III度烧伤指烧伤深达皮肤全层甚至达到皮下、肌肉和骨骼。烧伤事故不包括冻伤、吸入性损伤（又称呼吸道烧伤）和电击伤。烧伤后按烧伤面积、深度评定伤残等级，待医疗终结后，可以依据造成的功能障碍程度、皮肤瘢痕面积大小评定伤残等级，最终的伤残等级以严重者为准。</p></div><p></p><p></p><p></p><p></p><p></p></div>
+		</div>
+	</div>
+	<!--<div class="bus_bannerDiv" style="background-color: #fff;" >
+	<img  class='bus_img_box' style='cursor: pointer;'>
+</div>-->
+<div class="footer">
+			<div class="contains">
+				<div class="link_help">
+					<dl class="footer-item advantage">
+						<dt style="font-weight:bold;" id="newer_guidence_name">新手指南</dt>
+						<dd class="ft-link-item" id="newer_guidence">
+						</dd>
+					</dl>
+					<dl class="footer-item advantage">
+						<dt style="font-weight:bold;" id="ticket_notice_name">购票须知</dt>
+						<dd class="ft-link-item" id="ticket_notice">
+						</dd>
+					</dl>
+					<dl class="footer-item advantage" >
+						<dt style="font-weight:bold;" id="faq_guidence_name">常见问题</dt>
+						<dd class="ft-link-item" id="faq_guidence">
+						</dd>
+					</dl>
+					<dl class="footer-item advantage" >
+						<dt style="font-weight:bold;" id="ride_ins_name">乘车保险</dt>
+						<dd class="ft-link-item" id="ride_ins">
+						</dd>
+					</dl>
+					<dl class="footer-item advantage">
+						<dt style="font-weight:bold;" id="member_services_name">会员服务</dt>
+						<dd class="ft-link-item" id="member_services">
+						</dd>
+					</dl>
+
+					<dl class="footer-item advantage footer-abc footer-a1bc">
+						<dt> </dt>
+						<dd class="ft-link-item">
+							<img src="picture/erweima_21.png" />
+						</dd>
+						<dd class="ft-link-title">扫描二维码<br>下载手机APP</dd>
+					</dl>
+
+					<dl class="footer-item advantage footer-abc">
+						<dt> </dt>
+						<dd class="ft-link-item">
+							<img src="picture/erweima2_21.png" />
+						</dd>
+						<dd class="ft-link-title">扫描二维码<br>关注微信公众号</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="linksDiv">
+<!-- 				<div class="links"> -->
+<!-- 					<div class="links_list" id = "links_list"> -->
+							
+<!-- 					</div> -->
+<!-- 				</div> -->
+				<div class="copyright">
+					<p>增值电信业务经营许可证：川B2-20110154 <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51019002001334" style="color: #a3a3a3;font-size: 12px; line-height: 22px;margin-left: 7px;"> <img src="picture/ghs_21.png" style="top: -2px;position: relative;" /> 川公网安备 51019002001334号</a>
+						<span class="server_line" onclick="meiqia()">在线客服</span>
+						<span class="youmengBtn" style="float:right; position:relative; top:-10px; left: -5px;" >
+							<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1271582149'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1271582149%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+						</span>
+					</p>
+					<p>Copyright © 2012-2018 tz12306.com Inc. All Rights Reserved.
+						<a class="pay_icons first_icon_5"></a>  <!-- <img src="picture/bottom_ico_5_dark_21.png"> -->
+						<a class="pay_icons first_icon_4"></a>
+						<a class="pay_icons first_icon_3"></a>
+						<a class="pay_icons first_icon_2"></a>
+						<a class="pay_icons first_icon_1"></a>
+					</p>
+					<p><span>四川倍施特科技股份有限公司   </span>&nbsp;&nbsp;<img src="picture/phone_21.png" style="margin-top: -5px;"> &nbsp;<span>028-66878787</span><a href="https://www.tz12306.com/sitemap.xml"  style="font-size: 12px;margin-left: 6px;color: #a3a3a3;" target="_blank">XML</a></p>
+				</div>
+			</div>
+			</div>
+	<script type="text/javascript">
+		window.CTXXdomain = "https://www.tz12306.com";
+	</script>
+	<script src="js/footer_21.js" type="text/javascript"></script>
+	<script src="js/meiqia_21.js" type="text/javascript"></script></body>
+<script src="js/index_12.js" charset="utf-8"></script>
+</html>

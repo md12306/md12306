@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qianfeng.md.dao.IRouteMapper">
+
+    <resultMap id="baseResultMap" type="com.qianfeng.md.vo.HotRouteVO">
+        <id property="routeId" column="route_id" javaType="java.lang.Integer"/>
+        <result property="routeStart" column="route_start" javaType="java.lang.String"/>
+        <result property="routeEnd" column="route_end" javaType="java.lang.String"/>
+        <result property="hotNum" column="hot_num" javaType="java.lang.Integer"/>
+        <result property="hotImg" column="hot_img" javaType="java.lang.String"/>
+        <result property="routeDistance" column="route_distance" javaType="java.lang.Integer"/>
+        <result property="ticketPrice" column="ticket_price" javaType="java.lang.Integer"/>
+    </resultMap>
+
+    <resultMap id="TbRouteResultMap" type="com.qianfeng.md.bean.TbRoute">
+        <id property="routeId" column="route_id" javaType="java.lang.Integer"/>
+        <result property="routeStart" column="route_start" javaType="java.lang.String"/>
+        <result property="routeEnd" column="route_end" javaType="java.lang.String"/>
+        <result property="hotNum" column="hot_num" javaType="java.lang.Integer"/>
+        <result property="hotImg" column="hot_img" javaType="java.lang.String"/>
+        <result property="routeDistance" column="route_distance" javaType="java.lang.Integer"/>
+    </resultMap>
+
+    <!--热门线路查询-->
+    <select id="selectRoute" resultMap="baseResultMap">
+        select r.route_id,r.route_start, r.route_end,r.hot_num,c.ticket_price,r.hot_img from tb_route r join tb_carnum c on r.route_id = c.route_id GROUP BY hot_num desc LIMIT 11
+    </select>
+    <!--删除线路   慎用!!!!!!!!!-->
+    <delete id="deleteRoute" parameterType="java.lang.Integer">
+        delete from tb_route where route_id = #{routeId}
+    </delete>
+
+    <!--后台添加路线-->
+    <insert id="saveRoute">
+      insert into tb_route(route_start,route_end,hot_num,hot_img,route_distance)
+      values (#{routeStart},#{routeEnd},#{hotNum},#{hotImg},#{routeDistance})
+    </insert>
+
+    <!--后台更新线路-->
+    <update id="updateRoute">
+    update tb_route set route_start=#{routeStart},route_end=#{routeEnd},hot_num=#{hotNum},hot_img=#{hotImg},route_distance=#{routeDistance}
+    where route_id=#{routeId}
+    </update>
+
+    <select id="queryRoute" resultMap="TbRouteResultMap">
+        select route_id,route_start,route_end,hot_num,hot_img,route_distance from tb_route where route_id=#{routeId}
+    </select>
+
+    <select id="allRoute" resultMap="TbRouteResultMap">
+        select route_id,route_start,route_end,hot_num,hot_img,route_distance from tb_route
+    </select>
+</mapper>

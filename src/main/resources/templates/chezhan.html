@@ -1,0 +1,1344 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8" />
+	<base th:href="${#request.getContextPath()}+'/'"/>
+		<title>车站查询|团子出行</title>
+  		<meta name="keywords" content="车站,车站查询,车站电话,车站地址,团子出行"/>
+		<meta name="description" content="团子出行官网【原四川汽车票务网】可为您提供云南、贵州、四川、重庆的车站地址电话查询服务，车站网上预订车票，7*24小时服务热线：4006608787，预订有保障就上团子出行。"/>
+		<link rel="stylesheet" type="text/css" href="css/common_34.css" />
+		<link rel="stylesheet" type="text/css" href="css/new_file_21.css" />
+		<link rel="stylesheet" href="css/chezhan_6.css">
+		<link rel="stylesheet" href="css/mypagination_6.css">
+		<link rel="stylesheet" href="css/layui_21.css">
+		<link rel="stylesheet" type="text/css" href="css/new_file_21.css" />
+<link rel="Shortcut Icon" href="https://image.tz12306.com/favicon.ico" type="image/x-icon" />
+<script src="js/jquery-1.6.min_21.js"></script>
+<script src="js/common_21.js"></script>
+<script type="text/javascript" src="js/zzsc_21.js"></script>
+<script type="text/javascript" src="js/wdatepicker_21.js"></script>
+		<script type="text/javascript" src="js/popupclass_18.js"></script>
+		<script type="text/javascript" src="js/home_21.js"></script>
+		<script type="text/javascript" src="js/cp_21.js"></script>
+		<script src="js/kalendae.standalone_21.js"></script>
+		<script src="js/mypagination_6.js"></script>
+		<script src="js/common_21.js"></script>
+		<script type="text/javascript">
+			G.domain = "https://www.tz12306.com";
+			window.CTXXdomain = "https://www.tz12306.com";
+		</script>
+		<script type="text/javascript" src="js/constants_21.js"></script>
+		<script type="text/javascript" src="js/utils_21.js"></script>
+		<script src="js/searchbus_21.js"></script>
+	</head>
+<body>
+<link rel="stylesheet" href="css/picadaptive_21.css">
+<link rel="stylesheet" href="css/layui_21.css">
+<script src="js/jquery.kinslideshow-1.2.1.min_21.js" type="text/javascript"></script>
+<script src="js/cookie_21.js" type="text/javascript"></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?c9beffc738813888c9e19ea250946a9f":"https://jspassport.ssl.qhimg.com/11.0.1.js?c9beffc738813888c9e19ea250946a9f";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+
+<div style="background-color: #fff;">
+    <div class="header" style="font-family: 'Microsoft YaHei'" >
+        <div class="header_top">
+            <div class="nav">
+                <div id="logo">
+                    <a href="https://www.tz12306.com"><img id="provinceLogo" src="picture/-3.png"/></a>
+                </div>
+                <div id="region">
+                    <div style="float: left;position: relative; top:1px;" class="header-cityBox" id="headerCityBox">
+                    </div>
+                    <div style="float: left;" id="tzSelectBox">
+                            <a style="margin-left:0 !important;color:#00A2FF;" href="https://www.tz12306.com/qichepiao/" id="qichepiaoHead">汽车票</a>
+                            <a href="https://www.tz12306.com/chezhan/" id="qichezhanHead">汽车站</a>
+                            <a href="https://www.tz12306.com/help/" id="helpHead">帮助中心</a>
+                    </div>
+                </div>
+                <div class="head_user_msg_div" style="margin-right: -16px; padding-left: 22px;">
+                    <div id="head_user_msg" style='width: 145px;padding-top: 10px;'>
+                        <!-- <a href="#" class="btn_l b_login">登录</a>
+                        <a href="#" class="btn_l b_kszc">快速注册</a> -->
+                    </div>
+                    <div class="head_user_msg_data" style="margin-left:-22px; display: none">
+                        <a href="https://www.tz12306.com/user/index.html?type=busOrder" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center;"
+                           onmouseover="switchColor('#0483E5',this)" onmouseout="switchColor('black',this)">我的订单</a>
+                        <a href="https://www.tz12306.com/user/index.html?type=getContacts" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center; " onmouseover="switchColor('#0483E5',this)"
+                           onmouseout="switchColor('black',this)">常用乘车人管理</a>
+                        <a href="https://www.tz12306.com/user/index.html?type=userInfo" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center;" onmouseover="switchColor('#0483E5',this)"
+                           onmouseout="switchColor('black',this)">基本资料</a>
+                        <a href="https://www.tz12306.com/login/logout.html" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center;" onmouseover="switchColor('#0483E5',this)"
+                           onmouseout="switchColor('black',this)">退出登录</a>
+                    </div>
+                </div>
+                <div id="head_phone">
+                    <img src="picture/phone_21.png" style="margin-top: -5px;" />
+                    <a class="ico_phone head_font_I" style="cursor:default">400-660-8787（可退保险）</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+	window.CTXXdomain = "https://www.tz12306.com";
+	window.currCityInfoCityNo = "510000";
+	window.CTXXstaticdomain = "https://image.tz12306.com";
+	window.headLight ="2";
+</script>
+<script src="js/header_21.js" type="text/javascript"></script>
+<div class="container" style="background-color: #f5f5f5;width:100%;padding-bottom:49px">
+	<div class="banner">
+		<div class="banner_cont" >
+			<div class="banner_contl" style="top:90px;">
+				<div class="search_box">
+					<div class="datepk-search">
+							<div><span style="line-height: 28px;font-size: 18px;font-weight:bold;">汽车站查询</span></div>
+							<div class="bst-DC-elasticBox test-line-class">
+<!-- 							<div style="display:inline-block;font-size: 16px;color:#3e3e3e;margin-left:15px;font-weight:bold;">城市</div> -->
+							<div style="display:inline-block;width:100%;box-sizing:border-box;padding:20px 0 0 30px;margin-left:-30px;font-size: 14px;">
+							<div class="bst-select-box input1">
+							<input id="searchZh" type="text" style="line-height:35px;" placeholder="请输入汉字/全音/简拼" maxlength="30" value="">
+							</div></div></div>
+<!-- 							<div class="bst-DC-elasticBox test-line-class"> -->
+<!-- 							<div style="display:inline-block;font-size: 16px;color:#3e3e3e;font-weight:bold;">汽车站</div> -->
+<!-- 							<div style="display:inline-block;width:100%;box-sizing:border-box;padding:13px 0 0 75px;margin-left:-70px;font-size: 14px;"> -->
+<!-- 							<div class="bst-select-box input1"> -->
+<!-- 							</div></div></div> -->
+							<div style="padding-top:30px"><button id="stationBtn" class="bst-searchBus-submit-btn">立即搜索</button></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrap">
+			<ul class="rslides" id="dowebok1">
+		<li>
+				<a href="https://www.tz12306.com/article/id_127.html" style="display: block;">
+					<img src="picture/wkgjpvwgk22adajxaawc2tnz-so149_6.png"    height="278">
+				</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+<div class="contains" >
+	<div class="station-div">
+	
+		
+		<div class="station-show"   >
+			<p class="title-show">搜索结果车站</p>
+			<p style="border-bottom: 1px solid #e4e3e3;padding-top: 14px;width: 1200px;"></p>
+				<div style="text-align:center;margin:56px 0 56px 0;">
+						<img alt="" src="picture/search_non_6.png" />
+						<p style="font-size: 28px;line-height:40px;text-align:center;">无搜索结果车站</p>
+					</div>
+				</div>
+	</div>
+	<div class="station-div">
+		<div id="station-img-510000" class="station-img" style="display:none;" onclick="stationShow('510000')">
+			<img src="picture/wkgjplwl4qmaepgzaahzjrerozk705_6.png">
+			<p class="title-show" onclick="stationShow('510000')">四川车站 <i class="layui-icon" style="float:right;margin-left:8px;font-size:26px;">&#xe61a;</i> </p>
+		</div>
+		<div id="station-show-510000" class="station-show" style="display:block;"  >
+			<p class="title-show">四川车站<i class="layui-icon" style="float:right;cursor: pointer;font-size:24px;margin-right:18px;" onclick="closeStationShow('510000')">&#xe619;</i> </p>
+			<p style="border-bottom: 1px solid #e4e3e3;padding-top: 14px;width: 1200px;"></p>
+				<ul id="station-nqc-510000" class="station-nqc">
+					<li style="margin-top:24px;">
+						<a href="https://www.tz12306.com/article/id_755.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvzgmgaaj2wxaacxobzwmws404_18.jpg" style="width:140px;height:106px;"/>
+							</div>
+							<div class="sta_info" style="width:222px;height:105px;" >
+								<p class="title" >
+                           	 		雅安汽车客运站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		四川省雅安市雨城区北环东路公交总站对面</p>
+                           	 	<p class="tel" >
+                           	 		0835-2615742</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="margin-top:24px;">
+						<a href="https://www.tz12306.com/article/id_155.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvxjgjmaa8jwaahwjxwuppa062_18.jpg" style="width:140px;height:106px;"/>
+							</div>
+							<div class="sta_info" style="width:222px;height:105px;" >
+								<p class="title" >
+                           	 		成都茶店子车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		成都市西三环路五段289号</p>
+                           	 	<p class="tel" >
+                           	 		028-87506610</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="margin-top:24px;">
+						<a href="https://www.tz12306.com/article/id_903.html">
+							<div class="img_left">
+								<img src="picture/wkgjplxfkjoabh7vaadv8s-z064960_17.jpg" style="width:140px;height:106px;"/>
+							</div>
+							<div class="sta_info" style="width:222px;height:105px;" >
+								<p class="title" >
+                           	 		岳池综合客运枢纽站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		四川省广安市岳池县广岳大道岳池火车站对面</p>
+                           	 	<p class="tel" >
+                           	 		0826-5222131</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_595.html">
+							<div class="img_left">
+								<img src="picture/wkgjplxikkqalfzvaae3ishjhic473_18.jpg" style="width:140px;height:106px;"/>
+							</div>
+							<div class="sta_info" style="width:222px;height:105px;" >
+								<p class="title" >
+                           	 		屏山县锦之达客运站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		四川省宜宾市屏山县新县城丁石路</p>
+                           	 	<p class="tel" >
+                           	 		0831-5726566</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_279.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvwh2_iaelb3aauicxr5kq0760_18.png" style="width:140px;height:106px;"/>
+							</div>
+							<div class="sta_info" style="width:222px;height:105px;" >
+								<p class="title" >
+                           	 		成都长途汽车东站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		四川省成都市成华区邛崃山路成都东站</p>
+                           	 	<p class="tel" >
+                           	 		028-85950324</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_703.html">
+							<div class="img_left">
+								<img src="picture/wkgjplxp67yayhbtaacm_shuolq386_18.jpg" style="width:140px;height:106px;"/>
+							</div>
+							<div class="sta_info" style="width:222px;height:105px;" >
+								<p class="title" >
+                           	 		资阳汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		资阳市建设东路</p>
+                           	 	<p class="tel" >
+                           	 		028-26202529</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_691.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvxp65kam_3gaacnalczh8g498_5.jpg" style="width:140px;height:106px;"/>
+							</div>
+							<div class="sta_info" style="width:222px;height:105px;" >
+								<p class="title" >
+                           	 		资阳客运中心</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		资阳市雁江区书台路528号</p>
+                           	 	<p class="tel" >
+                           	 		028-26503631</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_607.html">
+							<div class="img_left">
+								<img src="picture/wkgjplxp60uafqc_aad1twfzqry750_6.jpg" style="width:140px;height:106px;"/>
+							</div>
+							<div class="sta_info" style="width:222px;height:105px;" >
+								<p class="title" >
+                           	 		宜宾高速公路客运站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		四川省宜宾市翠屏区月耳池街46号</p>
+                           	 	<p class="tel" >
+                           	 		0831-3541909</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_183.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvxp6ukaerj1aakifpcqdh4477_6.jpg" style="width:140px;height:106px;"/>
+							</div>
+							<div class="sta_info" style="width:222px;height:105px;" >
+								<p class="title" >
+                           	 		龙泉阳光城汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		同德街33</p>
+                           	 	<p class="tel" >
+                           	 		028-84836777</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_823.html">
+							<div class="img_left">
+								<img src="picture/wkgjplxp6riahuw1aabk_v4peqi484_6.jpg" style="width:140px;height:106px;"/>
+							</div>
+							<div class="sta_info" style="width:222px;height:105px;" >
+								<p class="title" >
+                           	 		盐亭新汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		盐亭城石岭新区</p>
+                           	 	<p class="tel" title='0816-6169591 0816-6169598'>
+                           	 		0816-6169591 0...
+                           	 		</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_771.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvxp6qeaz9-yaab1rjw3arm131_5.jpg" style="width:140px;height:106px;"/>
+							</div>
+							<div class="sta_info" style="width:222px;height:105px;" >
+								<p class="title" >
+                           	 		雅安西门汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		四川省雅安市雨城区西门北路17号</p>
+                           	 	<p class="tel" >
+                           	 		0835-2615742</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_899.html">
+							<div class="img_left">
+								<img src="picture/wkgjplxp6lmap45waafss70_dry437_6.jpg" style="width:140px;height:106px;"/>
+							</div>
+							<div class="sta_info" style="width:222px;height:105px;" >
+								<p class="title" >
+                           	 		武胜汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		迎宾大道北侧泰和国际西侧</p>
+                           	 	<p class="tel" >
+                           	 		0826-6251325</p>
+                           	 	</div>
+						</a>
+					</li>
+					</ul>
+				<div id="pagination-510000" class="pagination"></div>
+		</div>
+		
+	</div>
+	
+	<div class="station-div">
+		<div id="station-img-520000" class="station-img"  onclick="stationShow('520000')">
+			<img src="picture/wkgjpvwl4s6alzltaakzw7fe7_i642_5.png">
+			<p class="title-show">贵州车站 <i class="layui-icon" style="float:right;margin-left:8px;font-size:26px;">&#xe61a;</i> </p>
+		</div>
+		<div id="station-show-520000" class="station-show"   >
+			<p class="title-show">贵州车站<i class="layui-icon" style="float:right;cursor: pointer;font-size:24px;margin-right:18px;" onclick="closeStationShow('520000')">&#xe619;</i> </p>
+			<p style="border-bottom: 1px solid #e4e3e3;padding-top: 14px;width: 1200px;"></p>
+				<ul id="station-nqc-520000" class="station-nqc">
+					<li style="margin-top:24px;">
+						<a href="https://www.tz12306.com/article/id_403.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvwl2joauwfdaabesbislwu839_6.png" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		仁怀汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		仁怀市茅台路45号</p>
+                           	 	<p class="tel" >
+                           	 		0851-22250644</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="margin-top:24px;">
+						<a href="https://www.tz12306.com/article/id_427.html">
+							<div class="img_left">
+								<img src="picture/wkgjplxrp5uaea5maadupboodxe197_6.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		习水汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		习水县习酒路</p>
+                           	 	<p class="tel" >
+                           	 		0851-22520672</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="margin-top:24px;">
+						<a href="https://www.tz12306.com/article/id_451.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvxrqjyab_svaacrtswymqa367_5.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		遵义汽车总站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		遵义市红花岗区326国道遵湄路口</p>
+                           	 	<p class="tel" >
+                           	 		0851-28674544</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_463.html">
+							<div class="img_left">
+								<img src="picture/wkgjplxrqiyab8foaafdjvpuwli590_5.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		遵义忠庄汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		红花岗区海尔大道1号</p>
+                           	 	<p class="tel" >
+                           	 		0851-28431188</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_315.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvxrqfyaay3aaaeh3fw9ne4049_5.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		紫云汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		紫云苗族布依族自治县松山镇团坡外环西路汽车站</p>
+                           	 	<p class="tel" >
+                           	 		0851-35233719</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_983.html">
+							<div class="img_left">
+								<img src="picture/wkgjplxrqeeaapd4aaq6d3pwcos346_6.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		织金汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		毕节市织金县三甲桂花大道</p>
+                           	 	<p class="tel" >
+                           	 		0857-7162777</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_435.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvxrqdcalumzaaelvzgio_w954_5.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		正安汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		尹珍南路7号</p>
+                           	 	<p class="tel" >
+                           	 		0851-26400142</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_987.html">
+							<div class="img_left">
+								<img src="picture/wkgjplxrqa6argnaaabmenh-04i097_6.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		玉屏汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		玉屏县火车站对面</p>
+                           	 	<p class="tel" >
+                           	 		0856-3221242</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_431.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvxrp_qao-nraais98kvabi183_6.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		余庆汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		中华中路1号</p>
+                           	 	<p class="tel" >
+                           	 		0851-24621831</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_1027.html">
+							<div class="img_left">
+								<img src="picture/wkgjplxrp7uavbddaaf27ephs4y761_6.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		印江西环汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		印江自治县峨岭镇西环大道</p>
+                           	 	<p class="tel" >
+                           	 		0856-6221119</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_355.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvxrp62ab1ozaactbfo8w4e875_6.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		修文客运站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		修文县龙场镇河滨路356号（新客运站）</p>
+                           	 	<p class="tel" >
+                           	 		0851-82328116</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_347.html">
+							<div class="img_left">
+								<img src="picture/wkgjplxrp3qabouwaaeg5tvh-bi406_5.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		息烽客运站</p>
+                           	 	<p class="posi" style="height: 32px;" title='贵州省贵阳市息烽县虎城大道与龙泉大道交叉口东150米'>
+                           	 		贵州省贵阳市息烽县虎城大道与龙泉大道交叉口东...
+                           	 		</p>
+                           	 	<p class="tel" >
+                           	 		0851-87724165</p>
+                           	 	</div>
+						</a>
+					</li>
+					</ul>
+			<div id="pagination-520000" class="pagination"></div>
+		</div>
+		
+	</div>
+	
+	<div class="station-div">
+		<div id="station-img-500000" class="station-img"  onclick="stationShow('500000')">
+			<img src="picture/wkgjplwl4u6aw42maaff_yqavzw294_6.png">
+			<p class="title-show">重庆车站 <i class="layui-icon" style="float:right;margin-left:8px;font-size:26px;">&#xe61a;</i> </p>
+		</div>
+		<div id="station-show-500000" class="station-show"   >
+			<p class="title-show">重庆车站<i class="layui-icon" style="float:right;cursor: pointer;font-size:24px;margin-right:18px;" onclick="closeStationShow('500000')">&#xe619;</i> </p>
+			<p style="border-bottom: 1px solid #e4e3e3;padding-top: 14px;width: 1200px;"></p>
+				<ul id="station-nqc-500000" class="station-nqc">
+					<li style="margin-top:24px;">
+						<a href="https://www.tz12306.com/article/id_511.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvxuhbeaqfw9aaa7-ybhl-w694_5.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		丰都汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		丰都三合街道滨江西路127号</p>
+                           	 	<p class="tel" >
+                           	 		023-70704792</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="margin-top:24px;">
+						<a href="https://www.tz12306.com/article/id_547.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvxugrgazaxiaabhka5b_dy871_6.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		梁平汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		庆市梁平县梁山镇大河路2号</p>
+                           	 	<p class="tel" >
+                           	 		023-53253633</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="margin-top:24px;">
+						<a href="https://www.tz12306.com/article/id_271.html">
+							<div class="img_left">
+								<img src="picture/wkgjplxug2wazhkfaakaij3j7-i299_6.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		巫山汽车客运站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		重庆市巫山县平湖西路480号</p>
+                           	 	<p class="tel" >
+                           	 		023-57651677</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_475.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvxug0cacxwcaacm5aw9srw309_5.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		彭水县汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		彭水苗族土家族自治县 城隍巷21附35号</p>
+                           	 	<p class="tel" >
+                           	 		(023)78491785</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_507.html">
+							<div class="img_left">
+								<img src="picture/wkgjplxugxkafnyqaaeifwbanzq884_5.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		奉节汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		奉节县永安镇诗城路</p>
+                           	 	<p class="tel" >
+                           	 		023-56521051</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_231.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvxugwgaf0eeaaecmwsngww631_5.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		石柱汽车总站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		重庆市石柱县南宾镇万寿大道(城南汽车站)</p>
+                           	 	<p class="tel" >
+                           	 		023-73332428</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_491.html">
+							<div class="img_left">
+								<img src="picture/wkgjplxugnoaxhmwaablm4u9nbi307_4.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		垫江汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		重庆市垫江县桂溪镇牡丹大道86号</p>
+                           	 	<p class="tel" >
+                           	 		023-74603269</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_539.html">
+							<div class="img_left">
+								<img src="picture/wkgjplxugfcanjpoaacdghhr4z4398_6.png" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		重庆开州汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		重庆市开州区云枫街道长青社区裕安街13号</p>
+                           	 	<p class="tel" >
+                           	 		52222993</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_323.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvxsoxyaygbcaab_pfsoplc816_6.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		忠县汽车总站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		重庆市忠县忠州镇环城路59号</p>
+                           	 	<p class="tel" >
+                           	 		(023)85809991</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_483.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvxsxn6akbbeaackk-db7rs226_6.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		重庆江津汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		重庆市江津区几江街道津西路转盘客运中心</p>
+                           	 	<p class="tel" >
+                           	 		023-85562614</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_503.html">
+							<div class="img_left">
+								<img src="picture/wkgjplxsxmuan9z9aablb9x6du0305_6.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		重庆合川汽车</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		重庆市合川区合阳办北环路2号</p>
+                           	 	<p class="tel" >
+                           	 		023-42898631</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_499.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvxsxlqadtpcaacvo66ofaa371_5.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		重庆南川汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		重庆市南川区火车大道3号</p>
+                           	 	<p class="tel" >
+                           	 		023-71432296</p>
+                           	 	</div>
+						</a>
+					</li>
+					</ul>
+			<div id="pagination-500000" class="pagination"></div>
+		</div>
+	</div>
+	
+	<div class="station-div">
+		<div id="station-img-530000" class="station-img"  onclick="stationShow('530000')">
+			<img src="picture/wkgjpvwl4vqaa4u9aaydfgk2wpw456_6.png">
+			<p class="title-show">云南车站 <i class="layui-icon" style="float:right;margin-left:8px;font-size:26px;">&#xe61a;</i> </p>
+		</div>
+		<div id="station-show-530000" class="station-show"   >
+			<p class="title-show">云南车站<i class="layui-icon" style="float:right;cursor: pointer;font-size:24px;margin-right:18px;" onclick="closeStationShow('530000')">&#xe619;</i> </p>
+			<p style="border-bottom: 1px solid #e4e3e3;padding-top: 14px;width: 1200px;"></p>
+				<ul id="station-nqc-530000" class="station-nqc">
+					<li style="margin-top:24px;">
+						<a href="https://www.tz12306.com/article/id_1179.html">
+							<div class="img_left">
+								<img src="picture/wkgjplzog1uan6qnaabesbislwu262_6.png" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		禄劝县汽车客运站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		昆明市禄劝彝族苗族自治县秀屏路185号</p>
+                           	 	<p class="tel" >
+                           	 		0871-8910448</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="margin-top:24px;">
+						<a href="https://www.tz12306.com/article/id_1191.html">
+							<div class="img_left">
+								<img src="picture/wkgjplzox0iaajbtaabesbislwu783_4.png" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		峨山汽车客运站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		玉溪市峨山彝族自治县锦山路8</p>
+                           	 	<p class="tel" >
+                           	 		0877-4968168</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="margin-top:24px;">
+						<a href="https://www.tz12306.com/article/id_1195.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvzoxpyalcusaabesbislwu567_6.png" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		富民客运站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		昆明市富民县环城南路38号</p>
+                           	 	<p class="tel" >
+                           	 		400-08-84365</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_1051.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvwy7cmasbbcaabesbislwu671_5.png" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		澜沧县汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		普洱市澜沧拉祜族自治县</p>
+                           	 	<p class="tel" >
+                           	 		0879-723262</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_1087.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvxjhiqaepwkaacg69fncee941_6.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		宁洱县汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		普洱市宁洱哈尼族彝族自治县</p>
+                           	 	<p class="tel" >
+                           	 		0879-3232523</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_1115.html">
+							<div class="img_left">
+								<img src="picture/wkgjplxjhhsabzg1aagluwqp5-q774_5.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		西盟汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		普洱市西盟佤族自治县勐卡路</p>
+                           	 	<p class="tel" >
+                           	 		0879-8342327</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_1123.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvxjhggagdwxaacvcnqi1qk135_6.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		永德县汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		临沧市永德县一中附近</p>
+                           	 	<p class="tel" >
+                           	 		0883-5215894</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_1131.html">
+							<div class="img_left">
+								<img src="picture/wkgjplxjhe-aqb3raaeqovtdxra781_6.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		玉龙县汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		丽江玉龙纳西族自治县</p>
+                           	 	<p class="tel" >
+                           	 		010-10101234</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_1159.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvxibskagp7gaacc8bkafay126_6.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		普洱客运站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		云南省普洱市振兴大道148号</p>
+                           	 	<p class="tel" >
+                           	 		(0879)2308286</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_1163.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvxibtsauwfeaamlymzm4ri773_5.png" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		云县汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		黄山路15号</p>
+                           	 	<p class="tel" >
+                           	 		(0883)3221333</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_1151.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvxjhbwaudjpaaeqs7rdqo8483_4.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		云南景谷县汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		普洱市文明路15号</p>
+                           	 	<p class="tel" >
+                           	 		0879-5227549</p>
+                           	 	</div>
+						</a>
+					</li>
+					<li style="">
+						<a href="https://www.tz12306.com/article/id_1111.html">
+							<div class="img_left">
+								<img src="picture/wkgjpvxjhnqabdb1aabs7njcwx8144_5.jpg" style="width:140px;height:105px;"/>
+							</div>
+							<div class="sta_info" style="width:200px;height:105px;" >
+								<p class="title" >
+                           	 		威信县汽车站</p>
+                           	 	<p class="posi" style="height: 32px;">
+                           	 		昭通市威信县长征路</p>
+                           	 	<p class="tel" >
+                           	 		0870-6129656</p>
+                           	 	</div>
+						</a>
+					</li>
+					</ul>
+			<div id="pagination-530000" class="pagination"></div>
+		</div>
+	</div>
+	
+</div>
+</div>
+<!--<div class="bus_bannerDiv" style="background-color: #fff;" >
+	<img  class='bus_img_box' style='cursor: pointer;'>
+</div>-->
+<div class="footer">
+			<div class="contains">
+				<div class="link_help">
+					<dl class="footer-item advantage">
+						<dt style="font-weight:bold;" id="newer_guidence_name">新手指南</dt>
+						<dd class="ft-link-item" id="newer_guidence">
+						</dd>
+					</dl>
+					<dl class="footer-item advantage">
+						<dt style="font-weight:bold;" id="ticket_notice_name">购票须知</dt>
+						<dd class="ft-link-item" id="ticket_notice">
+						</dd>
+					</dl>
+					<dl class="footer-item advantage" >
+						<dt style="font-weight:bold;" id="faq_guidence_name">常见问题</dt>
+						<dd class="ft-link-item" id="faq_guidence">
+						</dd>
+					</dl>
+					<dl class="footer-item advantage" >
+						<dt style="font-weight:bold;" id="ride_ins_name">乘车保险</dt>
+						<dd class="ft-link-item" id="ride_ins">
+						</dd>
+					</dl>
+					<dl class="footer-item advantage">
+						<dt style="font-weight:bold;" id="member_services_name">会员服务</dt>
+						<dd class="ft-link-item" id="member_services">
+						</dd>
+					</dl>
+
+					<dl class="footer-item advantage footer-abc footer-a1bc">
+						<dt> </dt>
+						<dd class="ft-link-item">
+							<img src="picture/erweima_21.png" />
+						</dd>
+						<dd class="ft-link-title">扫描二维码<br>下载手机APP</dd>
+					</dl>
+
+					<dl class="footer-item advantage footer-abc">
+						<dt> </dt>
+						<dd class="ft-link-item">
+							<img src="picture/erweima2_21.png" />
+						</dd>
+						<dd class="ft-link-title">扫描二维码<br>关注微信公众号</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="linksDiv">
+<!-- 				<div class="links"> -->
+<!-- 					<div class="links_list" id = "links_list"> -->
+							
+<!-- 					</div> -->
+<!-- 				</div> -->
+				<div class="copyright">
+					<p>增值电信业务经营许可证：川B2-20110154 <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51019002001334" style="color: #a3a3a3;font-size: 12px; line-height: 22px;margin-left: 7px;"> <img src="picture/ghs_21.png" style="top: -2px;position: relative;" /> 川公网安备 51019002001334号</a>
+						<span class="server_line" onclick="meiqia()">在线客服</span>
+						<span class="youmengBtn" style="float:right; position:relative; top:-10px; left: -5px;" >
+							<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1271582149'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1271582149%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+						</span>
+					</p>
+					<p>Copyright © 2012-2018 tz12306.com Inc. All Rights Reserved.
+						<a class="pay_icons first_icon_5"></a>  <!-- <img src="picture/bottom_ico_5_dark_21.png"> -->
+						<a class="pay_icons first_icon_4"></a>
+						<a class="pay_icons first_icon_3"></a>
+						<a class="pay_icons first_icon_2"></a>
+						<a class="pay_icons first_icon_1"></a>
+					</p>
+					<p><span>四川倍施特科技股份有限公司   </span>&nbsp;&nbsp;<img src="picture/phone_21.png" style="margin-top: -5px;"> &nbsp;<span>028-66878787</span><a href="https://www.tz12306.com/sitemap.xml"  style="font-size: 12px;margin-left: 6px;color: #a3a3a3;" target="_blank">XML</a></p>
+				</div>
+			</div>
+			</div>
+	<script type="text/javascript">
+		window.CTXXdomain = "https://www.tz12306.com";
+	</script>
+	<script src="js/footer_21.js" type="text/javascript"></script>
+	<script src="js/meiqia_21.js" type="text/javascript"></script></body>
+ <script>
+  	window.STATIONINFO_PAGE_LIMIT = 12;
+  	window.STATIONINFO_510000ALL=[{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/33/wKgJPVzGmgaAJ2wxAACXobzWMws404.jpg","metaKeywords":"0835-2615742","createTime":"2018-12-27 16:00:35","updateTime":"2019-04-29 14:30:30","id":755,"title":"雅安汽车客运站","metaDes":"四川省雅安市雨城区北环东路公交总站对面"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxJgJmAa8jWAAHwJxWuppA062.jpg","metaKeywords":"028-87506610","createTime":"2018-12-25 11:03:04","updateTime":"2019-02-26 09:55:38","id":155,"title":"成都茶店子车站","metaDes":"成都市西三环路五段289号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPlxFkjOAbH7VAADV8s-z064960.jpg","metaKeywords":"0826-5222131","createTime":"2018-12-28 09:49:36","updateTime":"2019-02-18 15:29:46","id":903,"title":"岳池综合客运枢纽站","metaDes":"四川省广安市岳池县广岳大道岳池火车站对面"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/1E/wKgJPlxiKKqALFzVAAe3ISHjhic473.jpg","metaKeywords":"0831-5726566","createTime":"2018-12-26 15:39:59","updateTime":"2019-02-12 10:01:22","id":595,"title":"屏山县锦之达客运站","metaDes":"四川省宜宾市屏山县新县城丁石路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/03/wKgJPVwh2_iAeLb3AAUIcXR5Kq0760.png","metaKeywords":"028-85950324","createTime":"2018-12-25 15:27:52","updateTime":"2019-02-12 09:55:05","id":279,"title":"成都长途汽车东站","metaDes":"四川省成都市成华区邛崃山路成都东站"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPlxP67yAYhbtAACM_SHuoLQ386.jpg","metaKeywords":"028-26202529","createTime":"2018-12-27 15:17:22","updateTime":"2019-01-29 13:59:24","id":703,"title":"资阳汽车站","metaDes":"资阳市建设东路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPVxP65KAM_3gAACNalCZH8g498.jpg","metaKeywords":"028-26503631","createTime":"2018-12-27 15:10:43","updateTime":"2019-01-29 13:58:43","id":691,"title":"资阳客运中心","metaDes":"资阳市雁江区书台路528号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPlxP60uAfQC_AAD1TWfzqRY750.jpg","metaKeywords":"0831-3541909","createTime":"2018-12-26 15:55:19","updateTime":"2019-01-29 13:58:13","id":607,"title":"宜宾高速公路客运站","metaDes":"四川省宜宾市翠屏区月耳池街46号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPVxP6uKAerj1AAKIFpcqDH4477.jpg","metaKeywords":"028-84836777","createTime":"2018-12-25 12:51:42","updateTime":"2019-01-29 13:55:46","id":183,"title":"龙泉阳光城汽车站","metaDes":"同德街33"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPlxP6riAHUw1AABk_V4PeqI484.jpg","metaKeywords":"0816-6169591 0816-6169598","createTime":"2018-12-27 17:08:45","updateTime":"2019-01-29 13:55:05","id":823,"title":"盐亭新汽车站","metaDes":"盐亭城石岭新区"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPVxP6qeAZ9-yAAB1rjw3ArM131.jpg","metaKeywords":"0835-2615742","createTime":"2018-12-27 16:09:13","updateTime":"2019-01-29 13:54:48","id":771,"title":"雅安西门汽车站","metaDes":"四川省雅安市雨城区西门北路17号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPlxP6lmAP45wAAfss70_DrY437.jpg","metaKeywords":"0826-6251325","createTime":"2018-12-28 09:47:12","updateTime":"2019-01-29 13:53:29","id":899,"title":"武胜汽车站","metaDes":"迎宾大道北侧泰和国际西侧"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPVxP6kOAbeDEAADY1iVaDL8279.jpg","metaKeywords":"0832-8243110","createTime":"2018-12-27 17:27:15","updateTime":"2019-01-29 13:53:07","id":863,"title":"威远车站","metaDes":"威远县严陵镇三河路550号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPlxP6iKAA8STAACX2TrUOIo323.jpg","metaKeywords":"0839-4202117","createTime":"2018-12-27 17:39:48","updateTime":"2019-01-29 13:52:34","id":879,"title":"旺苍汽车站","metaDes":"旺苍县东河镇环城东路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPVxP6eWASKC0AAFzQpvpel4715.jpg","metaKeywords":"0816-4692178","createTime":"2018-12-27 16:38:11","updateTime":"2019-01-29 13:51:33","id":795,"title":"绵阳塔水汽车客运站","metaDes":"绵阳市安州区塔水镇朝兴街"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPlxP6baASGEDAAFY-EWvAO4903.jpg","metaKeywords":"0825-2330111","createTime":"2018-12-27 14:40:03","updateTime":"2019-01-29 13:50:46","id":659,"title":"遂宁汽车站","metaDes":"站南路1号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPVxP6aKAN6ViAABcXXn-UX4383.jpg","metaKeywords":"0825-2620662","createTime":"2018-12-27 14:36:00","updateTime":"2019-01-29 13:50:27","id":655,"title":"遂宁城南汽车站","metaDes":"四川省遂宁市船山区G318(南环路)"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPlxP6XWAVfaJAAB0wu47x7E670.jpg","metaKeywords":"028-84605450","createTime":"2018-12-25 13:16:22","updateTime":"2019-01-29 13:49:42","id":195,"title":"十陵汽车站","metaDes":"十陵镇东三环路三段"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPVxP6UWASYqIAAHXj6DVlrQ617.jpg","metaKeywords":"0813-6260362","createTime":"2018-12-25 17:04:07","updateTime":"2019-01-29 13:48:53","id":375,"title":"荣县西门车站","metaDes":"荣县西街430号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPlxP6PqAF8dJAAAts1_A1ho765.jpg","metaKeywords":"0813-6105414","createTime":"2018-12-25 17:00:18","updateTime":"2019-01-29 13:47:39","id":367,"title":"荣县南站","metaDes":"自贡市荣县蓝帝大道160号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPVxP6NOATDqbAAEDJTckcaI887.jpg","metaKeywords":"028-36260872","createTime":"2018-12-27 15:30:27","updateTime":"2019-01-29 13:47:00","id":719,"title":"仁寿联营汽车站","metaDes":"眉山市仁寿县仁眉路76号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPVxP6KWALAtrAABkLpA0Llg565.jpg","metaKeywords":"028-38813330","createTime":"2018-12-27 15:27:56","updateTime":"2019-01-29 13:46:14","id":715,"title":"青神汽车站","metaDes":"眉山市青神县眉青公路89号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPlxP6JOASKuqAADN_qM1CSo919.jpg","metaKeywords":"0839-7202381","createTime":"2018-12-27 17:34:09","updateTime":"2019-01-29 13:45:56","id":875,"title":"青川汽车站","metaDes":"四川省广元市青川县阴平街131号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPVxP6HuAJ8oqAAGqOGoSiXo295.jpg","metaKeywords":"无","createTime":"2018-12-27 16:54:55","updateTime":"2019-01-29 13:45:31","id":803,"title":"平武汽车客运中心站","metaDes":"平武县龙安镇冀安东路235号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPlxP6FeAUcbWAABJOnjB0s4319.jpg","metaKeywords":"0825-5390966","createTime":"2018-12-27 14:02:55","updateTime":"2019-01-29 13:44:55","id":635,"title":"蓬溪汽车站","metaDes":"四川省遂宁市蓬溪县赤城镇迎宾大道33号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPVxP6C-ADxcuAAE40Nndzfs192.jpg","metaKeywords":"028-37611697","createTime":"2018-12-27 15:23:56","updateTime":"2019-01-29 13:44:15","id":711,"title":"彭山客运中心","metaDes":"彭山县彭谢公路桥附近（彭山北站火车站旁）"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPlxP6ByALn-_AAA_nkDkx3s131.jpg","metaKeywords":"0812-2225553","createTime":"2018-12-27 14:46:53","updateTime":"2019-01-29 13:43:56","id":671,"title":"攀枝花汽车站","metaDes":"仁和区攀枝花大道西段142号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPVxP5_2AekR6AACry-3GBug004.jpg","metaKeywords":"(0832)2103275","createTime":"2018-12-27 17:24:48","updateTime":"2019-01-29 13:43:26","id":859,"title":"内江车站","metaDes":"交通路555号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPlxP58yAeNYUAAEldaCoUno977.jpg","metaKeywords":"0827-8222476","createTime":"2018-12-28 15:15:17","updateTime":"2019-01-29 13:42:36","id":935,"title":"南江汽车站","metaDes":"四川省巴中市南江县米仓山大道南磷段298号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPVxP51-AenGpAACFeaKfH9g674.jpg","metaKeywords":"0816-6393098","createTime":"2018-12-27 16:28:42","updateTime":"2019-01-29 13:40:47","id":783,"title":"绵阳南湖车站","metaDes":"绵阳市涪城区绵州大道北段98号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPlxP50SAeXhiAACqx4hNV-Y377.jpg","metaKeywords":"0817-2338219","createTime":"2018-12-26 14:24:42","updateTime":"2019-01-29 13:40:20","id":551,"title":"南充西门汽车站","metaDes":"西门坝街64"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/12/wKgJPlxJh3-Ac1-RAAC32nSOSlA074.jpg","metaKeywords":"0839-5045080","createTime":"2018-12-27 17:21:50","updateTime":"2019-01-29 13:39:38","id":855,"title":"剑阁汽车站","metaDes":"广元市剑阁县普安镇三江路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPlxP5VCAGdvwAAGTHGrajFI859.jpg","metaKeywords":"028-23352963","createTime":"2018-12-27 14:46:38","updateTime":"2019-01-29 13:39:27","id":667,"title":"乐至县北门汽车站","metaDes":"乐至县天池镇川鄂中路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPVxP5bSAbomUAAF1IKVCZCg299.jpg","metaKeywords":"028-84851013","createTime":"2018-12-25 11:48:41","updateTime":"2019-01-29 13:39:15","id":179,"title":"龙泉汽车站","metaDes":"驿都中路110号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPlxP5gmAXsBKAADP7zAlHhM889.jpg","metaKeywords":"隆昌县成渝北路69号","createTime":"2018-12-27 17:18:58","updateTime":"2019-01-29 13:37:53","id":851,"title":"隆江车站","metaDes":"隆昌县成渝北路69号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPVxP5lmAbw2JAABU2gDpfSw636.jpg","metaKeywords":"0835-6523938","createTime":"2018-12-27 15:41:15","updateTime":"2019-01-29 13:37:42","id":731,"title":"芦山汽车站","metaDes":"雅安市芦山县S210"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPlxP5oGAeGPqAAHrHBK0wls453.jpg","metaKeywords":"0812-8172155","createTime":"2018-12-27 14:42:52","updateTime":"2019-01-29 13:37:05","id":663,"title":"米易汽车站","metaDes":"米易县校园路24号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPlxP5X2AcLJBAAFlUOnFJBw207.jpg","metaKeywords":"0826-3222676","createTime":"2018-12-28 09:44:13","updateTime":"2019-01-29 13:32:46","id":895,"title":"邻水汽车客运中心","metaDes":"四川省广安市邻水县G210(西环线)"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPVxP5VeAAGVMAAFhNRojxyw105.jpg","metaKeywords":"028-23322318","createTime":"2018-12-27 14:51:04","updateTime":"2019-01-29 13:32:07","id":679,"title":"乐至汽车站","metaDes":"乐至县天池镇川鄂东路209号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPlxP4_-AaTibAABMSWziCA8074.jpg","metaKeywords":"0816-3222725","createTime":"2018-12-27 17:06:40","updateTime":"2019-01-29 13:26:23","id":819,"title":"富临汽车客运站","metaDes":"江油市太平镇李白大道中段"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/14/wKgJPVxP472ALh9vAABLhn_z97Q341.jpg","metaKeywords":"0839-6665272","createTime":"2018-12-27 17:27:20","updateTime":"2019-01-29 13:25:18","id":867,"title":"剑门关汽车站","metaDes":"剑门关汽车站位于108国道下寺镇南出口"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/12/wKgJPVxJh1iAWkrZAAHMG_haVlc661.jpg","metaKeywords":"0831-8306007","createTime":"2018-12-27 14:31:00","updateTime":"2019-01-24 17:37:28","id":651,"title":"简阳西门客运站","metaDes":"四川省成都市简阳市建设中路173号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/12/wKgJPlxJhxeAVAK5AADDG0-aItY204.jpg","metaKeywords":"0826-4821155","createTime":"2018-12-28 09:41:14","updateTime":"2019-01-24 17:36:24","id":891,"title":"华蓥汽车站","metaDes":"华蓥市迎宾路268号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/12/wKgJPVxJht-Af49CAABpeka4bmg466.jpg","metaKeywords":"028-37403336","createTime":"2018-12-27 15:11:49","updateTime":"2019-01-24 17:35:27","id":695,"title":"洪雅汽车站","metaDes":"洪雅县九胜大道369号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/12/wKgJPlxJhr-ANXpnAACPmfcqADI885.jpg","metaKeywords":"0830-5261666","createTime":"2018-12-25 18:07:16","updateTime":"2019-01-24 17:34:55","id":467,"title":"合江汽车站","metaDes":"长江路73号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPlxJhRuAbDJQAACtpEaWSP8865.jpg","metaKeywords":"0835-4382362","createTime":"2018-12-27 15:32:27","updateTime":"2019-01-24 17:33:40","id":723,"title":"汉源县九襄镇汽车站","metaDes":"雅安市汉源县九襄镇交通西路52号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxJgyGAJPRFAABjdEq-NmI739.jpg","metaKeywords":"0839-3606115","createTime":"2018-12-27 17:18:35","updateTime":"2019-01-24 17:19:30","id":847,"title":"广元长途汽车站","metaDes":"广元市利州区福星路2段"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPlxJgweAO8WvAADDyVSzBzw977.jpg","metaKeywords":"0839-3560287","createTime":"2018-12-27 17:12:59","updateTime":"2019-01-24 17:19:03","id":835,"title":"广元汽车站","metaDes":"广元市蜀门南路54号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxJgrmAOBIlAADuhM6aj4U109.jpg","metaKeywords":"0838-5240710","createTime":"2018-12-28 10:03:30","updateTime":"2019-01-24 17:17:45","id":911,"title":"广汉汽车站","metaDes":"中山大道南三段与深圳路东一段交叉口东北角"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxJgniASraNAABWCk0U07k637.jpg","metaKeywords":"0826-2222461","createTime":"2018-12-28 09:38:15","updateTime":"2019-01-24 17:16:40","id":887,"title":"广安汽车总站","metaDes":"广安市广安区洪州大道东6段22号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPlxJgmqADRx6AADsNF_3TRw171.jpg","metaKeywords":"0826-8902222","createTime":"2018-12-28 09:33:53","updateTime":"2019-01-24 17:16:26","id":883,"title":"广安客运枢纽站","metaDes":"站前大道西段2号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxJgi6AV4kZAAA030qZAhM347.jpg","metaKeywords":"0830-7222333","createTime":"2018-12-25 18:10:30","updateTime":"2019-01-24 17:15:26","id":471,"title":"古蔺汽车站","metaDes":"光明路与建鸿路交叉口北50米"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxJgeeAL7KEAABuOMGVjJU466.jpg","metaKeywords":"0838-2400200","createTime":"2018-12-28 09:58:22","updateTime":"2019-01-24 17:14:15","id":907,"title":"德阳汽车北站","metaDes":"黄山路三段"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPlxJgYqAZUdEAACByxgaOug263.jpg","metaKeywords":"028-26521417","createTime":"2018-12-27 15:02:43","updateTime":"2019-01-24 17:12:42","id":683,"title":"丹山客运站","metaDes":"资阳市丹山镇北大街附近"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPlxJgTeAJu8uAACOWBEYbwM213.jpg","metaKeywords":"028-37205808","createTime":"2018-12-27 15:08:08","updateTime":"2019-01-24 17:11:19","id":687,"title":"丹棱客运中心站","metaDes":"351国道和齐乐大道交叉口"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxJgRCAZLXWAABOn14pQic826.jpg","metaKeywords":"028-87345329","createTime":"2018-12-25 11:37:56","updateTime":"2019-01-24 17:10:41","id":171,"title":"成都金沙汽车站","metaDes":"成都市青羊区清江中路50号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxJgOiAXSLDAAC3tDMaLXs834.jpg","metaKeywords":"028-83175992","createTime":"2018-12-25 11:09:18","updateTime":"2019-01-24 17:10:01","id":159,"title":"成都城北汽车站","metaDes":"四川省成都市金牛区北二段85号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPlxJf6qAKyazAAB0ENH0QhA633.jpg","metaKeywords":"0831-6200511","createTime":"2018-12-26 16:25:30","updateTime":"2019-01-24 17:07:07","id":623,"title":"柏溪客运站","metaDes":"宜宾县柏溪镇桂园路299号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxJf9eAbqpwAABoWU3CP08107.jpg","metaKeywords":"0835-6822223","createTime":"2018-12-27 15:21:32","updateTime":"2019-01-24 17:06:41","id":707,"title":"宝兴汽车站","metaDes":"雅安市宝兴县穆坪镇沿江路202号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPlxJgASAJ568AADrP2GrCvs771.jpg","metaKeywords":"0839-5860000","createTime":"2018-12-27 17:08:51","updateTime":"2019-01-24 17:06:13","id":827,"title":"苍溪汽车站","metaDes":"四川省广元市苍溪县红军路401号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPVxFklKAL5xmAAA_mRB7Znc259.jpg","metaKeywords":"0813-8205549","createTime":"2018-12-25 17:07:46","updateTime":"2019-01-21 17:35:15","id":383,"title":"自贡汽车客运总站","metaDes":"自贡市丹桂大街817号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPVxFkiGAB1IGAACCfUpta3I956.jpg","metaKeywords":"0817-8221155","createTime":"2018-12-26 14:51:07","updateTime":"2019-01-21 17:34:25","id":575,"title":"营山汽车站","metaDes":"四川省南充市营山县朗池镇一环路旁"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPlxFkgeAdUNEAAB3AEIWNxo796.jpg","metaKeywords":"0835-7628072","createTime":"2018-12-27 16:24:57","updateTime":"2019-01-21 17:34:00","id":775,"title":"荥经汽车站","metaDes":"四川省雅安市荥经县严道镇新南村新南街荥经汽车站"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPVxFkeiAHr6XAAttN08WCDU682.jpg","metaKeywords":"0831-8226001","createTime":"2018-12-26 15:50:51","updateTime":"2019-01-21 17:33:29","id":603,"title":"宜宾北门汽车站","metaDes":"四川省宜宾市翠屏区北操场19号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPlxFkcuAWJDnAACnP8DYrKI341.jpg","metaKeywords":"0831-8306333","createTime":"2018-12-26 16:19:50","updateTime":"2019-01-21 17:32:59","id":619,"title":"宜宾西门客运站","metaDes":"四川省宜宾市翠屏区前进路399号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPlxFkSiAGQpSAAEwySmgoG8143.jpg","metaKeywords":"0831-2335492","createTime":"2018-12-26 16:15:26","updateTime":"2019-01-21 17:30:16","id":615,"title":"宜宾南岸汽车站","metaDes":"四川省宜宾市翠屏区航天路中段3号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPVxFkO2AGpXVAADos_m97eQ171.jpg","metaKeywords":"0831-3056800","createTime":"2018-12-26 16:08:38","updateTime":"2019-01-21 17:29:18","id":611,"title":"宜宾临港客运站","metaDes":"宜宾临港大道一段31号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPlxFkMeAZdDPAADsXti2JU8376.jpg","metaKeywords":"0830-6271958","createTime":"2018-12-25 17:58:31","updateTime":"2019-01-21 17:28:40","id":447,"title":"叙永汽车站","metaDes":"泸州市叙永县西外街255号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPVxFkISAK-X8AABIFqOL_io229.jpg","metaKeywords":"0831-8822492","createTime":"2018-12-26 15:45:50","updateTime":"2019-01-21 17:27:33","id":599,"title":"兴文客运站","metaDes":"宜宾市兴文县环城南路128号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPlxFkCiAR4HqAABdQ2Y--uk112.jpg","metaKeywords":"0827-7221954","createTime":"2018-12-28 15:36:17","updateTime":"2019-01-21 17:26:00","id":943,"title":"通江汽车站","metaDes":"四川省巴中市通江县诺江西路123号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPVxFkASAcL7FAABvBkKv2xI880.jpg","metaKeywords":"0817-5570638","createTime":"2018-12-26 11:37:44","updateTime":"2019-01-21 17:25:25","id":519,"title":"南部蜀北汽车站","metaDes":"蜀北大道342"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPlxFj96AOEmyAAD6nH7p6Ts464.jpg","metaKeywords":"0838-8232886","createTime":"2018-12-28 10:07:06","updateTime":"2019-01-21 17:24:47","id":915,"title":"什邡汽车站","metaDes":"什邡市国人小学对面"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPVxFj6-ALc4zAACSQfauIko434.jpg","metaKeywords":"0825-6988313","createTime":"2018-12-27 14:10:53","updateTime":"2019-01-21 17:24:00","id":639,"title":"射洪汽车站","metaDes":"兴乙街与文化街交叉口东100米"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPVxFj0-Ac_c3AACY5otvWPk093.jpg","metaKeywords":"0827-6222056","createTime":"2018-12-28 15:21:37","updateTime":"2019-01-21 17:22:23","id":939,"title":"平昌客运中心","metaDes":"四川省巴中市平昌县江口镇龙潭片区南河子"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPlxFjzmAFvlpAAB04_Hq31g646.jpg","metaKeywords":"028-87915162","createTime":"2018-12-25 12:59:00","updateTime":"2019-01-21 17:22:02","id":187,"title":"成都郫县汽车站","metaDes":"成都市郫都区成灌西路590号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPVxFjyKAP6HkAABMkvwYXaE818.jpg","metaKeywords":"02817-8622212","createTime":"2018-12-26 14:35:53","updateTime":"2019-01-21 17:21:39","id":559,"title":"蓬安汽车站","metaDes":"南充市蓬安县相如镇安汉大道腾茨沟村"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPlxFjxmAfBMvAABMkvwYXaE828.jpg","metaKeywords":"0817—8600367","createTime":"2018-12-26 14:30:28","updateTime":"2019-01-21 17:21:30","id":555,"title":"蓬安城北汽车站","metaDes":"南充市蓬安县政府街政府街288号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPVxFjrGALGWKAAZaPUgL0h8328.png","metaKeywords":"0817-3338332","createTime":"2018-12-26 13:50:41","updateTime":"2019-01-21 17:19:46","id":543,"title":"南充高坪汽车站","metaDes":"鹤鸣路266号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPlxFjfqAYHTnAAOFbWGpfeU750.png","metaKeywords":"0817-2319193","createTime":"2018-12-26 13:45:35","updateTime":"2019-01-21 17:16:42","id":535,"title":"南充市城北汽车站","metaDes":"四川省南充市铁昌路75号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPlxFjdKAc4yTAAJzCmmTmgo490.jpg","metaKeywords":"0817-5581955","createTime":"2018-12-26 11:25:00","updateTime":"2019-01-21 17:16:03","id":515,"title":"南部汽车站","metaDes":"振兴街311-313号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPVxFjbaAIkM8AAEOFmTEy48329.jpg","metaKeywords":"(0817)2224670","createTime":"2018-12-26 13:40:19","updateTime":"2019-01-21 17:15:35","id":531,"title":"马市铺汽车站","metaDes":"南充市顺庆区马市铺路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPlxFjX2AI6IgAABnMUH_Q0Y164.jpg","metaKeywords":"0830-8583100","createTime":"2018-12-25 18:02:34","updateTime":"2019-01-21 17:14:38","id":459,"title":"泸州客运中心汽车站","metaDes":"西南商贸城北边"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0F/wKgJPVxFjR6AelzOAADDJ-7N9H8056.jpg","metaKeywords":"0831-7721751","createTime":"2018-12-26 15:33:13","updateTime":"2019-01-21 17:13:02","id":591,"title":"筠连汽车站","metaDes":"宜宾市筠连县(玉壶公园)"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPlxFjJuAHFeaAABr9r0K2_I082.jpg","metaKeywords":"0831-5553222","createTime":"2018-12-26 15:21:07","updateTime":"2019-01-21 17:10:52","id":587,"title":"江安汽车站","metaDes":"江安县三零八省道洋码头村"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0F/wKgJPVxFjICAK88RAADgvx0nul4314.jpg","metaKeywords":"028-27266661","createTime":"2018-12-27 14:23:54","updateTime":"2019-01-21 17:10:25","id":647,"title":"简阳城东客运站","metaDes":"简阳河东新区东溪大道（国道318线）原狮子桥北"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPlxFjE6AIDEOAAGJInnfbv8247.jpg","metaKeywords":"028-85692938","createTime":"2018-12-25 13:34:30","updateTime":"2019-01-21 17:09:34","id":207,"title":"成都双流籍田汽车站","metaDes":"四川省成都市双流区新华路1段"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0F/wKgJPVxFjD6AYH60AAE7HrqYRhw078.jpg","metaKeywords":"028-85205360","createTime":"2018-12-25 13:27:16","updateTime":"2019-01-21 17:09:18","id":203,"title":"成都双流机场汽车站","metaDes":"成都双流国际机场出候机楼右行200米"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0F/wKgJPVxFjBiAK7ZKAADwQ_SbfkI488.jpg","metaKeywords":"0831-4317982","createTime":"2018-12-26 15:10:20","updateTime":"2019-01-21 17:08:40","id":583,"title":"珙县汽车站","metaDes":"宜宾市珙县芙蓉大道"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0F/wKgJPlxFi-GAfFQOAACu4CIcIFk912.jpg","metaKeywords":"028-85692938","createTime":"2018-12-25 16:52:53","updateTime":"2019-01-21 17:08:26","id":359,"title":"富顺客运中心","metaDes":"富顺县富世镇釜江大道299号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0F/wKgJPVxFi8uAeXP2AACIsCWuNFY048.jpg","metaKeywords":"0825-7863222","createTime":"2018-12-27 13:57:38","updateTime":"2019-01-21 17:07:24","id":631,"title":"大英汽车站","metaDes":"四川省遂宁市大英县交通下街301号大英县汽车站位于四川省遂宁市大英县交通下街301号，车站电话0825-7863222，了解更多的车站订票信息就上团子出行。"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0F/wKgJPlxFi7mANWsBAADS1Rch-WM490.jpg","metaKeywords":"028-83331872/83334126","createTime":"2018-12-25 10:47:44","updateTime":"2019-01-21 17:07:06","id":151,"title":"成都北门汽车站","metaDes":"成都市一环路北四段197号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0F/wKgJPVxFi36ABqobAAEQVQeDCMA944.jpg","metaKeywords":"0827-2266228","createTime":"2018-12-28 14:58:07","updateTime":"2019-01-21 17:06:07","id":927,"title":"巴中兴文客运中心","metaDes":"四川省巴中市巴州区兴文镇通木垭隧道兴文汽车客运中心"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0F/wKgJPlxFi2yAGjDsAACBVMueods009.jpg","metaKeywords":"028-24585353","createTime":"2018-12-27 14:18:59","updateTime":"2019-01-21 17:05:49","id":643,"title":"安岳汽车站","metaDes":"四川省资阳市安岳县普州大道北段18"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0F/wKgJPVxFiniAQysfAAExm1bS7_k069.jpg","metaKeywords":"028-83118599","createTime":"2018-12-25 15:08:23","updateTime":"2019-01-21 17:01:45","id":247,"title":"成都五块石汽车站","metaDes":"四川省成都市成华区站北路157号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0F/wKgJPVxFihqAXFxsAAEqcm21_sI585.jpg","metaKeywords":"0827-5818887","createTime":"2018-12-28 14:50:04","updateTime":"2019-01-21 17:00:10","id":923,"title":"巴中江北客运中心","metaDes":"江北滨河北路中段12号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0F/wKgJPVxFicyAbKn4AADhal7Yl1s787.jpg","metaKeywords":"0817-6225902","createTime":"2018-12-26 13:34:33","updateTime":"2019-01-21 16:58:53","id":527,"title":"阆中客运中心","metaDes":"七里大道与长公大道交叉口东150米"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0F/wKgJPlxFibqAdaKtAAC_skZrUOo542.jpg","metaKeywords":"0817-6280969","createTime":"2018-12-26 11:42:38","updateTime":"2019-01-21 16:58:35","id":523,"title":"阆中89队汽车站","metaDes":"四川省南充市阆中市张飞北路16号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0F/wKgJPVxFhxKAID-5AABaH9MRjJw069.jpg","metaKeywords":"0817-118114","createTime":"2018-12-26 14:39:18","updateTime":"2019-01-21 16:48:04","id":563,"title":"西充汽车站","metaDes":"西充县双凤镇凤头西射路西充双凤汽车客运站"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPlwly5SAXCihAABesBislwU557.png","metaKeywords":"0827-8222701","createTime":"2018-12-28 15:07:01","updateTime":"2019-01-08 15:29:29","id":931,"title":"南江广运汽车站","metaDes":"巴中市南江镇米仓山大道文星段277号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPVwl2QKAKkN4AABesBislwU894.png","metaKeywords":"0817-7222404","createTime":"2018-12-26 14:42:52","updateTime":"2019-01-08 14:57:14","id":567,"title":"仪陇金城客运站（88队汽车站）","metaDes":"仪陇县建设北路32号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0A/wKgJPVw0OdeAYUCFAATIjuSAvFg473.png","metaKeywords":"0816-5282892","createTime":"2018-12-27 17:02:43","updateTime":"2019-01-08 13:49:12","id":815,"title":"三台旅游​汽车客运站","metaDes":"三台县潼川镇金牛大道金喜登大酒店对面"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0A/wKgJPlw0OciAYAzJAAc68-kiIfI652.png","metaKeywords":"0816-2695343","createTime":"2018-12-27 16:35:39","updateTime":"2019-01-08 13:48:56","id":791,"title":"绵阳市平政汽车站","metaDes":"绵阳市涪城区一环路北段46号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0A/wKgJPVw0ObOAAzFqAAd6deo32vo998.png","metaKeywords":"0816-2362762 0816-2365510","createTime":"2018-12-27 16:32:39","updateTime":"2019-01-08 13:48:35","id":787,"title":"绵阳汽车客运总站","metaDes":"四川省绵阳市涪城区临园路西段29号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0A/wKgJPlw0OYKADvNXAAaa5DUDWBo192.png","metaKeywords":"0816-3222725","createTime":"2018-12-27 16:04:45","updateTime":"2019-01-08 13:47:47","id":763,"title":"江油汽车站","metaDes":"江油市太平镇李白大道中段"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0A/wKgJPVw0OU-AVRybAAlqCScmREQ219.png","metaKeywords":"(0816)2270581","createTime":"2018-12-27 16:24:59","updateTime":"2019-01-08 13:46:56","id":779,"title":"绵阳富乐汽车站","metaDes":"星光街31号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0A/wKgJPlw0OSGAAIvaAALBl_kVCH0334.jpg","metaKeywords":"028-38106276","createTime":"2018-12-27 15:15:38","updateTime":"2019-01-08 13:46:09","id":699,"title":"眉山客运中心站","metaDes":"四川省眉山市东坡区紫竹中街眉山东站旁"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/06/wKgJPlwl2v-AF37cAABesBislwU639.png","metaKeywords":"0827-5766766","createTime":"2018-12-28 14:33:44","updateTime":"2018-12-28 17:50:21","id":919,"title":"巴中恩阳马鞍汽车站","metaDes":"巴中市恩阳区万阿路东50米"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPlwl2OGAXRBTAABesBislwU448.png","metaKeywords":"0831-4626371","createTime":"2018-12-26 16:29:41","updateTime":"2018-12-28 16:54:15","id":627,"title":"长宁汽车站","metaDes":"宜宾市长宁县竹海大道1段175号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/03/wKgJPlwh3AiACAqHAAS4yS96Wxk390.png","metaKeywords":"028-83996976","createTime":"2018-12-25 15:20:25","updateTime":"2018-12-28 16:21:49","id":263,"title":"成都新都汽车站","metaDes":"成都市新都区绕城大道东一段1600号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/00/wKgJJFoqyP-AMgM5AAFEoXoJtA4429.jpg","metaKeywords":"0817-3638622","createTime":"2017-12-09 01:16:50","updateTime":"2018-12-28 16:18:49","id":70,"title":"南充客运站","metaDes":"南充市嘉陵区嘉西路1号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPVwl02qAOlr3AABesBislwU253.png","metaKeywords":"028-82726553","createTime":"2018-12-25 14:54:52","updateTime":"2018-12-28 16:18:45","id":239,"title":"成都温江汽车站","metaDes":"成都市温江区"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPVwl04KAMdW5AABesBislwU254.png","metaKeywords":"028-85832852","createTime":"2018-12-25 13:45:16","updateTime":"2018-12-28 16:18:40","id":211,"title":"成都双流汽车站","metaDes":"广都大道188"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPlwl04mAA5ohAABesBislwU510.png","metaKeywords":"028-84920025","createTime":"2018-12-25 11:45:15","updateTime":"2018-12-28 16:18:33","id":175,"title":"成都金堂汽车站","metaDes":"金堂县赵镇十里大道二段409号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/03/wKgJPVwhuxKAQaOXAARfHRIHDyc609.png","metaKeywords":"028-83694949","createTime":"2018-12-25 13:07:30","updateTime":"2018-12-28 16:18:28","id":191,"title":"成都青白江汽车站","metaDes":"四川省成都市青白江区同华大道青白江客运站附近"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/06/wKgJPVwl23iAXTUDAABesBislwU041.png","metaKeywords":"0817-7216880","createTime":"2018-12-26 14:45:23","updateTime":"2018-12-28 16:14:49","id":571,"title":"仪陇汽车站","metaDes":"南充市仪陇县新政镇永丰路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/06/wKgJPlwl22OAdTCXAABesBislwU915.png","metaKeywords":"0831-5580986","createTime":"2018-12-26 14:52:16","updateTime":"2018-12-28 16:14:28","id":579,"title":"高县城南车站","metaDes":"宜宾市高县文江镇柳怀路8号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPVwl2qSAYBZLAABesBislwU574.png","metaKeywords":"0813-7218189","createTime":"2018-12-25 16:47:25","updateTime":"2018-12-28 16:11:17","id":351,"title":"富顺城东汽车站","metaDes":"富顺县富顺东街"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/00/wKgJJFoqxXiAJFIRAAFdthf7J7U217.jpg","metaKeywords":"028-85433609","createTime":"2017-12-09 01:01:45","updateTime":"2018-12-28 16:10:27","id":62,"title":"成都新南门车站","metaDes":"成都市武侯区新南门临江路57号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/00/wKgJJFoqx_6ARAPHAAFml6WKEbk130.jpg","metaKeywords":"028-84716404","createTime":"2017-12-09 01:12:34","updateTime":"2018-12-28 16:10:21","id":67,"title":"成都汽车总站","metaDes":"成都市成华区迎晖路194号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/00/wKgJJFoqym-Aa3IZAAr7cUtxVM4964.png","metaKeywords":"0833-2450177","createTime":"2017-12-09 01:22:56","updateTime":"2018-12-28 16:06:05","id":73,"title":"乐山汽车客运中心站","metaDes":"四川省乐山市市中区宝莲路与瑞祥路交叉口"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/00/wKgJJFoqx5KAU8m7AAH3YIVTfH8575.jpg","metaKeywords":"028-83591407","createTime":"2017-12-09 01:10:43","updateTime":"2018-12-28 16:05:18","id":66,"title":"昭觉寺汽车站","metaDes":"金牛区昭青横路166号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPlwl1sOAFv1tAABesBislwU395.png","metaKeywords":"15983559858","createTime":"2018-12-27 14:49:56","updateTime":"2018-12-28 15:54:44","id":675,"title":"盐边汽车站","metaDes":"四川省攀枝花市盐边县桐子林镇东城街116号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPVwl1pyAbxYPAABesBislwU209.png","metaKeywords":"0816-4369908","createTime":"2018-12-27 16:50:52","updateTime":"2018-12-28 15:54:05","id":799,"title":"绵阳秀水汽车站","metaDes":"绵阳市安州区秀水镇南苑"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPVwl1o6AHsrGAABesBislwU428.png","metaKeywords":"0816-5337280","createTime":"2018-12-27 16:59:20","updateTime":"2018-12-28 15:53:50","id":811,"title":"三台城北汽车站","metaDes":"三台县新渡口大桥南侧马望路东150米"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/03/wKgJPlwhpJmAWa-_AA8Q1p8R_sI110.png","metaKeywords":"(028)81510314","createTime":"2018-12-25 11:31:38","updateTime":"2018-12-28 15:53:26","id":167,"title":"成都华阳汽车站","metaDes":"四川省成都市天府新区麓山大道一段17号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/03/wKgJPlwhvneADrfhAAWJwqF3T8s072.png","metaKeywords":"028-85316127","createTime":"2018-12-25 13:21:59","updateTime":"2018-12-28 15:53:24","id":199,"title":"成都石羊客运站","metaDes":"四川省成都市武侯区益新大道799号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/00/wKgJJFoqxteAdeK2AAGZJnOda5U400.jpg","metaKeywords":"0838-2201299","createTime":"2017-12-09 01:07:36","updateTime":"2018-12-28 15:53:20","id":65,"title":"德阳汽车客运南站","metaDes":"德阳市泰山南路与黔江路交汇处东南角"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPVwl1mSAF8p0AABesBislwU384.png","metaKeywords":"028-85950512","createTime":"2018-12-25 11:15:35","updateTime":"2018-12-28 15:53:09","id":163,"title":"成都城东汽车站","metaDes":"四川省成都市锦江区南三环路二段辅路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPVwl1hSAZUWCAABesBislwU365.png","metaKeywords":"0816-4369908","createTime":"2018-12-27 16:06:57","updateTime":"2018-12-28 15:51:49","id":767,"title":"绵阳安州区客运站","metaDes":"安州区花荄镇文苑路西段"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPlwl1f-AcduxAABesBislwU471.png","metaKeywords":"0835-8862057","createTime":"2018-12-27 15:51:18","updateTime":"2018-12-28 15:51:27","id":739,"title":"石棉县汽车站","metaDes":"石棉县解放路一段70号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPVwl1faAAQWwAABesBislwU797.png","metaKeywords":"0835-4382340","createTime":"2018-12-27 15:36:57","updateTime":"2018-12-28 15:51:19","id":727,"title":"汉源县汽车站","metaDes":"雅安市汉源县富林大道二段"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPVwl1emAN146AABesBislwU284.png","metaKeywords":"0835-3222552","createTime":"2018-12-27 15:46:30","updateTime":"2018-12-28 15:51:06","id":735,"title":"名山汽车站","metaDes":"名山汽车站"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPlwl1eGAAekDAABesBislwU670.png","metaKeywords":"0835-7227311","createTime":"2018-12-27 15:55:05","updateTime":"2018-12-28 15:50:58","id":743,"title":"天全县汽车站","metaDes":"向阳大道56号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPVwl1dqAUy8IAABesBislwU382.png","metaKeywords":"0816-4225549","createTime":"2018-12-27 15:55:57","updateTime":"2018-12-28 15:50:50","id":747,"title":"安昌城北车站","metaDes":"北川羌族自治县安昌镇东风路北段"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPlwl1cOANmwBAABesBislwU853.png","metaKeywords":"0816-4222586","createTime":"2018-12-27 15:59:17","updateTime":"2018-12-28 15:50:28","id":751,"title":"安昌城南汽车客运站","metaDes":"北川安昌镇沙汀路6号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPVwl1b2AewdjAABesBislwU445.png","metaKeywords":"18048171455","createTime":"2018-12-27 16:02:17","updateTime":"2018-12-28 15:50:21","id":759,"title":"北川客运站","metaDes":"北川县白草街92号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPVwl1YyANvWQAABesBislwU804.png","metaKeywords":"0816-8829456/882326","createTime":"2018-12-27 16:57:06","updateTime":"2018-12-28 15:49:33","id":807,"title":"平武汽车站","metaDes":"平武县报恩寺街"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPVwl1X-APJzGAABesBislwU732.png","metaKeywords":"0831-3541909","createTime":"2018-12-27 17:33:20","updateTime":"2018-12-28 15:49:19","id":871,"title":"资中车站","metaDes":"资中县城南路２０号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPVwl1VWAXF3OAABesBislwU368.png","metaKeywords":"0832-3982052","createTime":"2018-12-27 17:16:31","updateTime":"2018-12-28 15:48:38","id":843,"title":"隆昌南站","metaDes":"内江市隆昌市新华街618号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPlwl1AyAQ4E6AABesBislwU704.png","metaKeywords":"0816-8261645","createTime":"2018-12-27 17:11:22","updateTime":"2018-12-28 15:43:09","id":831,"title":"梓潼汽车站","metaDes":"梓潼县文昌大道中段"}];
+  	window.STATIONINFO_520000ALL=[{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPVwl2jOAUWFDAABesBislwU839.png","metaKeywords":"0851-22250644","createTime":"2018-12-25 17:19:55","updateTime":"2019-03-10 13:36:48","id":403,"title":"仁怀汽车站","metaDes":"仁怀市茅台路45号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPlxRP5uAEA5mAADuPbOOdXE197.jpg","metaKeywords":"0851-22520672","createTime":"2018-12-25 17:47:26","updateTime":"2019-03-06 11:48:19","id":427,"title":"习水汽车站","metaDes":"习水县习酒路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPVxRQJyAb_SVAACRtSwYmqA367.jpg","metaKeywords":"0851-28674544","createTime":"2018-12-25 17:59:41","updateTime":"2019-01-30 14:13:48","id":451,"title":"遵义汽车总站","metaDes":"遵义市红花岗区326国道遵湄路口"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPlxRQIyAB8fOAAFDjvPuWlI590.jpg","metaKeywords":"0851-28431188","createTime":"2018-12-25 18:06:24","updateTime":"2019-01-30 14:13:32","id":463,"title":"遵义忠庄汽车站","metaDes":"红花岗区海尔大道1号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPVxRQFyAAy3aAAEH3FW9Ne4049.jpg","metaKeywords":"0851-35233719","createTime":"2018-12-25 16:08:37","updateTime":"2019-01-30 14:12:44","id":315,"title":"紫云汽车站","metaDes":"紫云苗族布依族自治县松山镇团坡外环西路汽车站"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPlxRQEeAAPD4AAQ6d3PWcos346.jpg","metaKeywords":"0857-7162777","createTime":"2019-01-04 14:18:49","updateTime":"2019-01-30 14:12:23","id":983,"title":"织金汽车站","metaDes":"毕节市织金县三甲桂花大道"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPVxRQDCALuMZAAELVzgIo_w954.jpg","metaKeywords":"0851-26400142","createTime":"2018-12-25 17:52:34","updateTime":"2019-01-30 14:12:00","id":435,"title":"正安汽车站","metaDes":"尹珍南路7号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPlxRQA6ARgnAAABMENh-04I097.jpg","metaKeywords":"0856-3221242","createTime":"2019-01-04 14:25:33","updateTime":"2019-01-30 14:11:26","id":987,"title":"玉屏汽车站","metaDes":"玉屏县火车站对面"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPVxRP_qAO-nRAAIs98KVabI183.jpg","metaKeywords":"0851-24621831","createTime":"2018-12-25 17:49:58","updateTime":"2019-01-30 14:11:07","id":431,"title":"余庆汽车站","metaDes":"中华中路1号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPlxRP7uAVBddAAF27epHS4Y761.jpg","metaKeywords":"0856-6221119","createTime":"2019-01-04 15:16:10","updateTime":"2019-01-30 14:10:05","id":1027,"title":"印江西环汽车站","metaDes":"印江自治县峨岭镇西环大道"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPVxRP62Ab1OZAACTbfo8w4E875.jpg","metaKeywords":"0851-82328116","createTime":"2018-12-25 16:48:12","updateTime":"2019-01-30 14:09:49","id":355,"title":"修文客运站","metaDes":"修文县龙场镇河滨路356号（新客运站）"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPlxRP3qAbOuWAAEg5TVH-BI406.jpg","metaKeywords":"0851-87724165","createTime":"2018-12-25 16:44:34","updateTime":"2019-01-30 14:08:58","id":347,"title":"息烽客运站","metaDes":"贵州省贵阳市息烽县虎城大道与龙泉大道交叉口东150米"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPVxRPyKAYUuRAAB0wl6uOUo794.jpg","metaKeywords":"400-6608787","createTime":"2018-12-25 17:44:54","updateTime":"2019-01-30 14:07:31","id":423,"title":"务川汽车站","metaDes":"环城北路与350县道交叉口东150米"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPlxRPqGAL4lSAABrAPJBIdU857.jpg","metaKeywords":"0856-5257782","createTime":"2019-01-04 14:52:48","updateTime":"2019-01-30 14:05:22","id":1007,"title":"铜仁旅游汽车站","metaDes":"铜仁市在五环家具广场一楼"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPVxRPouATntMAADvElAqC_Y895.jpg","metaKeywords":"0856-5254481","createTime":"2019-01-04 14:58:03","updateTime":"2019-01-30 14:04:59","id":1011,"title":"铜仁城南汽车站","metaDes":"铜仁市碧江区六场路127号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPlxRPnCADE5aAACKTR5Mq4c775.jpg","metaKeywords":"0851-26634722","createTime":"2018-12-25 17:39:45","updateTime":"2019-01-30 14:04:32","id":419,"title":"桐梓汽车客运站","metaDes":"遵义市桐梓县滨河印象102"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPVxRPk6AectYAAB0uZ2wrhg257.jpg","metaKeywords":"0851-86233868","createTime":"2018-12-25 17:28:27","updateTime":"2019-01-30 14:03:58","id":407,"title":"绥阳汽车站","metaDes":"绥阳县西环路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPlxRPiiAGMi2AAFOH3Ce4fY700.jpg","metaKeywords":"0856-2830224","createTime":"2019-01-04 14:47:16","updateTime":"2019-01-30 14:03:20","id":1003,"title":"松桃汽车站","metaDes":"松桃县蓼皋镇北路湘渝大道旁"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPVxRPfOAVNECAABfddQXx2U513.jpg","metaKeywords":"0856-7229080","createTime":"2019-01-04 15:28:40","updateTime":"2019-01-30 14:02:28","id":1035,"title":"思南汽车站","metaDes":"贵州省铜仁市思南县城南大道城北新区"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPlxRPauAPZ1qAABm_x5QT88426.jpg","metaKeywords":"0856-7622227","createTime":"2019-01-04 14:43:19","updateTime":"2019-01-30 14:01:15","id":999,"title":"石阡汽车站","metaDes":"石阡县香树园石阡汽车站"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPVxRPVaAKToeAACT8w2QOWU000.jpg","metaKeywords":"028-85692938","createTime":"2018-12-25 17:34:30","updateTime":"2019-01-30 13:59:51","id":411,"title":"仁怀汽车站","metaDes":"仁怀市茅台路45号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPlxRPS-Ada0bAACCtxQgp6o218.jpg","metaKeywords":"0857-4245088","createTime":"2019-01-04 14:09:11","updateTime":"2019-01-30 13:59:11","id":975,"title":"黔西客运站","metaDes":"黔西同心商贸城"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPVxRPPuAIAKeAAAyrBDa81s827.jpg","metaKeywords":"0851-38222254","createTime":"2018-12-25 15:52:25","updateTime":"2019-01-30 13:58:20","id":295,"title":"平坝南客运站","metaDes":"安顺市普定县城关镇中医院斜对面"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPVxRPOmAS326AADJWkh3I1Y330.jpg","metaKeywords":"0857-3521972","createTime":"2019-01-04 14:05:19","updateTime":"2019-01-30 13:58:02","id":967,"title":"纳雍汽车站","metaDes":"毕节市纳雍县雍熙镇工贸街0001号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPlxRPMeAULnlAABenTCNZOs573.jpg","metaKeywords":"0852-4251956","createTime":"2018-12-25 17:17:18","updateTime":"2019-01-30 13:57:27","id":399,"title":"湄潭汽车站","metaDes":"天文大道路口"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPVxRPK6Ae6yrAADt7xeZuXc992.jpg","metaKeywords":"0851-27568025","createTime":"2018-12-25 17:57:01","updateTime":"2019-01-30 13:57:03","id":443,"title":"遵义茅草铺客运站","metaDes":"遵义市汇川区深圳路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPlxRPHuAXSQVAACWsx8pOmU608.jpg","metaKeywords":"0858-8680173","createTime":"2018-12-25 17:01:25","updateTime":"2019-01-30 13:56:11","id":371,"title":"六盘水南客运站","metaDes":"六盘水市X230(红桥大道)"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPVxRPF6ABGAHAAGZGzeYCzQ488.jpg","metaKeywords":"0858-8680173","createTime":"2018-12-25 16:57:48","updateTime":"2019-01-30 13:55:42","id":363,"title":"六盘水西客运站","metaDes":"贵州省六盘水市钟山区S102(夜郎大道"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/00/wKgJJFoqxeSAUffYACqQ0f9WrXc723.jpg","metaKeywords":"0851--82218000","createTime":"2017-12-09 01:03:33","updateTime":"2019-01-30 13:54:13","id":63,"title":"贵州金阳客车站","metaDes":"贵阳市观山湖区北京西路延伸段(西南商贸城)"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPlxRO9OAPbMBAAFynjB1Pd0474.jpg","metaKeywords":"0856-5225851","createTime":"2019-01-04 14:39:43","updateTime":"2019-01-30 13:53:23","id":995,"title":"江口汽车站","metaDes":"江口县象狮大道七里冲车站"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPVxRO4WAK0NkAABhUo14HSc822.jpg","metaKeywords":"0851-85859089","createTime":"2018-12-25 16:31:06","updateTime":"2019-01-30 13:52:06","id":331,"title":"贵阳客运东站（贵阳龙洞堡汽车客运站）","metaDes":"贵阳市南明区小碧乡水坝村西南环线"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPlxROzqAf9jgAABq8aIqe8A442.jpg","metaKeywords":"0851-37847755","createTime":"2018-12-25 15:17:22","updateTime":"2019-01-30 13:50:50","id":255,"title":"关岭汽车站","metaDes":"关岭县大龙滩高速公路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPVxROHOAdVrHAABiPrkzsy4598.jpg","metaKeywords":"0851-25221020","createTime":"2018-12-25 17:14:26","updateTime":"2019-01-30 13:38:59","id":395,"title":"凤冈客运站","metaDes":"遵义市凤冈县城北大道108号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPlxROF-Aamz7AAH1OCbpHIc759.jpg","metaKeywords":"0856-8533765","createTime":"2019-01-04 14:28:42","updateTime":"2019-01-30 13:38:40","id":991,"title":"德江客车站","metaDes":"德江县青龙镇香树路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPVxROEaAIrPeAABdU3u0aUY977.jpg","metaKeywords":"0852-5820132","createTime":"2018-12-25 17:11:01","updateTime":"2019-01-30 13:38:14","id":391,"title":"道真汽车站","metaDes":"道真县竹王大道附近"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPlxRODCAG0W3AAHaV3Iskzk828.jpg","metaKeywords":"0857-5221426","createTime":"2019-01-04 13:55:24","updateTime":"2019-01-30 13:37:52","id":955,"title":"大方汽车站","metaDes":"九驿大道大方五中对面"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPVxROA6Ab1vNAAB4kM80vFI341.jpg","metaKeywords":"0851-22821982","createTime":"2018-12-25 17:08:04","updateTime":"2019-01-30 13:37:18","id":387,"title":"赤水客运站","metaDes":"赤水市三十里河滨大道"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPlxRN-qAJK72AAC2HCNibTs794.jpg","metaKeywords":"400-6608787","createTime":"2019-01-04 13:51:32","updateTime":"2019-01-30 13:36:42","id":951,"title":"毕节高铁客运枢纽中心","metaDes":"金海湖新区梨树镇"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPVxRN7GAV7_ZAAFP-ziox1k360.jpg","metaKeywords":"0853-3223839","createTime":"2018-12-25 14:35:06","updateTime":"2019-01-30 13:35:46","id":223,"title":"安顺客运西站","metaDes":"安顺市黄果树大街高铁西站广场旁"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPlxRN3yALUkDAALhg6pZpzg836.jpg","metaKeywords":"0851-34622598","createTime":"2018-12-25 14:41:51","updateTime":"2019-01-30 13:34:52","id":227,"title":"安顺平坝汽车站","metaDes":"安顺市平坝区安平办事处龙阳路（龙凤山脚）"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/15/wKgJPVxRN1iAaroBAABbdkxSGcc397.jpg","metaKeywords":"0851-33223169","createTime":"2018-12-25 14:19:47","updateTime":"2019-01-30 13:34:17","id":215,"title":"安顺客运东站","metaDes":"安顺市西秀区两六路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/09/wKgJPlwvCPyAAEUBAABesBislwU886.png","metaKeywords":"0856-3221242","createTime":"2019-01-04 15:19:25","updateTime":"2019-01-04 15:19:25","id":1031,"title":"玉屏汽车站","metaDes":"玉屏县火车站对面"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/09/wKgJPlwvBxaAdkk4AABesBislwU124.png","metaKeywords":"0856-6228088","createTime":"2019-01-04 15:11:19","updateTime":"2019-01-04 15:11:19","id":1023,"title":"印江汽车客运站","metaDes":"印江县峨岭镇梵净山大道389号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/09/wKgJPVwvBjWAWx2rAABesBislwU913.png","metaKeywords":"0856-822085","createTime":"2019-01-04 15:07:34","updateTime":"2019-01-04 15:07:34","id":1019,"title":"沿河汽车站","metaDes":"沿河县和平镇崔家村城南路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/09/wKgJPlwvBMOAUWwlAABesBislwU345.png","metaKeywords":"0856-822085/ 0856-8225061","createTime":"2019-01-04 15:01:23","updateTime":"2019-01-04 15:01:58","id":1015,"title":"沿河河东客运站","metaDes":"沿河县河东开发区东环路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/09/wKgJPVwu-h-AKIbKAABesBislwU424.png","metaKeywords":"0857-7132688","createTime":"2019-01-04 14:15:59","updateTime":"2019-01-04 14:15:59","id":979,"title":"威宁汽车站","metaDes":"威宁县环城路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/09/wKgJPlwu9dKABEixAABesBislwU271.png","metaKeywords":"0857-3222709","createTime":"2019-01-04 13:57:39","updateTime":"2019-01-04 14:01:32","id":959,"title":"赫章汽车站","metaDes":"毕节市赫章县夜郎大道"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/08/wKgJPVwu9pWAOpAJAABesBislwU095.png","metaKeywords":"0857-7120588","createTime":"2019-01-04 14:00:53","updateTime":"2019-01-04 14:00:53","id":963,"title":"金沙汽车站","metaDes":"金沙县新城区金槐社区"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/08/wKgJPVwu80-ADC_jAABesBislwU984.png","metaKeywords":"0857-8298847","createTime":"2019-01-04 13:46:55","updateTime":"2019-01-04 13:46:55","id":947,"title":"毕节西汽车站","metaDes":"毕节市威宁路与翠屏路交叉口"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/00/wKgJJFoqyNqAdiHcAAF8N1_6etM810.jpg","metaKeywords":"(0857)8298670","createTime":"2017-12-09 01:16:11","updateTime":"2018-12-28 16:22:55","id":69,"title":"毕节东客站","metaDes":"毕节市麻园路与学院路交叉口"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/06/wKgJPlwl3N-AXIpKAABesBislwU654.png","metaKeywords":"0851-38222254","createTime":"2018-12-25 15:22:04","updateTime":"2018-12-28 16:20:47","id":267,"title":"普定汽车北站","metaDes":"安顺市普定县城关镇中医院斜对面"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/06/wKgJPlwl3MOAcwWKAABesBislwU076.png","metaKeywords":"0851—-36222360","createTime":"2018-12-25 16:02:09","updateTime":"2018-12-28 16:20:19","id":303,"title":"镇宁江龙客车站","metaDes":"镇宁县江龙镇政府西北"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPVwl2pWABoWLAABesBislwU487.png","metaKeywords":"0851-2522240","createTime":"2018-12-25 16:41:18","updateTime":"2018-12-28 16:11:01","id":343,"title":"清镇汽车站","metaDes":"红旗路30附近"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPlwl2o6AbHmQAABesBislwU055.png","metaKeywords":"028-85692938","createTime":"2018-12-25 16:37:54","updateTime":"2018-12-28 16:10:55","id":339,"title":"开阳汽车客运站","metaDes":"贵州省贵阳市开阳县开洲大道12"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPlwl2lmACh4IAABesBislwU535.png","metaKeywords":"(0858)3696208","createTime":"2018-12-25 17:04:36","updateTime":"2018-12-28 16:10:01","id":379,"title":"盘州市红果汽车","metaDes":"贵州省六盘水市盘州市红果汽车站(胜境大道东)"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPVwl2deAQY41AABesBislwU139.png","metaKeywords":"0852-7563286","createTime":"2018-12-25 18:01:45","updateTime":"2018-12-28 16:07:52","id":455,"title":"遵义县鸭溪客运站","metaDes":"遵义县326国道附近"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/00/wKgJJFoqyC6AA21dAAlG963WLT0454.jpg","metaKeywords":"0851--85859089;0851--85599412","createTime":"2017-12-09 01:13:20","updateTime":"2018-07-24 10:10:51","id":68,"title":"贵阳客运东站","metaDes":"贵阳市南明区小碧乡水坝村西南环线（龙洞堡）"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/00/wKgJJFoqzDaAY3ATAAUnc88th2M638.jpg","metaKeywords":"0859--3227304;0859--3223021","createTime":"2017-12-09 01:30:31","updateTime":"2018-07-24 10:03:08","id":76,"title":"兴义客运东站","metaDes":"兴义市宜化大道1号（浙兴商贸博览城旁）"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/00/wKgJJFoqyqmAE-IkAEb73gMGLlQ865.jpg","metaKeywords":"(0856)5253622","createTime":"2017-12-09 01:23:54","updateTime":"2018-07-24 10:01:30","id":74,"title":"铜仁客车站","metaDes":"铜仁市碧江区大庆中路43号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/00/wKgJJFoqybOAU0U0AANf-1xRdCo186.jpg","metaKeywords":"(0854)8330231","createTime":"2017-12-09 01:19:48","updateTime":"2018-07-24 09:59:06","id":72,"title":"都匀客运总站","metaDes":"都匀市剑江北路138号"}];
+  	window.STATIONINFO_500000ALL=[{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/17/wKgJPVxUHBeAQfw9AAA7-ybhL-w694.jpg","metaKeywords":"023-70704792","createTime":"2018-12-25 18:47:24","updateTime":"2019-02-01 18:16:10","id":511,"title":"丰都汽车站","metaDes":"丰都三合街道滨江西路127号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/17/wKgJPVxUGrGAZAxiAABHKA5B_dY871.jpg","metaKeywords":"023-53253633","createTime":"2018-12-26 13:54:27","updateTime":"2019-02-01 18:15:07","id":547,"title":"梁平汽车站","metaDes":"庆市梁平县梁山镇大河路2号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/17/wKgJPlxUG2WAZhKFAAKaIj3J7-I299.jpg","metaKeywords":"023-57651677","createTime":"2018-12-25 15:22:52","updateTime":"2019-02-01 18:11:50","id":271,"title":"巫山汽车客运站","metaDes":"重庆市巫山县平湖西路480号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/17/wKgJPVxUG0CACXwcAACm5Aw9Srw309.jpg","metaKeywords":"(023)78491785","createTime":"2018-12-25 18:19:52","updateTime":"2019-02-01 18:11:13","id":475,"title":"彭水县汽车站","metaDes":"彭水苗族土家族自治县 城隍巷21附35号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/17/wKgJPlxUGxKAFNyQAAEIfWbAnzQ884.jpg","metaKeywords":"023-56521051","createTime":"2018-12-25 18:45:08","updateTime":"2019-02-01 18:10:26","id":507,"title":"奉节汽车站","metaDes":"奉节县永安镇诗城路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/17/wKgJPVxUGwGAF0EEAAEcMwsnGww631.jpg","metaKeywords":"023-73332428","createTime":"2018-12-25 14:45:22","updateTime":"2019-02-01 18:10:09","id":231,"title":"石柱汽车总站","metaDes":"重庆市石柱县南宾镇万寿大道(城南汽车站)"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/17/wKgJPlxUGnOAXhMWAABlm4U9NBI307.jpg","metaKeywords":"023-74603269","createTime":"2018-12-25 18:26:14","updateTime":"2019-02-01 18:07:47","id":491,"title":"垫江汽车站","metaDes":"重庆市垫江县桂溪镇牡丹大道86号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/17/wKgJPlxUGfCANjPOAACDghhR4Z4398.png","metaKeywords":"52222993","createTime":"2018-12-26 13:49:49","updateTime":"2019-02-01 18:05:36","id":539,"title":"重庆开州汽车站","metaDes":"重庆市开州区云枫街道长青社区裕安街13号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/16/wKgJPVxSoXyAYGbcAAB_PfSOPLc816.jpg","metaKeywords":"(023)85809991","createTime":"2018-12-25 16:14:51","updateTime":"2019-01-31 17:50:39","id":323,"title":"忠县汽车总站","metaDes":"重庆市忠县忠州镇环城路59号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/16/wKgJPVxSxN6AKbbeAACKk-DB7Rs226.jpg","metaKeywords":"023-85562614","createTime":"2018-12-25 18:22:13","updateTime":"2019-01-31 17:50:22","id":483,"title":"重庆江津汽车站","metaDes":"重庆市江津区几江街道津西路转盘客运中心"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/16/wKgJPlxSxMuAN9Z9AABlb9X6du0305.jpg","metaKeywords":"023-42898631","createTime":"2018-12-25 18:40:45","updateTime":"2019-01-31 17:50:04","id":503,"title":"重庆合川汽车","metaDes":"重庆市合川区合阳办北环路2号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/16/wKgJPVxSxLqADTpCAACVo66oFaA371.jpg","metaKeywords":"023-71432296","createTime":"2018-12-25 18:31:50","updateTime":"2019-01-31 17:49:47","id":499,"title":"重庆南川汽车站","metaDes":"重庆市南川区火车大道3号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/16/wKgJPlxSxIOANOY3AADVZzlHEGA274.jpg","metaKeywords":"023-43722038 ","createTime":"2018-12-25 18:20:02","updateTime":"2019-01-31 17:48:51","id":479,"title":"重庆大足汽车站","metaDes":"重庆大足区双塔路224"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/16/wKgJPlxSojOAZrYOAAA53n94zxk101.jpg","metaKeywords":"023-40463346","createTime":"2018-12-25 16:08:19","updateTime":"2019-01-31 15:22:27","id":311,"title":"长寿汽车客运总站","metaDes":"重庆市长寿区桃花大道18号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/16/wKgJPVxSoiOAcJaOAAZTgYJ8G5c427.png","metaKeywords":"023-55123000","createTime":"2018-12-25 16:11:11","updateTime":"2019-01-31 15:22:12","id":319,"title":"云阳汽车客运中心","metaDes":"重庆市云阳县滨江大道3068号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/16/wKgJPlxSohSAG3KIAABICptaOu4673.jpg","metaKeywords":"(023)45632685重庆市铜梁区中南路1号","createTime":"2018-12-25 14:47:23","updateTime":"2019-01-31 15:21:57","id":235,"title":"铜梁汽车客运北站","metaDes":"重庆市铜梁区中南路1号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/16/wKgJPVxSogOAZaQOAARiOU2uIPs053.png","metaKeywords":"023-45645257","createTime":"2018-12-25 15:02:10","updateTime":"2019-01-31 15:21:40","id":243,"title":"铜梁汽车客运南站","metaDes":"铜梁区南城街道办事处西环路南段600号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/16/wKgJPlxSoSaAcQ18AACZUlB4lwA904.jpg","metaKeywords":"023-49854255","createTime":"2018-12-25 16:03:08","updateTime":"2019-01-31 15:17:59","id":307,"title":"永川汽车总站","metaDes":"重庆市永川区渝西大道中段1469"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/16/wKgJPVxSoRWAWLHhAAI_Gvg40no345.png","metaKeywords":"023-49810138","createTime":"2018-12-25 15:54:03","updateTime":"2019-01-31 15:17:42","id":299,"title":"永川客运中心","metaDes":"重庆市永川区内环南路611号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/16/wKgJPlxSoQOAZb6CAABO7-CwokU043.jpg","metaKeywords":"023-76864173","createTime":"2018-12-25 15:50:49","updateTime":"2019-01-31 15:17:24","id":291,"title":"秀山汽车总站","metaDes":"重庆市秀山土家族苗族自治县丹凤路与桂花路交叉口东北侧"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/16/wKgJPVxSoPeAaQVYAAB0iCQP_3Q310.jpg","metaKeywords":"(023)77721817","createTime":"2018-12-25 15:28:48","updateTime":"2019-01-31 15:17:11","id":283,"title":"武隆汽车客运站","metaDes":"武隆区巷口镇白杨路8号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/16/wKgJPlxSoOqAZWCHAAM6ampHGm8430.png","metaKeywords":"023-51530072","createTime":"2018-12-25 15:26:16","updateTime":"2019-01-31 15:16:58","id":275,"title":"巫溪长途汽车站","metaDes":"重庆市巫溪县滨河北路234附近"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/16/wKgJPVxSoNmABEpQAAEqtZWFXKE136.jpg","metaKeywords":"023-58375343","createTime":"2018-12-25 15:19:10","updateTime":"2019-01-31 15:16:41","id":259,"title":"万州汽车北站","metaDes":"重庆市万州区天城大道928"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/16/wKgJPlxSoLmAaGKZAABBLMv1J80777.jpg","metaKeywords":"023-44551187","createTime":"2018-12-25 15:14:04","updateTime":"2019-01-31 15:16:10","id":251,"title":"潼南汽车总站","metaDes":"重庆市潼南区大同街167号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/10/wKgJPlxFj3-ATPnmAABxZPZgsJc915.jpg","metaKeywords":"023-46732875","createTime":"2018-12-25 14:24:21","updateTime":"2019-01-21 17:23:12","id":219,"title":"荣昌汽车总站","metaDes":"重庆市荣昌区108省道昌州大道中段"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/06/wKgJPVwl3NiAV20WAABesBislwU914.png","metaKeywords":"028-85692938","createTime":"2018-12-25 15:36:40","updateTime":"2018-12-28 16:20:40","id":287,"title":"重庆綦江汽车站","metaDes":"重庆市綦江区文龙街道九龙大道46号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/06/wKgJPlwl3B-AaG0GAABesBislwU430.png","metaKeywords":"023-79252342","createTime":"2018-12-25 16:22:24","updateTime":"2018-12-28 16:17:36","id":327,"title":"黔江汽车东站","metaDes":"重庆市黔江区官坝路118"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPVwl2iWAez__AABesBislwU536.png","metaKeywords":"023-41401634","createTime":"2018-12-25 17:37:23","updateTime":"2018-12-28 16:09:10","id":415,"title":"重庆长运璧山汽车总站","metaDes":"重庆市璧山区璧渝路115号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/05/wKgJPVwl2feACUjFAABesBislwU464.png","metaKeywords":"13635321682","createTime":"2018-12-25 17:53:01","updateTime":"2018-12-28 16:08:23","id":439,"title":"重庆城口土产汽车站","metaDes":"重庆城口县商业街10号附3"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/01/wKgJJFq-VoeAXIM8AABdgrPcwUY816.jpg","metaKeywords":"023—63736778","createTime":"2018-03-30 23:23:52","updateTime":"2018-04-09 17:06:59","id":87,"title":"重庆红旗河沟汽车站","metaDes":"重庆市江北区建新北路49号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/01/wKgJJFq-QyGAAFOGAALUUepOFsA720.jpg","metaKeywords":"023-86286871","createTime":"2018-03-30 22:01:06","updateTime":"2018-03-30 23:40:54","id":84,"title":"重庆沙坪坝汽车站","metaDes":"重庆市沙坪坝区沙中路重庆大学国家科技园旁"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/01/wKgJJFq-Ts6AXR1TAABUkBdGdVU170.jpg","metaKeywords":"023—63203417","createTime":"2018-03-30 22:50:55","updateTime":"2018-03-30 23:40:48","id":86,"title":"重庆北站北广场汽车站","metaDes":"重庆市北部新区庐山大道"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/01/wKgJJFq-WmaAeqpCAAI8Ovii9Co238.jpg","metaKeywords":"023-4272508","createTime":"2018-03-30 23:40:23","updateTime":"2018-03-30 23:40:23","id":89,"title":"合川汽车客运总站","metaDes":"重庆市合川区书院路187号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/01/wKgJJFq-WWSAce8aAAJXPOROExw707.jpg","metaKeywords":"023-63103766","createTime":"2018-03-30 23:36:05","updateTime":"2018-03-30 23:36:05","id":88,"title":"菜园坝旅游集散中心","metaDes":"重庆市渝中区菜袁路6号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/01/wKgJJFq-Rb-AFw0-AAAlsqW07P8343.jpg","metaKeywords":"023—89088988","createTime":"2018-03-30 22:12:16","updateTime":"2018-03-30 22:52:12","id":85,"title":"重庆陈家坪汽车站","metaDes":"重庆市渝中区菜袁路6号"}];
+  	window.STATIONINFO_530000ALL=[{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/35/wKgJPlzOg1uAN6QNAABesBislwU262.png","metaKeywords":"0871-8910448","createTime":"2019-01-08 19:23:42","updateTime":"2019-05-05 14:31:56","id":1179,"title":"禄劝县汽车客运站","metaDes":"昆明市禄劝彝族苗族自治县秀屏路185号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/35/wKgJPlzOX0iAAJbTAABesBislwU783.png","metaKeywords":"0877-4968168","createTime":"2019-01-08 19:35:16","updateTime":"2019-05-05 11:58:00","id":1191,"title":"峨山汽车客运站","metaDes":"玉溪市峨山彝族自治县锦山路8"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/35/wKgJPVzOXpyALCUsAABesBislwU567.png","metaKeywords":"400-08-84365","createTime":"2019-01-08 19:39:56","updateTime":"2019-05-05 11:55:08","id":1195,"title":"富民客运站","metaDes":"昆明市富民县环城南路38号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0A/wKgJPVwy7CmASBbcAABesBislwU671.png","metaKeywords":"0879-723262","createTime":"2019-01-07 14:05:30","updateTime":"2019-01-24 17:52:13","id":1051,"title":"澜沧县汽车站","metaDes":"普洱市澜沧拉祜族自治县"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxJhiqAEPwkAACG69fnCEE941.jpg","metaKeywords":"0879-3232523","createTime":"2019-01-07 15:21:34","updateTime":"2019-01-24 17:32:27","id":1087,"title":"宁洱县汽车站","metaDes":"普洱市宁洱哈尼族彝族自治县"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/12/wKgJPlxJhhSABzg1AAGLuwQp5-Q774.jpg","metaKeywords":"0879-8342327","createTime":"2019-01-07 16:08:47","updateTime":"2019-01-24 17:32:04","id":1115,"title":"西盟汽车站","metaDes":"普洱市西盟佤族自治县勐卡路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxJhgGAGDwXAACVcNqI1qk135.jpg","metaKeywords":"0883-5215894","createTime":"2019-01-07 16:20:05","updateTime":"2019-01-24 17:31:46","id":1123,"title":"永德县汽车站","metaDes":"临沧市永德县一中附近"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/12/wKgJPlxJhe-AQb3rAAEQovTdxrA781.jpg","metaKeywords":"010-10101234","createTime":"2019-01-07 16:28:40","updateTime":"2019-01-24 17:31:28","id":1131,"title":"玉龙县汽车站","metaDes":"丽江玉龙纳西族自治县"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxIBSKAGP7GAACC8bKAFaY126.jpg","metaKeywords":"(0879)2308286","createTime":"2019-01-07 17:03:26","updateTime":"2019-01-24 17:31:05","id":1159,"title":"普洱客运站","metaDes":"云南省普洱市振兴大道148号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxIBTSAUWfeAAMLymZM4RI773.png","metaKeywords":"(0883)3221333","createTime":"2019-01-07 17:07:17","updateTime":"2019-01-24 17:31:00","id":1163,"title":"云县汽车站","metaDes":"黄山路15号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxJhbWAUDJPAAEQs7rdQo8483.jpg","metaKeywords":"0879-5227549","createTime":"2019-01-07 16:54:10","updateTime":"2019-01-24 17:30:29","id":1151,"title":"云南景谷县汽车站","metaDes":"普洱市文明路15号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxJhNqABdB1AABS7njCWX8144.jpg","metaKeywords":"0870-6129656","createTime":"2019-01-07 15:56:49","updateTime":"2019-01-24 17:26:51","id":1111,"title":"威信县汽车站","metaDes":"昭通市威信县长征路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPlxIBVOABCllAAPH1Suq740084.png","metaKeywords":"(0888)6846499","createTime":"2019-01-07 16:23:54","updateTime":"2019-01-24 17:25:32","id":1127,"title":"永胜客运站","metaDes":"云南省丽江市永胜县"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPlxJhDmAMj-iAAHqhBgfamg179.jpg","metaKeywords":"18987522770","createTime":"2019-01-07 15:52:07","updateTime":"2019-01-24 17:24:10","id":1107,"title":"腾冲县旅游汽车散客接待站","metaDes":"保山腾冲市云南省和顺古镇门口"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPlxIBMeAaovrAACCQPGJBGM894.png","metaKeywords":"0870-3132849","createTime":"2019-01-07 17:12:47","updateTime":"2019-01-24 17:23:40","id":1167,"title":"镇雄客运新南站","metaDes":"昭通南大街"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxIBIyAM_ZnAALaFg5VdQI686.png","metaKeywords":"0883-6630361","createTime":"2019-01-07 17:24:49","updateTime":"2019-01-24 17:23:30","id":1175,"title":"镇康南伞汽车站","metaDes":"临沧市镇康县南伞镇公主路1号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxJhASAKycWAACuVPlU0kU142.jpg","metaKeywords":"0870-7122203","createTime":"2019-01-07 15:37:20","updateTime":"2019-01-24 17:23:17","id":1095,"title":"巧家县汽车站","metaDes":"巧家县花桥社区新客运站"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPlxICdyAWMFlAAHjIEp_6ls677.jpg","metaKeywords":"(0875)7130695","createTime":"2019-01-07 16:34:19","updateTime":"2019-01-24 17:22:16","id":1135,"title":"昌宁县汽车站","metaDes":"云南省保山市昌宁县"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPlxJg8GAULOoAABDi0eYo_s778.jpg","metaKeywords":"(0875)6127238","createTime":"2019-01-07 14:59:30","updateTime":"2019-01-24 17:22:10","id":1079,"title":"龙陵汽车站","metaDes":"云南保山市龙陵龙华路北段"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxIDf-AFIbqAASeC9BGc3c805.jpg","metaKeywords":"0875-8121048","createTime":"2019-01-07 15:44:00","updateTime":"2019-01-24 17:17:22","id":1099,"title":"施甸客运站","metaDes":"保山施甸县云南省甸阳路北段"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPlxICsyAc35fAACG69fnCEE467.jpg","metaKeywords":"0888—5521505","createTime":"2019-01-07 15:28:26","updateTime":"2019-01-24 17:17:10","id":1091,"title":"宁蒗县汽车站","metaDes":"宁蒗县大兴镇万格路739号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxIMHmAdR72AACOoQ_pH7o111.jpg","metaKeywords":"0877-6014642","createTime":"2019-01-11 10:38:24","updateTime":"2019-01-23 17:14:33","id":1323,"title":"元江汽车客运站","metaDes":"玉溪市元江县凤凰路4号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPlxIMGyAKiKcAAB-4MXgGWE212.jpg","metaKeywords":"0877-2071796","createTime":"2019-01-11 10:30:22","updateTime":"2019-01-23 17:14:20","id":1315,"title":"玉溪城南客运站","metaDes":"玉溪市明珠路106号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxIMGGAXcWyAAIAcAGvXgc895.png","metaKeywords":"0870-6624819","createTime":"2019-01-10 16:34:49","updateTime":"2019-01-23 17:14:10","id":1299,"title":"盐津汽车客运站","metaDes":"昭通市盐津县盐井镇黄葛槽新区(黄葛槽邮政储蓄所对面)  "},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPlxIMFWAfhJ2AAG9JqsOtHo587.png","metaKeywords":"0871-2662363","createTime":"2019-01-10 14:45:16","updateTime":"2019-01-23 17:13:57","id":1235,"title":"寻甸县汽车站","metaDes":"昆明市寻甸县龙泉路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxIMDiAX7K5AACD8F58K7E122.jpg","metaKeywords":"0871-67912529","createTime":"2019-01-10 15:56:36","updateTime":"2019-01-23 17:13:29","id":1279,"title":"嵩明汽车客运站","metaDes":"昆明市嵩明县盟台西路516"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPlxIMCuAQD6rAAWLKupf24w096.png","metaKeywords":"0874-5752341","createTime":"2019-01-10 15:42:06","updateTime":"2019-01-23 17:13:16","id":1271,"title":"师宗汽车客运站","metaDes":"曲靖市师宗县丹溪大道与江召公路交叉处"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxIMByAAxkYAACNi35SBJ862.jpeg","metaKeywords":"(0874)8212327","createTime":"2019-01-10 15:15:54","updateTime":"2019-01-23 17:13:00","id":1259,"title":"罗平汽车客运站","metaDes":"曲靖市罗平县云贵路547号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPlxIL_2AOWt2AABRqbpLz5w670.jpg","metaKeywords":"0871-65326258","createTime":"2019-01-10 15:01:50","updateTime":"2019-01-23 17:12:29","id":1247,"title":"西部汽车站","metaDes":"昆明市西山区益宁路18"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxIL_CAXs-iAABR7w__DxY477.jpg","metaKeywords":"0871-68265359","createTime":"2019-01-10 14:57:05","updateTime":"2019-01-23 17:12:16","id":1243,"title":"西北部汽车站","metaDes":"昆明市五华区陈家营路与小屯路交叉处北侧"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPlxIL-GAESJcAABVov8HXeU782.jpg","metaKeywords":"0871-7595776","createTime":"2019-01-10 14:48:38","updateTime":"2019-01-23 17:12:02","id":1239,"title":"宜良县汽车站","metaDes":"昆明市宜良县时代广场旁"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxIL8yAeTbYAAHR1i1bV64112.png","metaKeywords":"0871-63530413","createTime":"2019-01-10 14:40:58","updateTime":"2019-01-23 17:11:41","id":1231,"title":"昆明市石林站","metaDes":"昆明市石林彝族自治县阿诗玛北路31号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxIL7yAUNE6AAB8wl1Egv4153.jpg","metaKeywords":"0874-3380959","createTime":"2019-01-10 14:38:15","updateTime":"2019-01-23 17:11:25","id":1227,"title":"曲靖高快客运站","metaDes":"曲靖市交通路189号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxIL6-AedDTAAAqL_TmlFw137.jpg","metaKeywords":"0871-68373009","createTime":"2019-01-10 14:35:35","updateTime":"2019-01-23 17:11:12","id":1223,"title":"昆明南部汽车站","metaDes":"云南省昆明市官渡区彩云北路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPlxIL5aAF15LAAXbEHludfE722.png","metaKeywords":"0871-63833680","createTime":"2019-01-10 14:32:51","updateTime":"2019-01-23 17:10:47","id":1219,"title":"昆明东部汽车站","metaDes":"昆明市官渡区东三环虹桥立交人民路延长线街口"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxIL22AHk0EAAYyHEjJZ1w242.png","metaKeywords":"0871-68373009","createTime":"2019-01-10 14:29:39","updateTime":"2019-01-23 17:10:06","id":1215,"title":"昆明北部汽车站","metaDes":"昆明市盘龙区龙头街羊肠"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPlxIL2GADdVtAACUFhND4Pc539.png","metaKeywords":"0877-5011598","createTime":"2019-01-08 19:44:24","updateTime":"2019-01-23 17:09:53","id":1203,"title":"华宁汽车客运站","metaDes":"玉溪市华宁县江华线与宁锦街交叉口附近"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPlxILZWAHMOMAAX4O6dtnMk845.png","metaKeywords":"(0877)6911595","createTime":"2019-01-08 19:29:34","updateTime":"2019-01-23 17:06:42","id":1183,"title":"澄江汽车客运站","metaDes":"云南省玉溪市澄江县凤翔路北11号澄江县国土资源局附近 "},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPlxILiGAYFuzABJP5RxDBUs779.png","metaKeywords":"0874-4624486","createTime":"2019-01-08 19:42:15","updateTime":"2019-01-23 17:04:34","id":1199,"title":"富源汽车客运站","metaDes":"曲靖市富源县胜境街104"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/11/wKgJPVxILayAa5VjAANgMPJlWgM733.png","metaKeywords":"0870-5621343","createTime":"2019-01-08 19:32:23","updateTime":"2019-01-23 17:02:36","id":1187,"title":"大关汽车客运站","metaDes":"云南省昭通市大关县G040(昭待二级公路)"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0C/wKgJPVw4AJiAP5IBAABesBislwU366.png","metaKeywords":"(0877)2026592","createTime":"2019-01-11 10:34:01","updateTime":"2019-01-11 10:34:01","id":1319,"title":"玉溪城西客运站","metaDes":"玉溪市七星街9号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0C/wKgJPlw3_fKAFIo6AABesBislwU383.png","metaKeywords":"0877-4968168","createTime":"2019-01-11 10:22:42","updateTime":"2019-01-11 10:28:04","id":1307,"title":"易门汽车客运站","metaDes":"云南省玉溪市易门县龙泉街道三元路易门汽车客运站 "},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0B/wKgJPVw3_waAakR5AABesBislwU807.png","metaKeywords":"(0870)4125600","createTime":"2019-01-11 10:27:18","updateTime":"2019-01-11 10:27:18","id":1311,"title":"永善汽车客运站","metaDes":"昭通市永善县金江路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0B/wKgJPVw3BLyAI7ZOAABesBislwU005.png","metaKeywords":"0870-8886102","createTime":"2019-01-10 16:39:25","updateTime":"2019-01-10 16:39:25","id":1303,"title":"彝良客运站","metaDes":"云南省昭通市彝良县南郊路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0B/wKgJPVw3AgWASmwdAABesBislwU532.png","metaKeywords":"(0874)6183555","createTime":"2019-01-10 16:27:50","updateTime":"2019-01-10 16:27:50","id":1295,"title":"宣威客运北站","metaDes":"云南省曲靖市宣威市振兴路延长线"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0B/wKgJPlw3AVmAbWhvAABesBislwU113.png","metaKeywords":"(0877)7718676","createTime":"2019-01-10 16:24:57","updateTime":"2019-01-10 16:24:57","id":1291,"title":"新平城东汽车客运站","metaDes":"玉溪市新平彝族傣族自治县新平大道附近"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0B/wKgJPVw2_TmARTW9AABesBislwU660.png","metaKeywords":"0877-3011870","createTime":"2019-01-10 16:07:22","updateTime":"2019-01-10 16:07:22","id":1287,"title":"通海汽车客运站","metaDes":"玉溪市通海县西龙路3号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0B/wKgJPlw2--WAdOZhAABesBislwU548.png","metaKeywords":"0870-7625773","createTime":"2019-01-10 16:01:41","updateTime":"2019-01-10 16:01:41","id":1283,"title":"绥江客运站","metaDes":"昭通市绥江县南横线附近"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0B/wKgJPlw2-P-ATBn5AABesBislwU470.png","metaKeywords":"(0870)8638079","createTime":"2019-01-10 15:49:20","updateTime":"2019-01-10 15:49:20","id":1275,"title":"水富汽车站","metaDes":"工农东路125号附近"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0B/wKgJPlw28v6ADjxVAABesBislwU997.png","metaKeywords":"(0870)7122203","createTime":"2019-01-10 15:23:43","updateTime":"2019-01-10 15:23:43","id":1267,"title":"巧家汽车客运站","metaDes":"昭通市巧家县巧天段妇幼保健院南侧 "},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0B/wKgJPVw28eCAPoYeAABesBislwU693.png","metaKeywords":"0874-8880979","createTime":"2019-01-10 15:18:56","updateTime":"2019-01-10 15:18:56","id":1263,"title":"马龙汽车客运站","metaDes":"曲靖市马龙县龙泉东路126"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0B/wKgJPlw28BKAaXKFAABesBislwU097.png","metaKeywords":"0874-6228076","createTime":"2019-01-10 15:11:15","updateTime":"2019-01-10 15:11:15","id":1255,"title":"陆良汽车客运站","metaDes":"曲靖市陆良县中兴南路中段"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0B/wKgJPlw27rSAROhBAABesBislwU216.png","metaKeywords":"0870-8122959","createTime":"2019-01-10 15:05:25","updateTime":"2019-01-10 15:05:25","id":1251,"title":"鲁甸汽车客运站","metaDes":"云南省昭通市鲁甸县世纪大道280号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0B/wKgJPlw25UmAdcfwAABesBislwU712.png","metaKeywords":"024-96669","createTime":"2019-01-10 14:25:13","updateTime":"2019-01-10 14:25:13","id":1211,"title":"晋宁汽车客运站","metaDes":"昆明市晋宁区东凤路路口"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0A/wKgJPlwzGRmAOliHAABesBislwU012.png","metaKeywords":"0870-3132849","createTime":"2019-01-07 17:17:14","updateTime":"2019-01-07 17:17:14","id":1171,"title":"镇沅县汽车站","metaDes":"昭通南大街"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0A/wKgJPVwzFL2AIbiGAABesBislwU247.png","metaKeywords":"0879-8723568","createTime":"2019-01-07 16:58:37","updateTime":"2019-01-07 16:58:37","id":1155,"title":"云南孟连县汽车站","metaDes":"云南省普洱市孟连县"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0A/wKgJPVwzErKAFtksAABesBislwU207.png","metaKeywords":"0879-6346432","createTime":"2019-01-07 16:49:54","updateTime":"2019-01-07 16:49:54","id":1147,"title":"云南景东汽车站","metaDes":"普洱市景东彝族自治县"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0A/wKgJPVwzEFGAJ43nAABesBislwU452.png","metaKeywords":"0888-6121828","createTime":"2019-01-07 16:39:46","updateTime":"2019-01-07 16:39:46","id":1139,"title":"云南华坪县汽车站","metaDes":"丽江市华坪县河东村蓝色港湾附近"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0A/wKgJPVwzCp-AM1eRAABesBislwU457.png","metaKeywords":"0879-8342327","createTime":"2019-01-07 16:15:28","updateTime":"2019-01-07 16:15:28","id":1119,"title":"西盟汽车站","metaDes":"普洱市西盟佤族自治县勐卡路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0A/wKgJPVwzBBOAD7UqAABesBislwU509.png","metaKeywords":"(0883)7621220","createTime":"2019-01-07 15:47:32","updateTime":"2019-01-07 15:47:32","id":1103,"title":"云南双江县汽车站","metaDes":"临沧市双江拉祜族佤族布朗族傣族自治县允景路813号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0A/wKgJPlwy_JuAIFMmAABesBislwU769.png","metaKeywords":"(0879)4232421","createTime":"2019-01-07 15:15:40","updateTime":"2019-01-07 15:15:40","id":1083,"title":"墨江县汽车站","metaDes":"云南省普洱市墨江哈尼族自治县"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0A/wKgJPVwy90mAVJ63AABesBislwU905.png","metaKeywords":"0883-2150281","createTime":"2019-01-07 14:52:58","updateTime":"2019-01-07 14:52:58","id":1075,"title":"临沧汽车站","metaDes":"临沧市临翔区南天路185号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0A/wKgJPVwy9XSAP_ReAABesBislwU455.png","metaKeywords":"0888--5121106","createTime":"2019-01-07 14:45:08","updateTime":"2019-01-07 14:48:09","id":1071,"title":"丽江汽车站","metaDes":"丽江古城区 15路上行(百信商场-百信商场),15路下行(百信商场-百信商场)"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0A/wKgJPlwy9CyAQSDiAABesBislwU894.png","metaKeywords":"0879-3722484","createTime":"2019-01-07 14:39:41","updateTime":"2019-01-07 14:40:01","id":1067,"title":"江城县汽车站","metaDes":"普洱市江城县联谊路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0A/wKgJPVwy8MKAXi0QAABesBislwU482.png","metaKeywords":"0883-6121485,耿马县汽车站,耿马县汽车站时刻表,耿马县汽车站地址,耿马县汽车站电话,团子出行","createTime":"2019-01-07 14:25:07","updateTime":"2019-01-07 14:25:23","id":1063,"title":"耿马县汽车站","metaDes":"临沧市耿马傣族佤族自治县羊耿路入城口"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0A/wKgJPlwy7teAVQSGAABesBislwU702.png","metaKeywords":"0883-7121237","createTime":"2019-01-07 14:16:56","updateTime":"2019-01-07 14:21:24","id":1055,"title":"沧源县汽车站","metaDes":"临沧市沧源佤族自治县白塔路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0A/wKgJPlwy79SAcGvLAABesBislwU479.png","metaKeywords":"0833—4211289","createTime":"2019-01-07 14:21:08","updateTime":"2019-01-07 14:21:08","id":1059,"title":"凤庆县汽车站 ","metaDes":"临沧市凤庆县稻香路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/0A/wKgJPlwy6J6ATDBGAABesBislwU321.png","metaKeywords":"0871-68015801-0,保山汽车站,保山汽车站,保山汽车站,保山汽车站,团子出行","createTime":"2019-01-07 13:50:22","updateTime":"2019-01-07 13:50:47","id":1047,"title":"保山汽车站","metaDes":"保山市隆阳区保岫东路延长线（高速公路旁）,保山汽车站位于保山市隆阳区保岫东路延长线（高速公路旁）,车站电话028-85692938,了解更多的车站订票信息就上团子出行"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/1A/wKgJJFsGWnuAKT5TAAB-bfNqk_U509.jpg","metaKeywords":"0874-3380959","createTime":"2018-05-24 14:23:56","updateTime":"2018-05-24 14:53:44","id":97,"title":"曲靖高快汽车客运站","metaDes":"曲靖市麒麟区交通路189号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/1A/wKgJJFsGWi2AJ8ZVAAGnk9HI8es942.jpg","metaKeywords":"0872-2129134","createTime":"2018-05-24 14:22:38","updateTime":"2018-05-24 14:50:52","id":96,"title":"大理汽车客运站新站","metaDes":"大理市下关巍山路372号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/1A/wKgJJFsGWfOAL18pAACM0VSwpFk49.jpeg","metaKeywords":"0871-63829710","createTime":"2018-05-24 14:21:40","updateTime":"2018-05-24 14:50:37","id":95,"title":"昆明东部汽车客运站","metaDes":"云南省昆明市盘龙区照青路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/1A/wKgJJFsGYAWARbjXAAMEsOZDCIc16.jpeg","metaKeywords":"0871-68180222","createTime":"2018-05-24 14:17:20","updateTime":"2018-05-24 14:50:21","id":94,"title":"昆明西部客运站","metaDes":"云南省昆明市西山区益宁路18号"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/1A/wKgJJFsGVySAWO8KAAE2_qanCnM803.jpg","metaKeywords":"0888-5121532","createTime":"2018-05-24 14:09:41","updateTime":"2018-05-24 14:49:35","id":93,"title":"丽江客运站","metaDes":"丽江市古城区康仲路"},{"imgUrl":"https://fdfs.tz12306.com/group1/M00/00/1A/wKgJJFsGVniAdBMKAA79Cej0z7Q802.png","metaKeywords":"0887-8223501","createTime":"2018-05-24 14:06:49","updateTime":"2018-05-24 14:49:04","id":92,"title":"香格里拉客运站","metaDes":"云南省迪庆藏族自治州香格里拉县香巴拉大道附近"}];
+    window.onload = function () {
+        new Page({
+            id: 'pagination-510000',
+            pageTotal: 12, //必填,总页数
+            pageAmount: 12,  //每页多少条
+            dataTotal: 140, //总共多少条数据
+            curPage:1, //初始页码,不填默认为1
+            pageSize: 5, //分页个数,不填默认为5
+            showPageTotalFlag:true, //是否显示数据统计,不填默认不显示
+            showSkipInputFlag:false, //是否支持跳转,不填默认不显示
+            getPage: function (page) { //获取当前页数
+               var smallDataIndex=(page-1)*window.STATIONINFO_PAGE_LIMIT;
+			   if(window.STATIONINFO_510000ALL.length < smallDataIndex){
+					return;
+			   }
+			   var mark=0;
+			   var pageNewArray=new Array();
+               for(var i in window.STATIONINFO_510000ALL){
+            	   if(i>=smallDataIndex && mark<= window.STATIONINFO_PAGE_LIMIT-1){
+            		   pageNewArray[mark]=window.STATIONINFO_510000ALL[i];
+            		   mark = mark + 1;
+                   }
+               }
+
+			   var innerHtml = '';
+               for(var j in pageNewArray){
+
+                   if(j <=2 ){
+                	   innerHtml = innerHtml + "<li style='margin-top:24px;'>"; 
+                   }else{
+                	   innerHtml = innerHtml + "<li>"; 
+                   }
+            	  
+            	   innerHtml = innerHtml + "<a href='"+window.CTXXdomain+"/article/id_"+pageNewArray[j].id+".html'>";
+            	   innerHtml = innerHtml + "<div class='img_left'><img src='"+pageNewArray[j].imgUrl+"' style='width:140px;height:105px;'/></div>"; 
+            	   innerHtml = innerHtml + "<div class='sta_info' style='width:200px;height:105px;' >"; 
+
+				   var title = '';
+				   if(pageNewArray[j].title.length >= 12){
+					   title = pageNewArray[j].title.substr(0,11)+'...';
+				   }else{
+					   title = pageNewArray[j].title;
+				   }
+				   innerHtml = innerHtml + "<p class='title' title='"+pageNewArray[j].title+"'>"+title+"</p>";
+
+				   var metaDes = '';
+				   if(pageNewArray[j].metaDes.length >= 23){
+					   metaDes = pageNewArray[j].metaDes.substr(0,22)+'...';
+				   }else{
+					   metaDes = pageNewArray[j].metaDes;
+				   }
+				   innerHtml = innerHtml + "<p class='posi' style='height: 32px;' title='"+pageNewArray[j].metaDes+"'>"+metaDes+"</p>";
+
+
+				   var metaKeywords = '';
+				   if(pageNewArray[j].metaKeywords.length >= 16){
+					   metaKeywords = pageNewArray[j].metaKeywords.substr(0,14)+'...';
+				   }else{
+					   metaKeywords = pageNewArray[j].metaKeywords;
+				   }
+				   innerHtml = innerHtml + "<p class='tel' title='"+pageNewArray[j].metaKeywords+"'>"+metaKeywords+"</p>"; 
+
+				   innerHtml = innerHtml + "</div></a></li>"; 
+               }
+
+               console.log(innerHtml);
+               $("#station-nqc-510000 li").remove();
+               $("#station-nqc-510000").append(innerHtml);
+               $("#station-nqc-510000").trigger("create");
+            }
+        });
+
+        new Page({
+            id: 'pagination-520000',
+            pageTotal: 5, //必填,总页数
+            pageAmount: 12,  //每页多少条
+            dataTotal: 60, //总共多少条数据
+            curPage:1, //初始页码,不填默认为1
+            pageSize: 5, //分页个数,不填默认为5
+            showPageTotalFlag:true, //是否显示数据统计,不填默认不显示
+            showSkipInputFlag:false, //是否支持跳转,不填默认不显示
+            getPage: function (page) { //获取当前页数
+               var smallDataIndex=(page-1)*window.STATIONINFO_PAGE_LIMIT;
+			   if(window.STATIONINFO_520000ALL.length < smallDataIndex){
+					return;
+			   }
+			   var mark=0;
+			   var pageNewArray=new Array();
+               for(var i in window.STATIONINFO_520000ALL){
+            	   if(i>=smallDataIndex && mark<= window.STATIONINFO_PAGE_LIMIT-1){
+            		   pageNewArray[mark]=window.STATIONINFO_520000ALL[i];
+            		   mark = mark + 1;
+                   }
+               }
+
+			   var innerHtml = '';
+               for(var j in pageNewArray){
+
+                   if(j <=2 ){
+                	   innerHtml = innerHtml + "<li style='margin-top:24px;'>"; 
+                   }else{
+                	   innerHtml = innerHtml + "<li>"; 
+                   }
+            	  
+            	   innerHtml = innerHtml + "<a href='"+window.CTXXdomain+"/article/id_"+pageNewArray[j].id+".html'>";
+            	   innerHtml = innerHtml + "<div class='img_left'><img src='"+pageNewArray[j].imgUrl+"' style='width:140px;height:105px;'/></div>"; 
+            	   innerHtml = innerHtml + "<div class='sta_info' style='width:200px;height:105px;' >"; 
+
+				   var title = '';
+				   if(pageNewArray[j].title.length >= 12){
+					   title = pageNewArray[j].title.substr(0,11)+'...';
+				   }else{
+					   title = pageNewArray[j].title;
+				   }
+				   innerHtml = innerHtml + "<p class='title' title='"+pageNewArray[j].title+"'>"+title+"</p>";
+
+				   var metaDes = '';
+				   if(pageNewArray[j].metaDes.length >= 23){
+					   metaDes = pageNewArray[j].metaDes.substr(0,22)+'...';
+				   }else{
+					   metaDes = pageNewArray[j].metaDes;
+				   }
+				   innerHtml = innerHtml + "<p class='posi' style='height: 32px;' title='"+pageNewArray[j].metaDes+"'>"+metaDes+"</p>";
+
+
+				   var metaKeywords = '';
+				   if(pageNewArray[j].metaKeywords.length >= 16){
+					   metaKeywords = pageNewArray[j].metaKeywords.substr(0,14)+'...';
+				   }else{
+					   metaKeywords = pageNewArray[j].metaKeywords;
+				   }
+				   innerHtml = innerHtml + "<p class='tel' title='"+pageNewArray[j].metaKeywords+"'>"+metaKeywords+"</p>"; 
+
+				   innerHtml = innerHtml + "</div></a></li>"; 
+               }
+
+               console.log(innerHtml);
+               $("#station-nqc-520000 li").remove();
+               $("#station-nqc-520000").append(innerHtml);
+               $("#station-nqc-520000").trigger("create");
+            }
+        });
+
+    new Page({
+        id: 'pagination-500000',
+        pageTotal: 3, //必填,总页数
+        pageAmount: 12,  //每页多少条
+        dataTotal: 35, //总共多少条数据
+        curPage:1, //初始页码,不填默认为1
+        pageSize: 5, //分页个数,不填默认为5
+        showPageTotalFlag:true, //是否显示数据统计,不填默认不显示
+        showSkipInputFlag:false, //是否支持跳转,不填默认不显示
+        getPage: function (page) { //获取当前页数
+           var smallDataIndex=(page-1)*window.STATIONINFO_PAGE_LIMIT;
+		   if(window.STATIONINFO_500000ALL.length < smallDataIndex){
+				return;
+		   }
+		   var mark=0;
+		   var pageNewArray=new Array();
+           for(var i in window.STATIONINFO_500000ALL){
+        	   if(i>=smallDataIndex && mark<= window.STATIONINFO_PAGE_LIMIT-1){
+        		   pageNewArray[mark]=window.STATIONINFO_500000ALL[i];
+        		   mark = mark + 1;
+               }
+           }
+
+		   var innerHtml = '';
+           for(var j in pageNewArray){
+
+               if(j <=2 ){
+            	   innerHtml = innerHtml + "<li style='margin-top:24px;'>"; 
+               }else{
+            	   innerHtml = innerHtml + "<li>"; 
+               }
+        	  
+        	   innerHtml = innerHtml + "<a href='"+window.CTXXdomain+"/article/id_"+pageNewArray[j].id+".html'>";
+        	   innerHtml = innerHtml + "<div class='img_left'><img src='"+pageNewArray[j].imgUrl+"' style='width:140px;height:105px;'/></div>"; 
+        	   innerHtml = innerHtml + "<div class='sta_info' style='width:200px;height:105px;' >"; 
+
+			   var title = '';
+			   if(pageNewArray[j].title.length >= 12){
+				   title = pageNewArray[j].title.substr(0,11)+'...';
+			   }else{
+				   title = pageNewArray[j].title;
+			   }
+			   innerHtml = innerHtml + "<p class='title' title='"+pageNewArray[j].title+"'>"+title+"</p>";
+
+			   var metaDes = '';
+			   if(pageNewArray[j].metaDes.length >= 23){
+				   metaDes = pageNewArray[j].metaDes.substr(0,22)+'...';
+			   }else{
+				   metaDes = pageNewArray[j].metaDes;
+			   }
+			   innerHtml = innerHtml + "<p class='posi' style='height: 32px;' title='"+pageNewArray[j].metaDes+"'>"+metaDes+"</p>";
+
+
+			   var metaKeywords = '';
+			   if(pageNewArray[j].metaKeywords.length >= 16){
+				   metaKeywords = pageNewArray[j].metaKeywords.substr(0,14)+'...';
+			   }else{
+				   metaKeywords = pageNewArray[j].metaKeywords;
+			   }
+			   innerHtml = innerHtml + "<p class='tel' title='"+pageNewArray[j].metaKeywords+"'>"+metaKeywords+"</p>"; 
+
+			   innerHtml = innerHtml + "</div></a></li>"; 
+           }
+
+           console.log(innerHtml);
+           $("#station-nqc-500000 li").remove();
+           $("#station-nqc-500000").append(innerHtml);
+           $("#station-nqc-500000").trigger("create");
+        }
+    });
+
+new Page({
+    id: 'pagination-530000',
+    pageTotal: 7, //必填,总页数
+    pageAmount: 12,  //每页多少条
+    dataTotal: 74, //总共多少条数据
+    curPage:1, //初始页码,不填默认为1
+    pageSize: 5, //分页个数,不填默认为5
+    showPageTotalFlag:true, //是否显示数据统计,不填默认不显示
+    showSkipInputFlag:false, //是否支持跳转,不填默认不显示
+    getPage: function (page) { //获取当前页数
+       var smallDataIndex=(page-1)*window.STATIONINFO_PAGE_LIMIT;
+	   if(window.STATIONINFO_530000ALL.length < smallDataIndex){
+			return;
+	   }
+	   var mark=0;
+	   var pageNewArray=new Array();
+       for(var i in window.STATIONINFO_530000ALL){
+    	   if(i>=smallDataIndex && mark<= window.STATIONINFO_PAGE_LIMIT-1){
+    		   pageNewArray[mark]=window.STATIONINFO_530000ALL[i];
+    		   mark = mark + 1;
+           }
+       }
+
+	   var innerHtml = '';
+       for(var j in pageNewArray){
+
+           if(j <=2 ){
+        	   innerHtml = innerHtml + "<li style='margin-top:24px;'>"; 
+           }else{
+        	   innerHtml = innerHtml + "<li>"; 
+           }
+    	  
+    	   innerHtml = innerHtml + "<a href='"+window.CTXXdomain+"/article/id_"+pageNewArray[j].id+".html'>";
+    	   innerHtml = innerHtml + "<div class='img_left'><img src='"+pageNewArray[j].imgUrl+"' style='width:140px;height:105px;'/></div>"; 
+    	   innerHtml = innerHtml + "<div class='sta_info' style='width:200px;height:105px;' >"; 
+
+		   var title = '';
+		   if(pageNewArray[j].title.length >= 12){
+			   title = pageNewArray[j].title.substr(0,11)+'...';
+		   }else{
+			   title = pageNewArray[j].title;
+		   }
+		   innerHtml = innerHtml + "<p class='title' title='"+pageNewArray[j].title+"'>"+title+"</p>";
+
+		   var metaDes = '';
+		   if(pageNewArray[j].metaDes.length >= 23){
+			   metaDes = pageNewArray[j].metaDes.substr(0,22)+'...';
+		   }else{
+			   metaDes = pageNewArray[j].metaDes;
+		   }
+		   innerHtml = innerHtml + "<p class='posi' style='height: 32px;' title='"+pageNewArray[j].metaDes+"'>"+metaDes+"</p>";
+
+
+		   var metaKeywords = '';
+		   if(pageNewArray[j].metaKeywords.length >= 16){
+			   metaKeywords = pageNewArray[j].metaKeywords.substr(0,14)+'...';
+		   }else{
+			   metaKeywords = pageNewArray[j].metaKeywords;
+		   }
+		   innerHtml = innerHtml + "<p class='tel' title='"+pageNewArray[j].metaKeywords+"'>"+metaKeywords+"</p>"; 
+
+		   innerHtml = innerHtml + "</div></a></li>"; 
+       }
+
+       $("#station-nqc-530000 li").remove();
+       $("#station-nqc-530000").append(innerHtml);
+       $("#station-nqc-530000").trigger("create");
+    }
+	});
+    }
+
+    function closeStationShow(cityNo){
+    	$("#station-img-"+cityNo).css('display','block');
+    	$("#station-show-"+cityNo).css('display','none');
+    	$("#pagination-"+cityNo).css('display','none');  
+    }
+
+    function stationShow(cityNo){
+    	$("#station-img-"+cityNo).css('display','none');
+    	$("#station-show-"+cityNo).css('display','block');
+    	$("#pagination-"+cityNo).css('display','block');  
+    }
+
+    $("#stationBtn").click(function(){
+        var searchZh = $("#searchZh").val().trim();
+        if(isEmpty(searchZh)){
+    		return;
+    	}
+
+        if(searchZh.length > 30){
+    		alert("您的搜索条件超过指定长度！")
+    	}
+        window.location.href=window.CTXXdomain+"/chezhan/search_"+searchZh+".html"; 
+    });
+
+    function isEmpty(obj){
+        if(typeof obj == "undefined" || obj == null || obj == ""){
+            return true;
+        }else{
+            return false;
+        }
+    }
+  </script>
+</html>
+
+

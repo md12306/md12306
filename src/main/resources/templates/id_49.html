@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8" />
+	<base th:href="${#request.getContextPath()}+'/'"/>
+	<title>购票须知|团子出行</title>
+   		<link rel="stylesheet" type="text/css" href="css/new_file_21.css" />
+<link rel="Shortcut Icon" href="https://image.tz12306.com/favicon.ico" type="image/x-icon" />
+<script src="js/jquery-1.6.min_21.js"></script>
+<script src="js/common_21.js"></script>
+<script type="text/javascript" src="js/zzsc_21.js"></script>
+<script src="js/common_21.js"></script>
+	<link rel="stylesheet" href="css/originalhtmlcss_12.css">
+	<link rel="stylesheet" href="css/layui_21.css">
+	<link rel="stylesheet" href="css/common_33.css">
+	<link rel="stylesheet" href="css/titleitem_12.css">
+	<!--[if lt IE 9]>
+	<script src="js/html5.min_12.js"></script>
+	<script src="js/respond.min_12.js"></script>
+	<![endif]-->
+	<meta name="keywords" content="购票须知,团子出行"/> 
+   		<meta name="description" content="团子出行，可为您提供云、贵、川、渝的汽车票查询、预订等服务，7*24小时服务热线：400-660-8787，预订有保障的官方汽车票尽在团子出行官网。"/>
+   		</head>
+<body >
+	<link rel="stylesheet" href="css/picadaptive_21.css">
+<link rel="stylesheet" href="css/layui_21.css">
+<script src="js/jquery.kinslideshow-1.2.1.min_21.js" type="text/javascript"></script>
+<script src="js/cookie_21.js" type="text/javascript"></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?c9beffc738813888c9e19ea250946a9f":"https://jspassport.ssl.qhimg.com/11.0.1.js?c9beffc738813888c9e19ea250946a9f";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+
+<div style="background-color: #fff;">
+    <div class="header" style="font-family: 'Microsoft YaHei'" >
+        <div class="header_top">
+            <div class="nav">
+                <div id="logo">
+                    <a href="https://www.tz12306.com"><img id="provinceLogo" src="picture/-3.png"/></a>
+                </div>
+                <div id="region">
+                    <div style="float: left;position: relative; top:1px;" class="header-cityBox" id="headerCityBox">
+                    </div>
+                    <div style="float: left;" id="tzSelectBox">
+                            <a style="margin-left:0 !important;color:#00A2FF;" href="https://www.tz12306.com/qichepiao/" id="qichepiaoHead">汽车票</a>
+                            <a href="https://www.tz12306.com/chezhan/" id="qichezhanHead">汽车站</a>
+                            <a href="https://www.tz12306.com/help/" id="helpHead">帮助中心</a>
+                    </div>
+                </div>
+                <div class="head_user_msg_div" style="margin-right: -16px; padding-left: 22px;">
+                    <div id="head_user_msg" style='width: 145px;padding-top: 10px;'>
+                        <!-- <a href="#" class="btn_l b_login">登录</a>
+                        <a href="#" class="btn_l b_kszc">快速注册</a> -->
+                    </div>
+                    <div class="head_user_msg_data" style="margin-left:-22px; display: none">
+                        <a href="https://www.tz12306.com/user/index.html?type=busOrder" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center;"
+                           onmouseover="switchColor('#0483E5',this)" onmouseout="switchColor('black',this)">我的订单</a>
+                        <a href="https://www.tz12306.com/user/index.html?type=getContacts" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center; " onmouseover="switchColor('#0483E5',this)"
+                           onmouseout="switchColor('black',this)">常用乘车人管理</a>
+                        <a href="https://www.tz12306.com/user/index.html?type=userInfo" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center;" onmouseover="switchColor('#0483E5',this)"
+                           onmouseout="switchColor('black',this)">基本资料</a>
+                        <a href="https://www.tz12306.com/login/logout.html" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center;" onmouseover="switchColor('#0483E5',this)"
+                           onmouseout="switchColor('black',this)">退出登录</a>
+                    </div>
+                </div>
+                <div id="head_phone">
+                    <img src="picture/phone_21.png" style="margin-top: -5px;" />
+                    <a class="ico_phone head_font_I" style="cursor:default">400-660-8787（可退保险）</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+	window.CTXXdomain = "https://www.tz12306.com";
+	window.currCityInfoCityNo = "510000";
+	window.CTXXstaticdomain = "https://image.tz12306.com";
+	window.headLight ="0";
+</script>
+<script src="js/header_21.js" type="text/javascript"></script>
+<div class="type-area origHtmlCss">
+		<div class="title-content">
+			<div class="title-main">
+				<div class="name"><h1>购票须知</h1></div>
+				<div class="title-msg">
+					<span>时间: 2017-12-09 00:36:10</span>发布者: 团子出行</div>
+			</div>
+			<div class="text-content-main">
+				<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p class="MsoNormal"><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">购票须知：</span></p><p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><span lang="EN-US">1. </span><span style="font-family:宋体;
+mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">购票流程</span></p><p class="MsoNormal"><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">首先注册成为团子网用户并完善个人信息</span></p><p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">网上购票：登录【</span><a href="https://www.tz12306.com" target="_blank">团子出行</a><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">（www.tz12306.com）】</span></p><p class="MsoNormal"><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">查询班线</span><span lang="EN-US">/</span><span>车次</span><span lang="EN-US">→</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">选择车次</span><span lang="EN-US">→</span><span>选择乘车人</span><span lang="EN-US">→</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">确认订单</span><span lang="EN-US">→</span><span>在线支付</span><span lang="EN-US">→</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">完成购票</span></p><p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">微信公众号：关注微信公众号【四川汽车票务网】</span></p><p class="MsoNormal"><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">查询班线</span><span lang="EN-US">/</span><span>车次</span><span lang="EN-US">→</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">选择车次</span><span lang="EN-US">→</span><span>选择乘车人</span><span lang="EN-US">→</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">确认订单</span><span lang="EN-US">→</span><span>在线支付</span><span lang="EN-US">→</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">完成购票</span></p><p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><span lang="EN-US">APP</span><span style="font-family:宋体;
+mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">购票：应用商城下载</span><span lang="EN-US">APP</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">【团子出行】</span></p><p class="MsoNormal"><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">查询班线</span><span lang="EN-US">/</span><span>车次</span><span lang="EN-US">→</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">选择车次</span><span lang="EN-US">→</span><span>选择乘车人</span><span lang="EN-US">→</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">确认订单</span><span lang="EN-US">→</span><span>在线支付</span><span lang="EN-US">→</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">完成购票</span></p><p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><!--[if !supportLists]--><span lang="EN-US"><span>2.</span></span><!--[endif]--><span style="font-family:
+宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">本网售票系统采取实名制，购买车票需出示乘车人身份证；网络、电话订票或其他购票服务需出示乘车人身份证和取票验证码（贵州还须出示取票密码）取票。</span></p><p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><!--[if !supportLists]--><span lang="EN-US"><span>3.</span></span><!--[endif]--><span style="font-family:
+宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">成人及身高<span style="font-weight: bold;">超过</span></span><span style="font-weight: bold;"><st1:chmetcnv unitname="米" sourcevalue="1.5" hasspace="False" negative="False" numbertype="1" tcsc="0" w:st="on"><span lang="EN-US">1.5</span><span style="font-family:宋体;
+ mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">米（含1.5米）</span></st1:chmetcnv></span><span>的儿童须购买<span style="font-weight: bold;">全价票</span>，供给座位。</span></p><p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><!--[if !supportLists]--><span lang="EN-US"><span>4.</span></span><!--[endif]--><span style="font-family:
+宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">身高</span><span style="font-weight: bold;"><st1:chmetcnv unitname="米" sourcevalue="1.2" hasspace="False" negative="False" numbertype="1" tcsc="0" w:st="on"><span lang="EN-US">1.2</span><span style="font-family:宋体;
+ mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">米（含1.2米）</span></st1:chmetcnv><span>至</span><st1:chmetcnv unitname="米" sourcevalue="1.5" hasspace="False" negative="False" numbertype="1" tcsc="0" w:st="on"><span lang="EN-US">1.5</span><span style="font-family:宋体;
+ mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">米</span></st1:chmetcnv></span><span>的儿童须购买<span style="font-weight: bold;">半价儿童票</span>，供给座位。若<span style="font-weight: bold;">部分车站不支持网上购买儿童半票</span>，请前往始发车站购买。</span></p><p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><!--[if !supportLists]--><span lang="EN-US"><span>5.</span></span><!--[endif]-->
+
+<span>身高</span><span style="font-weight: bold;"><span lang="EN-US">1.2</span></span><span><strong>米以下儿童属免票儿童</strong>。可通过购买“成人票”并在“是否携带</span><span lang="EN-US">1.2</span><span>米以下儿童”选项中选择“是”，进行购买。一张“成人票”最多可以携带一名免票儿童，免票儿童无座位。一名成人携带免票儿童超出一名时，应为超出的儿童购买儿童半票，儿童半票供给座位</span>
+
+<span>（如您没有购买免费儿童票，根据《道路旅客运输及客运站管理规定》车站有权拒绝您携带儿童乘车，由此造成的后果请自行承担）。若<span style="font-weight: bold;">部分车站不支持网上购买携童票</span>，请前往始发车站购买。<strong></strong></span></p><p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><!--[if !supportLists]--><span lang="EN-US"><span>6.</span></span><!--[endif]--><span style="font-family:
+宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">旅客随身携带的乘车物品：每张成人票可免费携带</span><st1:chmetcnv unitname="千克" sourcevalue="10" hasspace="False" negative="False" numbertype="1" tcsc="0" w:st="on"><span lang="EN-US">10</span><span style="font-family:宋体;
+ mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">千克</span></st1:chmetcnv><span>，每张儿童票可免费携带</span><st1:chmetcnv unitname="千克" sourcevalue="5" hasspace="False" negative="False" numbertype="1" tcsc="0" w:st="on"><span lang="EN-US">5</span><span style="font-family:宋体;
+ mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">千克</span></st1:chmetcnv><span>。旅客随身携带的乘车物品体积不能超过</span><st1:chmetcnv unitname="立方米" sourcevalue=".05" hasspace="False" negative="False" numbertype="1" tcsc="0" w:st="on"><span lang="EN-US">0.05</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:
+ Calibri">立方米</span></st1:chmetcnv><span style="font-family:宋体;mso-ascii-font-family:
+Calibri;mso-hansi-font-family:Calibri">，长度不能超过</span><st1:chmetcnv unitname="米" sourcevalue="1.8" hasspace="False" negative="False" numbertype="1" tcsc="0" w:st="on"><span lang="EN-US">1.8</span><span style="font-family:宋体;mso-ascii-font-family:
+ Calibri;mso-hansi-font-family:Calibri">米</span></st1:chmetcnv><span>，并以能放置本人座位下或车内行李架上为限。超过规定时，其超过部分按行包收费；占用座位时，须按实际占用座位数购票。<span style="font-family: 宋体;"><span style="font-weight: bold;"><span mode="out-in">各个车站执行情况略有不同，请以车站实际执行为准</span>
+
+</span></span>。</span></p><p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><!--[if !supportLists]--><span lang="EN-US"><span>7.</span></span><!--[endif]--><span style="font-family:
+宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">非法定节假日期间，旅客须在发车前</span><span lang="EN-US">30</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">分钟到始发站乘车；法定节假日及法定节假日前一天，旅客须在发车前</span><span lang="EN-US">1</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">小时到始发站乘车。</span></p><p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><!--[if !supportLists]--><span lang="EN-US"><span>8.</span></span><!--[endif]--><span style="font-family:
+宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">本售票渠道由我公司投资建设，采用自负盈亏的市场化机制运行，为了持续为旅客提供便捷服务，需要向使用购票服务的旅客收取一定的服务费。取票后可到车站综合窗口或服务台领取发票。由于您已经使用了本项服务，因此您如果<span style="font-weight: bold;">退票时，服务费是不退还的
+<span mode="out-in"><span mode="out-in">（包含但不限于车站停班、换班等情况）</span></span></span>。</span></p><p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><!--[if !supportLists]--><span lang="EN-US"><span>9.</span></span><!--[endif]--><span style="font-family:
+宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">军残票等特殊票请到始发站专用窗口优先购票。</span></p><p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><!--[if !supportLists]--><span lang="EN-US"><span>10.</span></span><!--[endif]--><span style="font-family:
+宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">请旅客妥善保管车票，<span style="font-weight: bold;">车票遗失不补，责任自负</span>。</span></p><p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><!--[if !supportLists]--><span lang="EN-US"><span>11.</span></span><!--[endif]--><span style="font-family:
+宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">目前<span style="font-weight: bold;">仅四川省有代理网点</span>可以直接购票，代理网点不售卖携童票、不提供退票服务。退票只能到始发站退票窗口办理。退票时，车站将收取退票手续费。标准如下方所列（退票费直接从购票款中扣划）：</span></p><p class="MsoNormal"><span style="font-family:
+宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri"></span><span lang="EN-US"> A</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">、当前客运班车开车时间两小时前办理退票，按票面金额</span><span lang="EN-US">10%</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">收取退票费，不足</span><span lang="EN-US">5</span><span>角不计收，不足</span><span lang="EN-US">1</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">元按</span><span lang="EN-US">5</span><span>角计收；</span><span lang="EN-US"> <br></span></p><p class="MsoNormal"><span lang="EN-US">B</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">：当前客运班车开车时间两小时以内办理退票，按票面金额</span><span lang="EN-US">20%</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">收取退票费，不足</span><span lang="EN-US">5</span><span>角不计收，不足</span><span lang="EN-US">1</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">元按</span><span lang="EN-US">5</span><span>角计收；</span></p><p class="MsoNormal"><span></span><span lang="EN-US"> C</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">：当前客运班车开车后一小时内办理退票，按票面金额</span><span lang="EN-US">50%</span><span>收取退票费，不足</span><span lang="EN-US">5</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">角不计收，不足</span><span lang="EN-US">1</span><span>元按</span><span lang="EN-US">5</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri">角计收；</span><span lang="EN-US"> <br></span></p><p class="MsoNormal"><span lang="EN-US">D</span><span>：当前客运班车开车一小时后，不再办理退票。</span></p><p class="MsoNormal"><span>特别说明：<span style="font-weight: bold;">若部分车站退票手续费收取规定与本说明不符，以车站实际执行规定为准</span>。</span></p><p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><!--[if !supportLists]--><span lang="EN-US"><span>12.</span></span><!--[endif]--><span style="font-family:
+宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">由于您个人原因包括但不限于错误提供乘车人姓名、身份证号码、发车班次、发车时间、联系人信息等导致购票错误，代理网点、本网和始发站均不承担任何法律责任。</span></p><p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p><p style="margin: 0pt; text-align: justify; text-indent: 0pt; -ms-text-autospace: ideograph-numeric; -ms-text-justify: inter-ideograph; mso-pagination: none; mso-para-margin-right: 0.0000gd; mso-para-margin-left: 0.0000gd; mso-char-indent-count: 0.0000;" align="justify">
+<o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="chmetcnv" downloadurl="">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:PunctuationKerning/>
+  <w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:普通表格;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</o:smarttagtype></p><p class="MsoNormal"><span lang="EN-US">13.</span><span style="font-family:宋体;
+mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">所有公路汽车票及服务均由团子网<a name="_GoBack"></a>及其联网汽车客运站联合提供，如有疑问请咨询本网服务热线：</span><span lang="EN-US">400-660-8787</span><span>。</span><span lang="EN-US">&nbsp;</span></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></div>
+		</div>
+	</div>
+	<!--<div class="bus_bannerDiv" style="background-color: #fff;" >
+	<img  class='bus_img_box' style='cursor: pointer;'>
+</div>-->
+<div class="footer">
+			<div class="contains">
+				<div class="link_help">
+					<dl class="footer-item advantage">
+						<dt style="font-weight:bold;" id="newer_guidence_name">新手指南</dt>
+						<dd class="ft-link-item" id="newer_guidence">
+						</dd>
+					</dl>
+					<dl class="footer-item advantage">
+						<dt style="font-weight:bold;" id="ticket_notice_name">购票须知</dt>
+						<dd class="ft-link-item" id="ticket_notice">
+						</dd>
+					</dl>
+					<dl class="footer-item advantage" >
+						<dt style="font-weight:bold;" id="faq_guidence_name">常见问题</dt>
+						<dd class="ft-link-item" id="faq_guidence">
+						</dd>
+					</dl>
+					<dl class="footer-item advantage" >
+						<dt style="font-weight:bold;" id="ride_ins_name">乘车保险</dt>
+						<dd class="ft-link-item" id="ride_ins">
+						</dd>
+					</dl>
+					<dl class="footer-item advantage">
+						<dt style="font-weight:bold;" id="member_services_name">会员服务</dt>
+						<dd class="ft-link-item" id="member_services">
+						</dd>
+					</dl>
+
+					<dl class="footer-item advantage footer-abc footer-a1bc">
+						<dt> </dt>
+						<dd class="ft-link-item">
+							<img src="picture/erweima_21.png" />
+						</dd>
+						<dd class="ft-link-title">扫描二维码<br>下载手机APP</dd>
+					</dl>
+
+					<dl class="footer-item advantage footer-abc">
+						<dt> </dt>
+						<dd class="ft-link-item">
+							<img src="picture/erweima2_21.png" />
+						</dd>
+						<dd class="ft-link-title">扫描二维码<br>关注微信公众号</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="linksDiv">
+<!-- 				<div class="links"> -->
+<!-- 					<div class="links_list" id = "links_list"> -->
+							
+<!-- 					</div> -->
+<!-- 				</div> -->
+				<div class="copyright">
+					<p>增值电信业务经营许可证：川B2-20110154 <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51019002001334" style="color: #a3a3a3;font-size: 12px; line-height: 22px;margin-left: 7px;"> <img src="picture/ghs_21.png" style="top: -2px;position: relative;" /> 川公网安备 51019002001334号</a>
+						<span class="server_line" onclick="meiqia()">在线客服</span>
+						<span class="youmengBtn" style="float:right; position:relative; top:-10px; left: -5px;" >
+							<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1271582149'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1271582149%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+						</span>
+					</p>
+					<p>Copyright © 2012-2018 tz12306.com Inc. All Rights Reserved.
+						<a class="pay_icons first_icon_5"></a>  <!-- <img src="picture/bottom_ico_5_dark_21.png"> -->
+						<a class="pay_icons first_icon_4"></a>
+						<a class="pay_icons first_icon_3"></a>
+						<a class="pay_icons first_icon_2"></a>
+						<a class="pay_icons first_icon_1"></a>
+					</p>
+					<p><span>四川倍施特科技股份有限公司   </span>&nbsp;&nbsp;<img src="picture/phone_21.png" style="margin-top: -5px;"> &nbsp;<span>028-66878787</span><a href="https://www.tz12306.com/sitemap.xml"  style="font-size: 12px;margin-left: 6px;color: #a3a3a3;" target="_blank">XML</a></p>
+				</div>
+			</div>
+			</div>
+	<script type="text/javascript">
+		window.CTXXdomain = "https://www.tz12306.com";
+	</script>
+	<script src="js/footer_21.js" type="text/javascript"></script>
+	<script src="js/meiqia_21.js" type="text/javascript"></script></body>
+<script src="js/index_12.js" charset="utf-8"></script>
+</html>

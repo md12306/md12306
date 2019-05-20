@@ -5,7 +5,7 @@ public class TbUser {
 
   private Integer userId;
   private Integer payId;
-  private String userName;
+  private String username;
   private String userIdentity;
   private String userTel;
   private String email;
@@ -28,12 +28,12 @@ public class TbUser {
     this.payId = payId;
   }
 
-  public String getUserName() {
-    return userName;
+  public String getUsername() {
+    return username;
   }
 
-  public void setUserName(String userName) {
-    this.userName = userName;
+  public void setUsername(String username) {
+    this.username = username;
   }
 
   public String getUserIdentity() {
@@ -81,7 +81,7 @@ public class TbUser {
     return "TbUser{" +
             "userId=" + userId +
             ", payId=" + payId +
-            ", userName='" + userName + '\'' +
+            ", username='" + username + '\'' +
             ", userIdentity='" + userIdentity + '\'' +
             ", userTel='" + userTel + '\'' +
             ", email='" + email + '\'' +

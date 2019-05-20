@@ -10,8 +10,12 @@ import org.apache.shiro.authc.UnknownAccountException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements IUserService {
+
+
     @Autowired
     private IUserMapper iUserMapper;
     @Override
@@ -35,5 +39,11 @@ public class UserServiceImpl implements IUserService {
             throw new IncorrectCredentialsException();
         }
         return tbUser;
+    }
+    @Override
+    public List<TbUser> queryAllUsers() {
+        //查询所有用户
+        List<TbUser> userList = iUserMapper.queryAllUsers();
+        return userList;
     }
 }

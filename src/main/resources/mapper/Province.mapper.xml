@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qianfeng.md.dao.IProvinceMapper">
+    <resultMap id="baseResult" type="com.qianfeng.md.bean.TbProvince">
+        <id property="provinceId" column="province_id" javaType="java.lang.Integer"/>
+        <result property="provinceName" column="province_name" javaType="java.lang.String"/>
+    </resultMap>
+    <select id="selectAllProvince" resultMap="baseResult">
+        select province_id,province_name from tb_province
+    </select>
+</mapper>

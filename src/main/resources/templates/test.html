@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <base th:href="${#request.getContextPath()}+'/'"/>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="float: left;margin-left:0px" >
+
+    <div  style="float: left;margin-left:0px" >
+        <div th:each="table:${tableList}">
+        row:<span th:text="${table.row}">aaa</span>
+        col:<span th:text="${table.col}">aaa</span>
+        style:<span th:text="${table.style}">aaa</span>
+            <br>
+        </div>
+    </div>
+    <p th:text="${tableList.size()}">aaa</p>
+</div>
+</body>
+</html>

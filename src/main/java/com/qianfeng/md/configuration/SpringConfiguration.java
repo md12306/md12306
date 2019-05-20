@@ -1,3 +1,4 @@
+/*
 package com.qianfeng.md.configuration;
 
 
@@ -11,10 +12,11 @@ import java.util.LinkedHashMap;
 
 @Configuration
 public class SpringConfiguration {
-
-    /**
+    */
+/**
      * 整合shiro
-     */
+     *//*
+
     @Bean
     public ShiroFilterFactoryBean provideShiroFilter(MyRealm myRealm){
         System.out.println("----->>>>");
@@ -36,15 +38,18 @@ public class SpringConfiguration {
         return factoryBean;
     }
 
-    /**
+    */
+/**
      * 因为Thymeleaf支持shiro没有jsp容易，需要让shiro知道当前的页面是jsp还是thymeleaf，
      * 所以需要加入方言。
      *
      * 以下方言是thymeleaf的方言
      * @return
-     */
+     *//*
+
     @Bean
     public ShiroDialect shiroDialect() {
         return new ShiroDialect();
     }
 }
+*/

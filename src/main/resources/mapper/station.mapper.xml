@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qianfeng.md.dao.IStationMapper">
+    <resultMap id="baseResult" type="com.qianfeng.md.bean.TbStation">
+        <id property="stationId" column="station_id" javaType="java.lang.Integer"/>
+        <result property="stationName" column="station_name" javaType="java.lang.String"/>
+        <result property="stationAddress" column="station_address" javaType="java.lang.String"/>
+        <result property="stationTel" column="station_tel" javaType="java.lang.String"/>
+        <result property="stationPic" column="station_pic" javaType="java.lang.String"/>
+        <result property="stationUrl" column="station_url" javaType="java.lang.String"/>
+    </resultMap>
+    <select id="queryAllStation" resultMap="baseResult">
+            select station_id,station_name,station_address,station_tel,station_pic,station_url,province from tb_station
+    </select>
+</mapper>

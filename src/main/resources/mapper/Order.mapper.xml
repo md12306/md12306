@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qianfeng.md.dao.IOrderMapper">
+    <resultMap id="baseResult" type="com.qianfeng.md.bean.TbOrder">
+        <id property="orderId" column="order_id" javaType="java.lang.Integer"/>
+        <result property="ticketPrice" column="ticket_price" javaType="java.lang.Integer"/>
+        <result property="userId" column="user_id" javaType="java.lang.Integer"/>
+        <result property="orderNum" column="order_num" javaType="java.lang.String"/>
+        <result property="routeStart" column="route_start" javaType="java.lang.String"/>
+        <result property="routeEnd" column="route_end" javaType="java.lang.String"/>
+        <result property="momentWeek" column="moment_week" javaType="java.lang.String"/>
+        <result property="startDate" column="start_date" javaType="java.lang.String"/>
+        <result property="startTime" column="start_time" javaType="java.lang.String"/>
+        <result property="carType" column="car_type" javaType="java.lang.String"/>
+        <result property="orderStatus" column="order_status" javaType="java.lang.String"/>
+        <result property="carnumType" column="carnum_type" javaType="java.lang.String"/>
+        <result property="orderTime" column="order_time" javaType="java.lang.String"/>
+        <result property="orderType" column="order_type" javaType="java.lang.String"/>
+        <result property="stationName" column="station_name" javaType="java.lang.String"/>
+        <result property="typeName" column="type_name" javaType="java.lang.String"/>
+        <result property="typeSeatNum" column="type_seat_num" javaType="java.lang.Integer"/>
+        <result property="carnumId" column="carnum_id" javaType="java.lang.Integer"/>
+    </resultMap>
+    <select id="queryTicketByMsg" resultMap="baseResult">
+            select r.route_start,r.route_end,
+            m.start_date,m.start_time,m.moment_week,
+            c.carnum,c.carnum_type,c.ticket_price,
+            t.type_seat_num ,t.type_name,s.station_name
+            ,c.carpai,t.type_seat_num,c.carnum_id
+            from tb_type t
+            INNER JOIN tb_carnum c
+            INNER JOIN tb_route r
+            INNER JOIN tb_station s
+            INNER JOIN tb_moment m
+            on c.type_id=t.type_id
+            and c.route_id = r.route_id
+            and c.station_id = s.station_id
+            and c.moment_id=m.moment_id
+            where r.route_start = #{routeStart}
+            and r.route_end = #{routeEnd}
+            and m.start_date=#{startDate};
+    </select>
+</mapper>

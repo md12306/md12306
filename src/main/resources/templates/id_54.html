@@ -1,0 +1,1602 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8" />
+	<base th:href="${#request.getContextPath()}+'/'"/>
+	<title>乘车保险|团子出行</title>
+   		<link rel="stylesheet" type="text/css" href="css/new_file_21.css" />
+<link rel="Shortcut Icon" href="https://image.tz12306.com/favicon.ico" type="image/x-icon" />
+<script src="js/jquery-1.6.min_21.js"></script>
+<script src="js/common_21.js"></script>
+<script type="text/javascript" src="js/zzsc_21.js"></script>
+<script src="js/common_21.js"></script>
+	<link rel="stylesheet" href="css/originalhtmlcss_12.css">
+	<link rel="stylesheet" href="css/layui_21.css">
+	<link rel="stylesheet" href="css/common_33.css">
+	<link rel="stylesheet" href="css/titleitem_12.css">
+	<!--[if lt IE 9]>
+	<script src="js/html5.min_12.js"></script>
+	<script src="js/respond.min_12.js"></script>
+	<![endif]-->
+	<meta name="keywords" content="乘车保险,团子出行"/> 
+   		<meta name="description" content="团子出行，可为您提供云、贵、川、渝的汽车票查询、预订等服务，7*24小时服务热线：400-660-8787，预订有保障的官方汽车票尽在团子出行官网。"/>
+   		</head>
+<body >
+	<link rel="stylesheet" href="css/picadaptive_21.css">
+<link rel="stylesheet" href="css/layui_21.css">
+<script src="js/jquery.kinslideshow-1.2.1.min_21.js" type="text/javascript"></script>
+<script src="js/cookie_21.js" type="text/javascript"></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?c9beffc738813888c9e19ea250946a9f":"https://jspassport.ssl.qhimg.com/11.0.1.js?c9beffc738813888c9e19ea250946a9f";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+
+<div style="background-color: #fff;">
+    <div class="header" style="font-family: 'Microsoft YaHei'" >
+        <div class="header_top">
+            <div class="nav">
+                <div id="logo">
+                    <a href="https://www.tz12306.com"><img id="provinceLogo" src="picture/-3.png"/></a>
+                </div>
+                <div id="region">
+                    <div style="float: left;position: relative; top:1px;" class="header-cityBox" id="headerCityBox">
+                    </div>
+                    <div style="float: left;" id="tzSelectBox">
+                            <a style="margin-left:0 !important;color:#00A2FF;" href="https://www.tz12306.com/qichepiao/" id="qichepiaoHead">汽车票</a>
+                            <a href="https://www.tz12306.com/chezhan/" id="qichezhanHead">汽车站</a>
+                            <a href="https://www.tz12306.com/help/" id="helpHead">帮助中心</a>
+                    </div>
+                </div>
+                <div class="head_user_msg_div" style="margin-right: -16px; padding-left: 22px;">
+                    <div id="head_user_msg" style='width: 145px;padding-top: 10px;'>
+                        <!-- <a href="#" class="btn_l b_login">登录</a>
+                        <a href="#" class="btn_l b_kszc">快速注册</a> -->
+                    </div>
+                    <div class="head_user_msg_data" style="margin-left:-22px; display: none">
+                        <a href="https://www.tz12306.com/user/index.html?type=busOrder" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center;"
+                           onmouseover="switchColor('#0483E5',this)" onmouseout="switchColor('black',this)">我的订单</a>
+                        <a href="https://www.tz12306.com/user/index.html?type=getContacts" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center; " onmouseover="switchColor('#0483E5',this)"
+                           onmouseout="switchColor('black',this)">常用乘车人管理</a>
+                        <a href="https://www.tz12306.com/user/index.html?type=userInfo" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center;" onmouseover="switchColor('#0483E5',this)"
+                           onmouseout="switchColor('black',this)">基本资料</a>
+                        <a href="https://www.tz12306.com/login/logout.html" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center;" onmouseover="switchColor('#0483E5',this)"
+                           onmouseout="switchColor('black',this)">退出登录</a>
+                    </div>
+                </div>
+                <div id="head_phone">
+                    <img src="picture/phone_21.png" style="margin-top: -5px;" />
+                    <a class="ico_phone head_font_I" style="cursor:default">400-660-8787（可退保险）</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+	window.CTXXdomain = "https://www.tz12306.com";
+	window.currCityInfoCityNo = "510000";
+	window.CTXXstaticdomain = "https://image.tz12306.com";
+	window.headLight ="0";
+</script>
+<script src="js/header_21.js" type="text/javascript"></script>
+<div class="type-area origHtmlCss">
+		<div class="title-content">
+			<div class="title-main">
+				<div class="name"><h1>乘车保险</h1></div>
+				<div class="title-msg">
+					<span>时间: 2018-04-02 17:12:33</span>发布者: 团子出行</div>
+			</div>
+			<div class="text-content-main">
+				<p class="MsoNormal" align="center">
+<!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:RelyOnVML/>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+
+
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>ZH-CN</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:DoNotOptimizeForBrowser/>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" QFormat="true" Name="header"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:1;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1073786111 1 0 415 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:宋体;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	mso-ascii-font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-hansi-font-family:"Times New Roman";
+	mso-font-kerning:0pt;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:普通表格;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.5pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:宋体;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+</style>
+<![endif]-->
+
+
+
+<span lang="EN-US" style="font-size:12.0pt;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-theme-font:minor-bidi;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;
+mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">“</span><span style="font-size:12.0pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi;
+mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;
+mso-bidi-language:AR-SA">出行保障<span lang="EN-US">”</span>请自愿购买，若不需要请点击出行保障下拉框选择<span lang="EN-US">“</span>放弃出行保障<span lang="EN-US">”</span>。</span>&nbsp;</p><p class="MsoNormal" align="center">&nbsp;&nbsp;<b><span style="font-size:18.0pt;line-height:
+150%;font-family:宋体;mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin"><br></span></b></p><p class="MsoNormal" align="center"><b><span style="font-size:18.0pt;line-height:
+150%;font-family:宋体;mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin">太平洋保险乘意险信息披露</span></b></p><p class="MsoNormal" align="center"><br></p><p class="MsoNormal"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:12.0pt;line-height:150%;font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">【产品、报备文号】<span lang="EN-US"><o:p></o:p></span></span></b></p><p class="MsoNormal" style="text-indent:24.1pt;mso-char-indent-count:2.0;
+line-height:150%"><b><span style="font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast">产品名称：<span lang="EN-US"><o:p></o:p></span></span></b></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">乘客人身意外伤害保险<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">本产品《中国太平洋人寿保险股份有限公司乘客人身意外伤害保险》<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.1pt;mso-char-indent-count:2.0;
+line-height:150%"><b><span style="font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast">报备文件编号：<span lang="EN-US"><o:p></o:p></span></span></b></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">太保寿（<span lang="EN-US">2013</span>）<span lang="EN-US">152</span>号<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span lang="EN-US" style="font-size:12.0pt;line-height:150%;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:12.0pt;line-height:150%;font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">【保障方案费率表】</span></b></p><p class="MsoNormal"><img src="picture/bc3a08727189410bf5d4fdf8d8816a1e_12.png"><br></p><p class="MsoNormal"><span lang="EN-US" style="mso-no-proof:
+yes"><v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke join="">
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0">
+  <v:f eqn="sum @0 1 0">
+  <v:f eqn="sum 0 0 @1">
+  <v:f eqn="prod @2 1 2">
+  <v:f eqn="prod @3 21600 pixelWidth">
+  <v:f eqn="prod @3 21600 pixelHeight">
+  <v:f eqn="sum @0 0 1">
+  <v:f eqn="prod @6 1 2">
+  <v:f eqn="prod @7 21600 pixelWidth">
+  <v:f eqn="sum @8 21600 0">
+  <v:f eqn="prod @7 21600 pixelHeight">
+  <v:f eqn="sum @10 21600 0">
+ </v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect">
+ <o:lock v:ext="edit" aspectratio="t">
+</o:lock></v:path></v:stroke></v:shapetype><v:shape id="图片_x0020_1" o:spid="_x0000_i1025" type="#_x0000_t75">
+ <v:imagedata src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image001.png" o:title="">
+</v:imagedata></v:shape></span><b><span lang="EN-US" style="font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast"><o:p></o:p></span></b></p><p class="MsoNormal"><span lang="EN-US" style="font-size:
+12.0pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:12.0pt;line-height:150%;font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">【重要提示】<span lang="EN-US"><o:p></o:p></span></span></b></p><p class="MsoNormal" style="text-indent:24.1pt;mso-char-indent-count:2.0;
+line-height:150%"><b><span style="font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast">销售区域说明：<span lang="EN-US"><o:p></o:p></span></span></b></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">本产品由中国太平洋人寿保险股份有限公司承保，公司在全国除西藏自治区外的北京、上海、天津、重庆、黑龙江、吉林、辽宁、河北、山西、山东、安徽、江苏、浙江、福建、江西、广东、海南、广西、湖南、湖北、河南、云南、贵州、四川、陕西、甘肃、新疆、宁夏、内蒙古、青海设有分公司。本产品的销售区域为全国，对于本公司未设分公司地区的用户，您的后续服务可能会受到影响。<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.1pt;mso-char-indent-count:2.0;
+line-height:150%"><b><span style="font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast">保单形式：<span lang="EN-US"><o:p></o:p></span></span></b></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">本产品合同采用电子保单形式，与纸质保单具有同等法律效力。您可通过拨打<span lang="EN-US">95500</span>客服热线查询保单或登陆太平洋寿险官方网站（<span lang="EN-US">life.cpic.com.cn</span>）查询并下载电子保单。<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.1pt;mso-char-indent-count:2.0;
+line-height:150%"><b><span style="font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast">保费支付：<span lang="EN-US"><o:p></o:p></span></span></b></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">保费一次性支付，您可通过支付宝、微信、银行转账等方式支付保险费。<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.1pt;mso-char-indent-count:2.0;
+line-height:150%"><b><span style="font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast">犹豫期：<span lang="EN-US"><o:p></o:p></span></span></b></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">无。<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.1pt;mso-char-indent-count:2.0;
+line-height:150%"><b><span style="font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast">发票配送及收费标准：<span lang="EN-US"><o:p></o:p></span></span></b></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">如您需要发票，您可以在购买成功<span lang="EN-US">3</span>个工作日以后，登陆太平洋寿险官方网站（<span lang="EN-US">life.cpic.com.cn</span>）查询并下载电子发票。<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.1pt;mso-char-indent-count:2.0;
+line-height:150%"><b><span style="font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast">信息安全：<span lang="EN-US"><o:p></o:p></span></span></b></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">我们严格遵守现行的关于个人信息、数据及隐私保护的法律法规，采取充分的技术手段和制度管理，保护您提供给我们的个人信息、数据和隐私不受到非法的泄露或披露给未获授权的第三方。<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.1pt;mso-char-indent-count:2.0;
+line-height:150%"><b><span style="font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast">投诉路径：<span lang="EN-US"><o:p></o:p></span></span></b></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">您在投保过程中，如发现本公司有关人员有违法、违规行为，或认为自身权益受到侵犯，请您保留相关证据并向本公司投诉，投诉电话为<span lang="EN-US">95500</span>。<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span lang="EN-US" style="font-size:12.0pt;line-height:150%;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:12.0pt;line-height:150%;font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">【免责说明】<span lang="EN-US"><o:p></o:p></span></span></b></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">本保险不承担因以下原因导致的保险金给付责任：<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">因下列情形之一导致被保险人身故、伤残或住院治疗的，本公司不负给付保险金责任：<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">一、投保人对被保险人的故意杀害、故意伤害；<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">二、被保险人故意犯罪或者抗拒依法采取的刑事强制措施；<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">三、被保险人自杀，但被保险人自杀时为无民事行为能力人的除外；<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">四、被保险人醉酒，斗殴，主动吸食或注射毒品；<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">五、被保险人酒后驾驶，无合法有效驾驶证驾驶，或驾驶无有效行驶证的机动车；<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">六、被保险人因妊娠（含宫外孕）、流产、分娩（含剖宫产）导致的伤害；
+<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">七、被保险人因医疗事故、药物过敏导致的伤害； <span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">八、被保险人因精神疾患导致的意外；<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">九、被保险人未遵医嘱，私自使用药物，但按使用说明的规定使用非处方药的除外；<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">十、被保险人从事赛车等高风险运动和活动；<span lang="EN-US"><span>&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">十一、战争、军事冲突、暴乱或武装叛乱；<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">十二、核爆炸、核辐射或核污染；<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">十三、被保险人扒车、跳车；<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">十四、人工直接供油；<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">十五、非因意外伤害事故而发生的治疗；<span lang="EN-US"><span>&nbsp; </span><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">十六、用于矫形、整容、美容、器官移植，或修复、安装及购买残疾用具（如轮椅、假肢、助听器、假眼、配镜等）的费用；<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">十七、被保险人体检、疗养、康复治疗；<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">十八、被保险人在非本合同规定等级医院的住院治疗；<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">十九、被保险人支出的医疗、医药费用中依法已由第三者赔偿或补偿的部分。<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">二十、投保时填报车辆车型及用途与实际不一致。<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">发生本条一至十四款情形之一，导致被保险人身故的，本公司对该被保险人的保险责任终止。若该被保险人已发生过保险金给付，本公司不退还相应的现金价值。<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">投保前，须阅读并了解本保险相关“保险条款”，以上为部分责任免除条款，全部免责条款见保险条款。如对保险条款中的各项免除保险公司责任的条款或保障内容不清楚，请咨询在线客服。<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span lang="EN-US" style="font-size:12.0pt;line-height:150%;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:12.0pt;line-height:150%;font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">【退保<span lang="EN-US">/</span>保全流程】<span lang="EN-US"><o:p></o:p></span></span></b></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">需办理解除合同或保单变更，请拨打<span lang="EN-US">95500</span>咨询办理，或者联系网站客服电话<span lang="EN-US">400-660-8787</span>进行办理。<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:12.0pt;line-height:150%;font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">【理赔流程】<span lang="EN-US"><o:p></o:p></span></span></b></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">出险后尽快联系网站客服或拨打<span lang="EN-US">95500</span>进行报案，根据指示提交理赔资料，保险公司审核案件并对属于保险事故责任的进行理赔支付，理赔金将直接转账至被保险人<span lang="EN-US">/</span>受益人名下的指定银行卡账户。<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span lang="EN-US" style="font-size:12.0pt;line-height:150%;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:12.0pt;line-height:150%;font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">【理赔资料】<span lang="EN-US"><o:p></o:p></span></span></b></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">■保险单及最后一次缴费凭证；<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">■申请人和被保险人的身份证明；<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">■如被保险人、受益人或其他申请权利人委托他人申请保险金的，还须提供授权委托书及受托人的身份证明等材料。<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">此外，根据事故性质不同，还须分别提交以下材料<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">项目应提供的证明、资料 <span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">住院医疗<span lang="EN-US"> 3</span>、<span lang="EN-US">4</span>、<span lang="EN-US">5</span>、<span lang="EN-US">7<o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">住院补贴<span lang="EN-US"> 3</span>、<span lang="EN-US">4</span>、<span lang="EN-US">7<o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">意外身故<span lang="EN-US"> 1</span>、<span lang="EN-US">2</span>、<span lang="EN-US">6</span>、<span lang="EN-US">7<o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">疾病身故<span lang="EN-US"> 2</span>、<span lang="EN-US">3</span>、<span lang="EN-US">7<o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">重大疾病<span lang="EN-US"> 3</span>、<span lang="EN-US">4</span>、<span lang="EN-US">7<o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">残疾给付 <span lang="EN-US">1</span>、<span lang="EN-US">3</span>、<span lang="EN-US">4</span>、<span lang="EN-US">6</span>、<span lang="EN-US">7<o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">证明或资料 <span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span lang="EN-US" style="font-size:12.0pt;line-height:150%;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast">1.</span><span style="font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast">意外身故证明（公安或交管部门出具）；<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span lang="EN-US" style="font-size:12.0pt;line-height:150%;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast">2.</span><span style="font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast">死亡证明、户口注销证明及火化证明；<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span lang="EN-US" style="font-size:12.0pt;line-height:150%;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast">3.</span><span style="font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast">诊疗记录（如门诊和住院病例、出院小结、诊断证明、病理报告、影像学报告、血液检验报告、心电图等）；
+<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span lang="EN-US" style="font-size:12.0pt;line-height:150%;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast">4.</span><span style="font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast">医院或医疗机构出具的收费收据；<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span lang="EN-US" style="font-size:12.0pt;line-height:150%;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast">5.</span><span style="font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast">医院或医疗机构出具的费用明细清单；<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span lang="EN-US" style="font-size:12.0pt;line-height:150%;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast">6.</span><span style="font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast">法医或各类机构出具的鉴定、证明。 <span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span lang="EN-US" style="font-size:12.0pt;line-height:150%;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast">7.</span><span style="font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast">交通事故认定书<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">注：当提交本表所列材料后仍不足以证明事故属于保险责任范围时，本公司将会要求您提供其他有关材料，届时请您合作。<span lang="EN-US"><o:p></o:p></span></span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span lang="EN-US" style="font-size:12.0pt;line-height:150%;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:12.0pt;line-height:150%;font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">【偿付能力信息披露】<span lang="EN-US"><o:p></o:p></span></span></b></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">中国太平洋人寿保险股份有限公司偿付能力季度报告摘要：（</span><a href="http://life.cpic.com.cn/xrsbx/gkxxpl/cfnlxxzq/?subMenu=5&amp;inSub=1" target="_blank" style="font-family: Avenir, Helvetica, Arial, sans-serif;">点击进入</a><span style="font-family: 宋体; font-size: 12pt; text-indent: 24pt;">）</span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span lang="EN-US" style="font-size:12.0pt;line-height:150%;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:12.0pt;line-height:150%;font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">【保险条款】<span lang="EN-US"><o:p></o:p></span></span></b></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">见附件（</span><a href="https://www.tz12306.com/article/index.html?id=45" target="_blank" style="font-family: Avenir, Helvetica, Arial, sans-serif;">点击进入</a><span style="font-family: 宋体; font-size: 12pt; text-indent: 24pt;">）。</span></p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span lang="EN-US" style="font-size:12.0pt;line-height:150%;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast"><o:p>&nbsp;</o:p></span></p><p>
+
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:RelyOnVML/>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+
+
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>ZH-CN</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:DoNotOptimizeForBrowser/>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" QFormat="true" Name="header"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:1;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1073786111 1 0 415 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:宋体;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-link:"页眉 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:none;
+	tab-stops:center 207.65pt right 415.3pt;
+	layout-grid-mode:char;
+	border:none;
+	mso-border-bottom-alt:solid windowtext .75pt;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 1.0pt 0cm;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:宋体;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	mso-themecolor:hyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+span.Char
+	{mso-style-name:"页眉 Char";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-locked:yes;
+	mso-style-link:页眉;
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:9.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:宋体;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	mso-ascii-font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-hansi-font-family:"Times New Roman";
+	mso-font-kerning:0pt;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:普通表格;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.5pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:宋体;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+</style>
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><p class="MsoNormal" style="text-indent:24.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size:12.0pt;line-height:150%;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast">本产品所有的页面文字描述为展示作用，具体保障方案等信息以购买成功后生成的保单为准，太平洋寿险保留在法律规定范围内的解释权利。<span lang="EN-US"><o:p></o:p></span></span></p></div>
+		</div>
+	</div>
+	<!--<div class="bus_bannerDiv" style="background-color: #fff;" >
+	<img  class='bus_img_box' style='cursor: pointer;'>
+</div>-->
+<div class="footer">
+			<div class="contains">
+				<div class="link_help">
+					<dl class="footer-item advantage">
+						<dt style="font-weight:bold;" id="newer_guidence_name">新手指南</dt>
+						<dd class="ft-link-item" id="newer_guidence">
+						</dd>
+					</dl>
+					<dl class="footer-item advantage">
+						<dt style="font-weight:bold;" id="ticket_notice_name">购票须知</dt>
+						<dd class="ft-link-item" id="ticket_notice">
+						</dd>
+					</dl>
+					<dl class="footer-item advantage" >
+						<dt style="font-weight:bold;" id="faq_guidence_name">常见问题</dt>
+						<dd class="ft-link-item" id="faq_guidence">
+						</dd>
+					</dl>
+					<dl class="footer-item advantage" >
+						<dt style="font-weight:bold;" id="ride_ins_name">乘车保险</dt>
+						<dd class="ft-link-item" id="ride_ins">
+						</dd>
+					</dl>
+					<dl class="footer-item advantage">
+						<dt style="font-weight:bold;" id="member_services_name">会员服务</dt>
+						<dd class="ft-link-item" id="member_services">
+						</dd>
+					</dl>
+
+					<dl class="footer-item advantage footer-abc footer-a1bc">
+						<dt> </dt>
+						<dd class="ft-link-item">
+							<img src="picture/erweima_21.png" />
+						</dd>
+						<dd class="ft-link-title">扫描二维码<br>下载手机APP</dd>
+					</dl>
+
+					<dl class="footer-item advantage footer-abc">
+						<dt> </dt>
+						<dd class="ft-link-item">
+							<img src="picture/erweima2_21.png" />
+						</dd>
+						<dd class="ft-link-title">扫描二维码<br>关注微信公众号</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="linksDiv">
+<!-- 				<div class="links"> -->
+<!-- 					<div class="links_list" id = "links_list"> -->
+							
+<!-- 					</div> -->
+<!-- 				</div> -->
+				<div class="copyright">
+					<p>增值电信业务经营许可证：川B2-20110154 <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51019002001334" style="color: #a3a3a3;font-size: 12px; line-height: 22px;margin-left: 7px;"> <img src="picture/ghs_21.png" style="top: -2px;position: relative;" /> 川公网安备 51019002001334号</a>
+						<span class="server_line" onclick="meiqia()">在线客服</span>
+						<span class="youmengBtn" style="float:right; position:relative; top:-10px; left: -5px;" >
+							<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1271582149'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1271582149%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+						</span>
+					</p>
+					<p>Copyright © 2012-2018 tz12306.com Inc. All Rights Reserved.
+						<a class="pay_icons first_icon_5"></a>  <!-- <img src="picture/bottom_ico_5_dark_21.png"> -->
+						<a class="pay_icons first_icon_4"></a>
+						<a class="pay_icons first_icon_3"></a>
+						<a class="pay_icons first_icon_2"></a>
+						<a class="pay_icons first_icon_1"></a>
+					</p>
+					<p><span>四川倍施特科技股份有限公司   </span>&nbsp;&nbsp;<img src="picture/phone_21.png" style="margin-top: -5px;"> &nbsp;<span>028-66878787</span><a href="https://www.tz12306.com/sitemap.xml"  style="font-size: 12px;margin-left: 6px;color: #a3a3a3;" target="_blank">XML</a></p>
+				</div>
+			</div>
+			</div>
+	<script type="text/javascript">
+		window.CTXXdomain = "https://www.tz12306.com";
+	</script>
+	<script src="js/footer_21.js" type="text/javascript"></script>
+	<script src="js/meiqia_21.js" type="text/javascript"></script></body>
+<script src="js/index_12.js" charset="utf-8"></script>
+</html>

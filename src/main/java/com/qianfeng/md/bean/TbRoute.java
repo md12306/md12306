@@ -3,18 +3,22 @@ package com.qianfeng.md.bean;
 
 public class TbRoute {
 
-  private Integer routeId;
+  private long routeId;
   private String routeStart;
   private String routeEnd;
-  private Integer hotNum;
+  private long hotNum;
+  private String hotImg;
+  private long routeDistance;
 
-  public Integer getRouteId() {
+
+  public long getRouteId() {
     return routeId;
   }
 
-  public void setRouteId(Integer routeId) {
+  public void setRouteId(long routeId) {
     this.routeId = routeId;
   }
+
 
   public String getRouteStart() {
     return routeStart;
@@ -24,6 +28,7 @@ public class TbRoute {
     this.routeStart = routeStart;
   }
 
+
   public String getRouteEnd() {
     return routeEnd;
   }
@@ -32,21 +37,31 @@ public class TbRoute {
     this.routeEnd = routeEnd;
   }
 
-  public Integer getHotNum() {
+
+  public long getHotNum() {
     return hotNum;
   }
 
-  public void setHotNum(Integer hotNum) {
+  public void setHotNum(long hotNum) {
     this.hotNum = hotNum;
   }
 
-  @Override
-  public String toString() {
-    return "TbRoute{" +
-            "routeId=" + routeId +
-            ", routeStart='" + routeStart + '\'' +
-            ", routeEnd='" + routeEnd + '\'' +
-            ", hotNum=" + hotNum +
-            '}';
+
+  public String getHotImg() {
+    return hotImg;
   }
+
+  public void setHotImg(String hotImg) {
+    this.hotImg = hotImg;
+  }
+
+
+  public long getRouteDistance() {
+    return routeDistance;
+  }
+
+  public void setRouteDistance(long routeDistance) {
+    this.routeDistance = routeDistance;
+  }
+
 }

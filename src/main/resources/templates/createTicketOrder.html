@@ -1,0 +1,717 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8" />
+	<base th:href="${#request.getContextPath()}+'/'"/>
+<style>
+div.err {
+	text-align: left;
+	font-size: 12px;
+	color: red;
+	position: absolute;
+	top: 39px;
+	left: 0px;
+}
+
+.freeze {
+	background-color: #ccc !important;
+	cursor: auto !important;
+}
+
+select::-ms-expand {
+	border: none;
+	background-color: transparent;
+}
+</style>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="团子出行,长途汽车票,四川汽车票,贵州汽车票,云南汽车票,重庆汽车票,旅行,汽车时刻表,汽车站查询,汽车时刻表查询"/>
+	<meta name="description" content="团子出行，可为您提供云、贵、川、渝的汽车票查询、预订等服务，7*24小时服务热线：400-660-8787，预订有保障的官方汽车票尽在团子出行官网。"/>
+	<title>团子汽车票_原四川汽车票务网_贵州好行_成都汽车票务网_汽车票网上订票官网_汽车票查询_汽车票查询时刻表_汽车票预订</title>
+	<link rel="stylesheet" type="text/css" href="css/new_file_21.css" />
+<link rel="Shortcut Icon" href="https://image.tz12306.com/favicon.ico" type="image/x-icon" />
+<script src="js/jquery-1.6.min_21.js"></script>
+<script src="js/common_21.js"></script>
+<script type="text/javascript" src="js/zzsc_21.js"></script>
+<link rel="stylesheet" href="css/layui_21.css">
+	<link rel="stylesheet" href="css/common_33.css">
+	<link rel="stylesheet" href="css/confirmorder_12.css">
+	<link rel="stylesheet" href="css/map_12.css">
+	<link rel="stylesheet" href="css/contacttip_12.css">
+<!--[if lt IE 9]>
+	<script src="js/html5.min_12.js"></script>
+	<script src="js/respond.min_12.js"></script>
+	<![endif]-->
+</head>
+<!-- 相关第三方埋点 -->
+<script src="js/hm_19.js" language="JavaScript"></script>
+<script type="text/javascript" src="js/func_12.js"></script>
+<script type="text/javascript" >
+    var drvTimeStr = '2019-05-14 18:00'
+    setInterval(func);
+</script>
+<script src="js/constants_21.js" charset="utf-8"></script>
+<script src="js/utils_21.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/popupclass_18.js"></script>
+<script type="text/javascript" src="js/createticketorder_12.js"></script>
+<script type="text/javascript" src="js/valididcard_12.js"></script>
+<script type="text/javascript" src="js/validate_12.js"></script>
+<body>
+	<link rel="stylesheet" href="css/picadaptive_21.css">
+<link rel="stylesheet" href="css/layui_21.css">
+<script src="js/jquery.kinslideshow-1.2.1.min_21.js" type="text/javascript"></script>
+<script src="js/cookie_21.js" type="text/javascript"></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?c9beffc738813888c9e19ea250946a9f":"https://jspassport.ssl.qhimg.com/11.0.1.js?c9beffc738813888c9e19ea250946a9f";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+
+<div style="background-color: #fff;">
+    <div class="header" style="font-family: 'Microsoft YaHei'" >
+        <div class="header_top">
+            <div class="nav">
+                <div id="logo">
+                    <a href="https://www.tz12306.com"><img id="provinceLogo" src="picture/-3.png"/></a>
+                </div>
+                <div id="region">
+                    <div style="float: left;position: relative; top:1px;" class="header-cityBox" id="headerCityBox">
+                    </div>
+                    <div style="float: left;" id="tzSelectBox">
+                            <a style="margin-left:0 !important;color:#00A2FF;" href="https://www.tz12306.com/qichepiao/" id="qichepiaoHead">汽车票</a>
+                            <a href="https://www.tz12306.com/chezhan/" id="qichezhanHead">汽车站</a>
+                            <a href="https://www.tz12306.com/help/" id="helpHead">帮助中心</a>
+                    </div>
+                </div>
+                <div class="head_user_msg_div" style="margin-right: -16px; padding-left: 22px;">
+                    <div id="head_user_msg" style='width: 145px;padding-top: 10px;'>
+                        <!-- <a href="#" class="btn_l b_login">登录</a>
+                        <a href="#" class="btn_l b_kszc">快速注册</a> -->
+                    </div>
+                    <div class="head_user_msg_data" style="margin-left:-22px; display: none">
+                        <a href="https://www.tz12306.com/user/index.html?type=busOrder" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center;"
+                           onmouseover="switchColor('#0483E5',this)" onmouseout="switchColor('black',this)">我的订单</a>
+                        <a href="https://www.tz12306.com/user/index.html?type=getContacts" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center; " onmouseover="switchColor('#0483E5',this)"
+                           onmouseout="switchColor('black',this)">常用乘车人管理</a>
+                        <a href="https://www.tz12306.com/user/index.html?type=userInfo" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center;" onmouseover="switchColor('#0483E5',this)"
+                           onmouseout="switchColor('black',this)">基本资料</a>
+                        <a href="https://www.tz12306.com/login/logout.html" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center;" onmouseover="switchColor('#0483E5',this)"
+                           onmouseout="switchColor('black',this)">退出登录</a>
+                    </div>
+                </div>
+                <div id="head_phone">
+                    <img src="picture/phone_21.png" style="margin-top: -5px;" />
+                    <a class="ico_phone head_font_I" style="cursor:default">400-660-8787（可退保险）</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+	window.CTXXdomain = "https://www.tz12306.com";
+	window.currCityInfoCityNo = "510000";
+	window.CTXXstaticdomain = "https://image.tz12306.com";
+	window.headLight ="0";
+</script>
+<script src="js/header_21.js" type="text/javascript"></script>
+<div class="order-confirm type-area">
+		<!--支付步骤-->
+		<div class="step-content">
+			<div class="content-main layui-row">
+				<div class="step-item layui-col-xs4">
+					<div class="garden-num">1</div>
+					<div class="triangle-right special">
+						<div class="small-triangle"></div>
+					</div>
+					填写车票订单信息
+				</div>
+				<div class=" step-item-forbade step-item layui-col-xs4">
+					<div class="garden-num not">2</div>
+					确认订单并支付
+					<div class="triangle-right">
+						<div class="small-triangle first-step"></div>
+					</div>
+				</div>
+				<div class="step-item-forbade   step-item layui-col-xs4">
+					<div class="garden-num not">3</div>
+					支付成功
+				</div>
+			</div>
+		</div>
+		<!-- 中间内容-->
+		<div class="order-confirm-center">
+			<!--车票信息 & 乘车人信息-->
+			<div class="center-left">
+				<!--车票信息-->
+				<div class="center-ticket-msg">
+					<div class="title-name">车票信息</div>
+					<div class="ticket-detail">
+						<div class="ticket-time">
+							<p class="p_1">2019-05-14</p>
+							<p class="p_2">
+								<span>18:00</span>
+								之前</p>
+						</div>
+						<div class="ticket-location">
+							<div class="get-start">
+								<div class="name">
+									<span class="name-pos-item"><span
+										class="icon-self start-bg left-pos-icon">始</span>成都</span>
+								</div>
+								<div class="stop start-address map-stop-open"
+										onclick="show_station_info('cddz')"
+										style="cursor: pointer" title='成都东站汽车站(火车东站旁)'>
+	                           	 		成都东站汽车站(火车...
+	                           	 	</div>
+                           	 	<img src="picture/main_ico_address_bus_12.png" style="vertical-align: baseline;" />
+							</div>
+							<div class="through-line">166km</div>
+
+							<div class="get-end">
+									<div class="name">
+										<span class="name-pos-item"> <span
+											class="icon-self end-bg right-pos-icon">终</span>
+											安昌</span>
+										<div class="stop map-stop-open">
+												安昌</div>
+										</div>
+
+								</div>
+							</div>
+						<div class="ticket-type">
+							<p class="p1">
+								流水班</p>
+							<p>中型高一</p>
+						</div>
+					</div>
+				</div>
+				<!--乘车人信息-->
+				<form id="ticket_with_insurant" method="post">
+					<div class="center-passenger">
+						<div class="title-name" style="cursor: pointer">
+							乘车人信息 <span style='font-size: 14px; color: #0490F7'
+								id="child_tip_msg"></span> <span class="save-Commonly">
+								<div class="input-select-self selected"
+									onclick='isSaveContactPerson(this)'>保存到常用联系人</div>
+							</span>
+						</div>
+						<div class="passenger-crud">
+							<!--                 	 <div class="often" id="often" data-flag = '1'> -->
+							<!--                         <span class="title">常用联系人:</span> -->
+							<!--                         <div class="get-more" onclick='show_more_contacts(this)' style="cursor:pointer">更多<i class="layui-icon icon-self-more" id='contacts_more_mark' >&#xe61a;</i></div> -->
+							<!--                     </div> -->
+							<div class="passenger-create">
+								<ul id="passenger-create">
+								</ul>
+							</div>
+							<div class="submit-btn">
+								<div class="btn" id='add_ticket_passenger'
+									onclick='click_add_ticket_passenger()' style="cursor: pointer">添加乘车人</div>
+								<span>一个订单最多可订购5张车票</span>
+							</div>
+						</div>
+						<div class="insurance" id='insurancediv'>
+							<select class="select-input" id="insProductNo"
+								name="insProductNo" onchange='change_ins_productNo(this)'>
+								<option value="" price="0" selected="selected">放弃出行保障</option>
+								<option value="pro6"
+											ins_price="3.00" coverage="40000"
+											>出行保障</option>
+									</select> <span class="insurance-input"><strong><span
+									id="ins_explain" onmouseout="ins_explain_out(this)"
+									onmouseover="ins_explain_over(this)" style="cursor: pointer">[说明]</span></strong>提示:安全出行，推荐选择</span>
+						</div>
+
+					</div>
+					<!--取票信息人-->
+					<div class="collect-tickets">
+						<div class="title-name">
+							取票信息人
+							<div class="warmth-tip">先取票后乘车，建议提前1小时（节假日高峰建议提前2小时）到出发站取票</div>
+						</div>
+						<div class="phone-user">
+							<span>*</span>手机号码:&emsp; <input type="text"
+								placeholder="用于接收取票验证码" name="contactPhone"
+								id="contactPhone" onblur="check_phone(this)" maxlength="11" value="">
+						</div>
+					</div>
+					<!--提交及协议-->
+					<div class="protocol-submit">
+						<p class="protocol">
+							<i class="input-select-self "
+								style="cursor: pointer; font-style: normal"
+								id="checkbox_ticket_insurant"></i>我已经阅读并同意<a
+								href="https://www.tz12306.com/article/code_pc_ticket_notice.html"
+								target="_blank"><span>《汽车票预定协议》</span></a>和<a
+								href="https://www.tz12306.com/article/code_pc_ins_explain.html"
+								target="_blank"><span>《保险协议》</span></a>
+						</p>
+						<p class="total-passenger">
+							共<a id='show_passenger_num'>0</a>名乘客出行，订单总额:<span>￥<a
+								id='show_total_pence' style="color: #f38f3e">0</a></span>
+						</p>
+						<div class="btn-submit" onclick="submit_data()"
+							style="cursor: pointer">确认无误，提交</div>
+					</div>
+			</div>
+			<input type="hidden" name="startStationNo"
+				value="cddz" /> <input type="hidden"
+				name="drvTime" value="2019-05-14 18:00" /> <input type="hidden"
+				name="signId" value="fca99bb83cc149e7adabb36afa4d2b57" /> <input type="hidden"
+				name="stopName" value="安昌" /> <input
+				id='passenger_num' type="hidden" name="passengerNum" value="0" /> <input
+				id="isSaveContactPerson" type="hidden" name="isSaveContactPerson"
+				value='true' />
+			</form>
+			<!--票价信息 & 重要信息-->
+			<div class="center-right">
+				<!--票价信息-->
+				<div class="ticket-total">
+					<div class="title-name">票价信息</div>
+					<ul class="total-ul-content">
+						<li class="total-item" id='show_ticket_adult_li'>
+							<div class="name">成人票价</div>
+							<div class="price">
+								<span id='show_ticket_adult_price'>47.00×0=0</span>元
+							</div>
+						</li>
+						<li class="total-item" id='show_ticket_child_li'>
+							<div class="name">儿童票价</div>
+							<div class="price">
+								<span id='show_ticket_child_price'>23.50×0=0</span>元
+							</div>
+						</li>
+						<li class="total-item" id='show_ticket_ins_li'>
+							<div class="name">出行保障</div>
+							<div class="price">
+								<span id="show_ticket_ins"> 0 </span>元
+							</div>
+						</li>
+						<li class="total-item" id="show_ticket_service_li">
+							<div class="name">服务费</div>
+							<div class="price">
+								<span id="show_ticket_service"> 4×0=0
+                        </span>元
+							</div>
+						</li>
+						<li class="total-item">
+							<div class="name">订单总额</div>
+							<div class="price">
+								<span id='show_total_pence_ex'>0</span>元
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!--重要提示-->
+				<div class="important-note">
+					<div class="title-name">重要提示</div>
+					<div class="accordion-right" style="cursor: pointer">
+						<ul>
+							<li class="import-tip-li">
+								<div class="title-tip">
+									<span class='icon-que'>问</span>携带儿童相关注意事项 <span
+										class="triangleEx ico_order"></span>
+								</div>
+								<div class="tip-main-content">
+									<span class="icon-ans">答</span>
+									<div class="inner-main">
+										<p>1、成人及身高超过1.5米的儿童须购买全价票，供给座位。</p>
+										<p>2、身高1.2米至1.5米的儿童购买半价儿童票，供给座位。儿童票可凭验证码到始发车站综合窗口、车站自动取票机、红旗超市等代理网点取票。</p>
+										<p>3、身高1.2米以下儿童属免票儿童。可通过购买“成人票”并在“是否携带1.2米以下儿童”选项中选择“是”，进行购买。一张“成人票”最多可以携带一名免票儿童，免票儿童无座位。一名成人携带免票儿童超出一名时，应为超出的儿童购买儿童半票，儿童半票供给座位。
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="import-tip-li">
+								<div class="title-tip">
+									<span class='icon-que'>问</span>携带物品宠物相关注意事项 <span
+										class="triangle ico_order"></span>
+								</div>
+								<div class="tip-main-content tip-content-hide">
+									<span class="icon-ans">答</span>
+									<div class="inner-main">
+										<p>1、每一张全票可免费携带10千克，每一张儿童票可免费5千克；体积不能超过0.05立方米，长度不能超过1.8米，并以能放置本人座位下或车内行李架上为限。超过规定时，其超过部分按行包收费；占用座位时，按实际占用座位数购票收费。</p>
+										<p>2、携带宠物乘车，需使用专用宠物笼携带宠物，乘车时宠物必须放置于行李车厢，不得带入乘坐区域，且如果在运输途中造成的宠物意外伤害或者死亡，需乘客自行承担。我们建议您携带宠物的相关免疫证明，并提前致电车站进行咨询。各个车站执行情况略有不同，请以车站实际执行为准。</p>
+									</div>
+								</div>
+							</li>
+							<li class="import-tip-li">
+								<div class="title-tip">
+									<span class='icon-que'>问</span>取票和改签相关注意事项<span
+										class="triangle ico_order"></span>
+								</div>
+								<div class="tip-main-content tip-content-hide">
+									<span class="icon-ans">答</span>
+									<div class="inner-main">
+										<p>1、始发站为成都市区内，可凭身份证或取票验证码到各大代理网点取票。</p>
+										<p>2、凭身份证或取票验证码，前往各大车站自动取票机上取票。</p>
+										<p>3、凭身份证或取票验证码，前往各大车站售票大厅综合窗口取票。</p>
+										<p>为避免误车，非节假日建议在发车前1小时取票，并提前30分钟到始发站乘车；法定节假日及法定节假日节前一天，建议在发车前2小时取票，并提前1小时到始发站乘车。
+										</p>
+										<p>4、汽车票暂时是不支持改签功能的，如果您想改班/换票的话还请退票后再购买。</p>
+									</div>
+								</div>
+							</li>
+							<li class="import-tip-li">
+								<div class="title-tip">
+									<span class='icon-que'>问</span>出行保障与服务费相关说明<span
+										class="triangle ico_order"></span>
+								</div>
+								<div class="tip-main-content tip-content-hide">
+									<span class="icon-ans">答</span>
+									<div class="inner-main">
+										<p>1、为保障各位旅客的出行安全，本网站为您提供的交通意外保险服务，请自愿购买。</p>
+										<p>2、本售票渠道由我公司投资建设，采用自负盈亏的市场化机制运行，为了持续为旅客提供便捷服务，需要向使用购票服务的旅客收取一定的服务费。取票后可到车站综合窗口或服务台领取发票。由于您已经使用了本项服务，因此您如果退票时，服务费是不退还的。
+										
+										<p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="fast_login" style="display: none">
+		<div id='mask'>
+			<div class='closeBtn-btn'></div>
+			<div class='title'>
+				<div class='active' style="cursor: pointer">登录</div>
+				<div style="cursor: pointer">注册</div>
+			</div>
+			<div class='tab-main'>
+				<div class='tab-content'>
+					<div class='item-input'>
+						<input type='text' placeholder='手机号/邮箱' class='input-big'
+							name='userName' id='userName' maxlength="30"> <span
+							class='icon-login user'></span>
+						<div class="err">
+							<span id='userName_error'></span>
+						</div>
+					</div>
+					<div class='item-input'>
+						<input type='password' placeholder='请输入密码' class='input-big'
+							name='userPassword' id='userPassword' maxlength="30"> <span
+							class='icon-login password'></span>
+						<div class="err">
+							<span id='userPassword_error'></span>
+						</div>
+					</div>
+					<div class='item-input' id="code1_div"
+						>
+						<input type='text' placeholder='请输入验证码' class='input-big small'
+							name="code1" id="code1" maxlength="10"> <span
+							class='exchange' id='exchange_code1'
+							onclick="$(this).siblings('img').attr('src','https://www.tz12306.com/common/checkCode.html.html?d='+Math.random());"
+							style="cursor: pointer">换一换</span> <img class='phone_code'
+							src='picture/checkcode_12.html' alt=''
+							onclick="$(this).attr('src','https://www.tz12306.com/common/checkCode.html.html?d='+Math.random());"
+							style="cursor: pointer">
+						<div class="err">
+							<span id='code1_error'></span>
+						</div>
+					</div>
+					<div class='auto-login'>
+						<div class='left'>
+							<input type='checkbox' name="checkbox1" id="checkbox1"
+								style="cursor: pointer" checked="checked">自动登录
+						</div>
+						<div class='right'>
+							<a href='https://www.tz12306.com/user/resetPassword/index.html'
+								style="cursor: pointer" target="_blank">忘记密码?</a>
+						</div>
+					</div>
+					<div class='submit-mask' id='login' style="cursor: pointer;">立即登录</div>
+				</div>
+				<div class='tab-content hide'>
+
+					<div class='item-input'>
+						<input type='text' placeholder='请输入你的手机号' class='input-big'
+							name='registerName' id="registerName"
+							onblur="checkUserName(this)" maxlength="11"> <span
+							class='icon-login user'></span>
+						<div class="err">
+							<span id='registername_error'></span>
+						</div>
+					</div>
+
+					<div class='item-input'>
+						<input type='password' placeholder='请输入6至16位密码,建议数字字母组合'
+							class='input-big' name='registerPassword' id='registerPassword'
+							maxlength="16"> <span class='icon-login password'></span>
+						<div class="err">
+							<span id='registerPassword_error'></span>
+						</div>
+					</div>
+
+					<div class='item-input'>
+						<input type='password' placeholder='请输入6至16位密码,建议数字字母组合'
+							class='input-big' maxlength="16" name='registerPasswordConfirm'
+							id='registerPasswordConfirm'> <span
+							class='icon-login password'></span>
+						<div class="err">
+							<span id='registerPasswordConfirm_error'></span>
+						</div>
+					</div>
+					<input type="hidden" name="dxtoken" id="dxtoken" value="LfScTgwOgdadvLKYrE"/>
+					<div class='item-input' id="code2_div"
+						>
+						<input type='text' placeholder='请输入验证码' class='input-big small'
+							name="code2" id="code2" maxlength="10"> <span
+							class='exchange' id='exchange_code2'
+							onclick="$(this).siblings('img').attr('src','https://www.tz12306.com/common/checkCode.html.html?d='+Math.random());"
+							style="cursor: pointer">换一换</span> <img class='phone_code' src=''
+							alt=''
+							onclick="$(this).attr('src','https://www.tz12306.com/common/checkCode.html.html?d='+Math.random());"
+							style="cursor: pointer">
+						<div class="err">
+							<span id='code2_error'></span>
+						</div>
+					</div>
+					<div class='item-input'>
+						<input type='text' placeholder='请输入短信校验码' class='input-big medium'
+							name="phone_code" id="phone_code" maxlength="10">
+						<div class='getCode' id="sendPhoneCode" style="cursor: pointer"
+							data-flag=1>获取校验码</div>
+
+						<span class='icon-login code'></span>
+						<div class="err">
+							<span id='phone_code_error'></span>
+						</div>
+					</div>
+					<div class='auto-login'>
+						<div class='left'>
+							<input type='checkbox' name="checkbox2" id="checkbox2"
+								checked="checked" style="cursor: pointer">我已阅读并同意<span><a
+								href="https://www.tz12306.com/article/code_pc_reg_protocol.html"
+								target="_blank" style="color: #0391db">《注册须知服务条款》</a></span>
+						</div>
+					</div>
+					<div class='submit-mask' id='register' style="cursor: pointer;">注册并登录</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		function wordlimit(id, row) {
+			var Trim = function(str, is_global) {
+				var result;
+				result = str.replace(/(^\s+)|(\s+$)/g, "");
+				if (is_global.toLowerCase() == "g") {
+					result = result.replace(/(\s)/g, "");
+				}
+				return result;
+			};
+			var $el = $("#" + id);
+			var dataflag = $el.attr("data-flag");
+			var ElHeight = $el.height();
+			var ElWidth = $el.width();
+			var FontSize = dataflag ? 16 : parseInt($el.css("font-size"));
+			var maxSize = Math.floor(ElWidth / FontSize) * row;
+			var inner = Trim($el.text(), 'g');
+			var newRow = row;
+			if (inner.length > maxSize) {
+				inner = inner.substr(0, wordSize - 1) + '...';
+				$el.text(inner);
+			} else {
+				var sizeC = FontSize * inner.length;
+				newRow = Math.ceil(sizeC / ElWidth);
+			}
+			dataflag ? $el.css({
+				'line-height' : ElHeight / newRow + 'px',
+				'font-size' : '16px'
+			}) : $el.css({
+				'line-height' : ElHeight / newRow + 'px'
+			});
+
+		}
+		wordlimit('stop_name_show', 3);
+
+		$(".input-select-self").click(function() {
+			var hasClass = $(this).hasClass('selected');
+			if (hasClass) {
+				$(this).removeClass('selected')
+			} else {
+				$(this).addClass('selected')
+				//console.log($(this).attr('id'));
+			}
+		});
+
+ 		if ($("#insProductNo option").size() > 1
+ 				&& $("#insProductNo").val() == '') {
+ 			$('#insProductNo option:eq(0)').attr('selected', 'selected');
+ 			$("#ins_explain").hide();
+ 		}
+
+		if ($("#insProductNo").val() == ''
+			&& $("#insProductNo option").size() == 1) {
+			$("#show_ticket_ins_li").hide();
+			$("#ins_explain").hide();
+			$("#insurancediv").hide();
+			$(".center-passenger .passenger-crud").css("border-bottom", "none")
+			$(".center-passenger .passenger-crud").css("padding-bottom", "0px")
+		} else {
+			$("#show_ticket_ins").html(
+					$("#insProductNo option:selected").attr("ins_price") + "×"
+							+ "0=0");
+		}
+
+		window.TICKET_PER_PERSON = '5';//最大售卖张数
+		window.TICKET_ALLOW_TYPE = '0,1,2';//允许购票票种
+		window.TICKET_PER_SEAT = '249'; //余座
+		window.TICKET_PER_CHILD = '38'; //携童余座
+		window.TICKET_ALLOW_IDCARD = '01,02,04,03'; //允许购票证件类型
+
+		window.TICKET_FULL_PRICE = '47.00';//全票价
+		window.TICKET_HALF_PRICE = '23.50';//半票价
+		window.TICKET_SERVICE_PRICE = '4';//服务费价
+		
+		window.TICKET_TIP = "<p></p><div>应车站要求，购票成功后，请前往&nbsp;东站汽车站&nbsp;自助取票区（位于进站口4门口）自助取票，您也可以前往咨询台寻求取票帮助<br></div>";//班次提示信息
+		
+		window.OPENVERCODE = true;//验证码开关
+		window.OPENVERCODEFORLOGIN = true;//登录验证码开关
+		if (window.TICKET_SERVICE_PRICE == ''
+				|| window.TICKET_SERVICE_PRICE == '0'
+				|| window.TICKET_SERVICE_PRICE == '0.00') {
+			window.TICKET_SERVICE_PRICE = '0';
+		}
+
+		if (parseInt(window.TICKET_PER_PERSON) > parseInt(window.TICKET_PER_SEAT)) {
+			window.TICKET_PER_PERSON = window.TICKET_PER_SEAT;
+		}
+
+		if (window.TICKET_ALLOW_TYPE.indexOf("1") < 0) {
+			$("#show_ticket_child_li").hide();
+		}
+
+		if (window.TICKET_SERVICE_PRICE == '0'
+				|| window.TICKET_SERVICE_PRICE == '') {
+			$("#show_ticket_service_li").hide();
+		}
+
+		$('.accordion-right .import-tip-li').hover(
+				function() {
+					$('.accordion-right .tip-main-content').addClass(
+							'tip-content-hide');
+					$('.ico_order').removeClass('triangleEx');
+					$('.ico_order').addClass('triangle');
+					//$('.accordion-right .title-tip').removeClass('active3');
+					//$(this).children('.title-tip').addClass('active');
+
+					$(this).children('.tip-main-content').removeClass(
+							'tip-content-hide');
+					$(this).children(".title-tip").children('.ico_order')
+							.removeClass('triangle');
+					$(this).children(".title-tip").children('.ico_order')
+							.addClass('triangleEx');
+				});
+
+		get_contacts();
+	</script>
+	<script src="js/layui.all_12.js"></script>
+	<script type="text/javascript"
+		src="js/93e1b9e36604421b967e77c9fe8fc356.js"></script>
+	<!--<div class="bus_bannerDiv" style="background-color: #fff;" >
+	<img  class='bus_img_box' style='cursor: pointer;'>
+</div>-->
+<div class="footer">
+			<div class="contains">
+				<div class="link_help">
+					<dl class="footer-item advantage">
+						<dt style="font-weight:bold;" id="newer_guidence_name">新手指南</dt>
+						<dd class="ft-link-item" id="newer_guidence">
+						</dd>
+					</dl>
+					<dl class="footer-item advantage">
+						<dt style="font-weight:bold;" id="ticket_notice_name">购票须知</dt>
+						<dd class="ft-link-item" id="ticket_notice">
+						</dd>
+					</dl>
+					<dl class="footer-item advantage" >
+						<dt style="font-weight:bold;" id="faq_guidence_name">常见问题</dt>
+						<dd class="ft-link-item" id="faq_guidence">
+						</dd>
+					</dl>
+					<dl class="footer-item advantage" >
+						<dt style="font-weight:bold;" id="ride_ins_name">乘车保险</dt>
+						<dd class="ft-link-item" id="ride_ins">
+						</dd>
+					</dl>
+					<dl class="footer-item advantage">
+						<dt style="font-weight:bold;" id="member_services_name">会员服务</dt>
+						<dd class="ft-link-item" id="member_services">
+						</dd>
+					</dl>
+
+					<dl class="footer-item advantage footer-abc footer-a1bc">
+						<dt> </dt>
+						<dd class="ft-link-item">
+							<img src="picture/erweima_21.png" />
+						</dd>
+						<dd class="ft-link-title">扫描二维码<br>下载手机APP</dd>
+					</dl>
+
+					<dl class="footer-item advantage footer-abc">
+						<dt> </dt>
+						<dd class="ft-link-item">
+							<img src="picture/erweima2_21.png" />
+						</dd>
+						<dd class="ft-link-title">扫描二维码<br>关注微信公众号</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="linksDiv">
+<!-- 				<div class="links"> -->
+<!-- 					<div class="links_list" id = "links_list"> -->
+							
+<!-- 					</div> -->
+<!-- 				</div> -->
+				<div class="copyright">
+					<p>增值电信业务经营许可证：川B2-20110154 <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51019002001334" style="color: #a3a3a3;font-size: 12px; line-height: 22px;margin-left: 7px;"> <img src="picture/ghs_21.png" style="top: -2px;position: relative;" /> 川公网安备 51019002001334号</a>
+						<span class="server_line" onclick="meiqia()">在线客服</span>
+						<span class="youmengBtn" style="float:right; position:relative; top:-10px; left: -5px;" >
+							<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1271582149'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1271582149%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+						</span>
+					</p>
+					<p>Copyright © 2012-2018 tz12306.com Inc. All Rights Reserved.
+						<a class="pay_icons first_icon_5"></a>  <!-- <img src="picture/bottom_ico_5_dark_21.png"> -->
+						<a class="pay_icons first_icon_4"></a>
+						<a class="pay_icons first_icon_3"></a>
+						<a class="pay_icons first_icon_2"></a>
+						<a class="pay_icons first_icon_1"></a>
+					</p>
+					<p><span>四川倍施特科技股份有限公司   </span>&nbsp;&nbsp;<img src="picture/phone_21.png" style="margin-top: -5px;"> &nbsp;<span>028-66878787</span><a href="https://www.tz12306.com/sitemap.xml"  style="font-size: 12px;margin-left: 6px;color: #a3a3a3;" target="_blank">XML</a></p>
+				</div>
+			</div>
+			</div>
+	<script type="text/javascript">
+		window.CTXXdomain = "https://www.tz12306.com";
+	</script>
+	<script src="js/footer_21.js" type="text/javascript"></script>
+	<script src="js/meiqia_21.js" type="text/javascript"></script></body>
+</html>

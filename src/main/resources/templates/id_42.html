@@ -1,0 +1,846 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <base th:href="${#request.getContextPath()}+'/'"/>
+    <title>购票常见问题|团子出行</title>
+    <link rel="stylesheet" type="text/css" href="css/new_file_21.css"/>
+    <link rel="Shortcut Icon" href="https://image.tz12306.com/favicon.ico" type="image/x-icon"/>
+    <script src="js/jquery-1.6.min_21.js"></script>
+    <script src="js/common_21.js"></script>
+    <script type="text/javascript" src="js/zzsc_21.js"></script>
+    <script src="js/common_21.js"></script>
+    <link rel="stylesheet" href="css/originalhtmlcss_12.css">
+    <link rel="stylesheet" href="css/layui_21.css">
+    <link rel="stylesheet" href="css/common_33.css">
+    <link rel="stylesheet" href="css/titleitem_12.css">
+    <!--[if lt IE 9]>
+    <script src="js/html5.min_12.js"></script>
+    <script src="js/respond.min_12.js"></script>
+    <![endif]-->
+    <meta name="keywords" content="购票常见问题,团子出行"/>
+    <meta name="description" content="团子出行，可为您提供云、贵、川、渝的汽车票查询、预订等服务，7*24小时服务热线：400-660-8787，预订有保障的官方汽车票尽在团子出行官网。"/>
+</head>
+<body>
+<link rel="stylesheet" href="css/picadaptive_21.css">
+<link rel="stylesheet" href="css/layui_21.css">
+<script src="js/jquery.kinslideshow-1.2.1.min_21.js" type="text/javascript"></script>
+<script src="js/cookie_21.js" type="text/javascript"></script>
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+<script>
+    (function () {
+        var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?c9beffc738813888c9e19ea250946a9f" : "https://jspassport.ssl.qhimg.com/11.0.1.js?c9beffc738813888c9e19ea250946a9f";
+        document.write('<script src="' + src + '" id="sozz"><\/script>');
+    })();
+</script>
+
+<div style="background-color: #fff;">
+    <div class="header" style="font-family: 'Microsoft YaHei'">
+        <div class="header_top">
+            <div class="nav">
+                <div id="logo">
+                    <a href="https://www.tz12306.com"><img id="provinceLogo" src="picture/-3.png"/></a>
+                </div>
+                <div id="region">
+                    <div style="float: left;position: relative; top:1px;" class="header-cityBox" id="headerCityBox">
+                    </div>
+                    <div style="float: left;" id="tzSelectBox">
+                        <a style="margin-left:0 !important;color:#00A2FF;" href="https://www.tz12306.com/qichepiao/"
+                           id="qichepiaoHead">汽车票</a>
+                        <a href="https://www.tz12306.com/chezhan/" id="qichezhanHead">汽车站</a>
+                        <a href="https://www.tz12306.com/help/" id="helpHead">帮助中心</a>
+                    </div>
+                </div>
+                <div class="head_user_msg_div" style="margin-right: -16px; padding-left: 22px;">
+                    <div id="head_user_msg" style='width: 145px;padding-top: 10px;'>
+                        <!-- <a href="#" class="btn_l b_login">登录</a>
+                        <a href="#" class="btn_l b_kszc">快速注册</a> -->
+                    </div>
+                    <div class="head_user_msg_data" style="margin-left:-22px; display: none">
+                        <a href="https://www.tz12306.com/user/index.html?type=busOrder" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center;"
+                           onmouseover="switchColor('#0483E5',this)" onmouseout="switchColor('black',this)">我的订单</a>
+                        <a href="https://www.tz12306.com/user/index.html?type=getContacts" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center; "
+                           onmouseover="switchColor('#0483E5',this)"
+                           onmouseout="switchColor('black',this)">常用乘车人管理</a>
+                        <a href="https://www.tz12306.com/user/index.html?type=userInfo" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center;"
+                           onmouseover="switchColor('#0483E5',this)"
+                           onmouseout="switchColor('black',this)">基本资料</a>
+                        <a href="https://www.tz12306.com/login/logout.html" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center;"
+                           onmouseover="switchColor('#0483E5',this)"
+                           onmouseout="switchColor('black',this)">退出登录</a>
+                    </div>
+                </div>
+                <div id="head_phone">
+                    <img src="picture/phone_21.png" style="margin-top: -5px;"/>
+                    <a class="ico_phone head_font_I" style="cursor:default">400-660-8787（可退保险）</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    window.CTXXdomain = "https://www.tz12306.com";
+    window.currCityInfoCityNo = "510000";
+    window.CTXXstaticdomain = "https://image.tz12306.com";
+    window.headLight = "0";
+</script>
+<script src="js/header_21.js" type="text/javascript"></script>
+<div class="type-area origHtmlCss">
+    <div class="title-content">
+        <div class="title-main">
+            <div class="name"><h1>购票常见问题</h1></div>
+            <div class="title-msg">
+                <span>时间: 2019-05-17 21:48:52</span>发布者: 蒙多出行
+            </div>
+        </div>
+        <div class="text-content-main">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p><!--[if gte mso 9]>
+                <xml>
+                    <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true" DefSemiHidden="true"
+                                    DefQFormat="false" DefPriority="99" LatentStyleCount="260">
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="Normal"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="heading 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="heading 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="heading 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="heading 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="heading 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="heading 6"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="heading 7"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="heading 8"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="heading 9"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="index 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="index 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="index 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="index 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="index 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="index 6"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="index 7"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="index 8"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="index 9"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="toc 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="toc 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="toc 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="toc 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="toc 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="toc 6"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="toc 7"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="toc 8"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="toc 9"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Normal Indent"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="footnote text"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="annotation text"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="header"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="footer"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="index heading"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="caption"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="table of figures"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="envelope address"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="envelope return"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="footnote reference"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="annotation reference"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="line number"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="page number"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="endnote reference"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="endnote text"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="table of authorities"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="macro"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="toa heading"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="List"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="List Bullet"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="List Number"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="List 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="List 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="List 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="List 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="List Bullet 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="List Bullet 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="List Bullet 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="List Bullet 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="List Number 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="List Number 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="List Number 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="List Number 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="Title"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="Closing"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Signature"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Default Paragraph Font"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Body Text"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Body Text Indent"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="List Continue"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="List Continue 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="List Continue 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="List Continue 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="List Continue 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Message Header"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Subtitle"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Salutation"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="Date"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Body Text First Indent"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Body Text First Indent 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Note Heading"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Body Text 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Body Text 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Body Text Indent 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Body Text Indent 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Block Text"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Hyperlink"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="FollowedHyperlink"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="Strong"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Emphasis"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Document Map"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Plain Text"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="E-mail Signature"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Normal (Web)"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="HTML Acronym"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="HTML Address"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="HTML Cite"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="HTML Code"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="HTML Definition"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="HTML Keyboard"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="HTML Preformatted"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="HTML Sample"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="HTML Typewriter"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="HTML Variable"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Normal Table"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="annotation subject"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="No List"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Simple 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Simple 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Simple 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Classic 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Classic 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Classic 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Classic 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Colorful 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Colorful 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Colorful 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Columns 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Columns 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Columns 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Columns 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Columns 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Grid 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Grid 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Grid 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Grid 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Grid 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Grid 6"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Grid 7"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Grid 8"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table List 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table List 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table List 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table List 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table List 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table List 6"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table List 7"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table List 8"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table 3D effects 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table 3D effects 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table 3D effects 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Contemporary"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Elegant"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Professional"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Subtle 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Subtle 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Web 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Web 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Web 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Balloon Text"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Grid"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Table Theme"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Placeholder Text"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="No Spacing"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Light Shading"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Light List"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Light Grid"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Shading 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Shading 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium List 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium List 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Grid 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Grid 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Grid 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Dark List"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Colorful Shading"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Colorful List"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Colorful Grid"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Light Shading Accent 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Light List Accent 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Light Grid Accent 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Shading 1 Accent 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Shading 2 Accent 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium List 1 Accent 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="List Paragraph"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false" Name="Quote"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Intense Quote"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium List 2 Accent 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Grid 1 Accent 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Grid 2 Accent 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Grid 3 Accent 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Dark List Accent 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Colorful Shading Accent 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Colorful List Accent 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Colorful Grid Accent 1"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Light Shading Accent 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Light List Accent 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Light Grid Accent 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Shading 1 Accent 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Shading 2 Accent 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium List 1 Accent 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium List 2 Accent 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Grid 1 Accent 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Grid 2 Accent 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Grid 3 Accent 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Dark List Accent 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Colorful Shading Accent 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Colorful List Accent 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Colorful Grid Accent 2"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Light Shading Accent 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Light List Accent 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Light Grid Accent 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Shading 1 Accent 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Shading 2 Accent 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium List 1 Accent 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium List 2 Accent 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Grid 1 Accent 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Grid 2 Accent 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Grid 3 Accent 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Dark List Accent 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Colorful Shading Accent 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Colorful List Accent 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Colorful Grid Accent 3"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Light Shading Accent 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Light List Accent 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Light Grid Accent 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Shading 1 Accent 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Shading 2 Accent 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium List 1 Accent 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium List 2 Accent 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Grid 1 Accent 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Grid 2 Accent 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Grid 3 Accent 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Dark List Accent 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Colorful Shading Accent 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Colorful List Accent 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Colorful Grid Accent 4"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Light Shading Accent 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Light List Accent 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Light Grid Accent 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Shading 1 Accent 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Shading 2 Accent 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium List 1 Accent 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium List 2 Accent 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Grid 1 Accent 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Grid 2 Accent 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Grid 3 Accent 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Dark List Accent 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Colorful Shading Accent 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Colorful List Accent 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Colorful Grid Accent 5"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Light Shading Accent 6"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Light List Accent 6"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Light Grid Accent 6"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Shading 1 Accent 6"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Shading 2 Accent 6"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium List 1 Accent 6"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium List 2 Accent 6"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Grid 1 Accent 6"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Grid 2 Accent 6"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Medium Grid 3 Accent 6"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Dark List Accent 6"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Colorful Shading Accent 6"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Colorful List Accent 6"></w:LsdException>
+                        <w:LsdException Locked="false" Priority="99" SemiHidden="false"
+                                        Name="Colorful Grid Accent 6"></w:LsdException>
+                    </w:LatentStyles>
+                </xml><![endif]-->
+          
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p></div>
+			<span>购票常见问题</span><br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<span>网站能购买哪些车站的车票？</span><br>
+			<br>
+			<br>
+			<span>答：目前可购买四川省、贵州省及重庆地区以联网车站出发的车票，车站保持持续联网中，即将开放更多的省份和车站，请以实际查询结果为准。</span><br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<span>车站预售期是几天？</span><br>
+			<br>
+			<br>
+			<span>答：一般情况下本网pc端可以查询和预售10分钟以后，非节假日期间5天以内、重大节假日（如春节、国庆节）期间10天内的汽车票。</span><br>
+			<br>
+			<span>由于每天线路的预售天数不同，实际以本网实时查询的结果为准。</span>
+			<br>
+			<br>
+			<br>
+			<br>
+			<span>能购买哪些类型的车票？</span><br>
+			<br>
+			<br>
+			<span>答：能购买成人票、成人携带免票儿童（一名成年人只能携带一名身高1.2米以下儿童）、儿童半票（须身高在1.2米至1.5米的儿童）。以实际查询下单结果为准。</span><br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<span>什么是流水班？</span><br>
+			<br>
+			<br>
+			<span>答：流水班即滚动发车，乘客须在截至时间之前到站乘车。</span><br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<span>节假日加班车车次信息能否查询？</span><br>
+			<br>
+			<br>
+			<span>答：您好，系统与车站实时数据对接，车站加班车次信息均能搜到。</span><br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<span>每人最多能买几张车票？</span><br>
+			<br>
+			<br>
+			<span>答：同一个账号在一个订单内最多购买5张车票，一个身份证在同一班次中只能购买一张车票。</span><br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<span>能否买到当日车票？</span><br>
+			<br>
+			<br>
+			<span>答：可狗来距离发车时间大于10分钟的所有车票。</span><br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<span>能否预定座位？</span><br>
+			<br>
+			<br>
+			<span>答：可以，现阶段只对部分车型提供选座服务，其他车型座位由系统自动排序分配。</span><br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<span>如何代人买票？</span><br>
+			<br>
+			<br>
+			<span>答：进入购票页面后，点击“添加乘车人”，填写乘车人相关信息即可购买。购票成功后可凭乘车人身份证或取票验证码（贵州省还需取票密码）到始发车站自助机或综合窗口取票。</span><br>
+			<br>
+			<span>重庆目前仅支持身份证取票</span>
+			<br>
+			<br>
+			<br>
+			<br>
+			<span>为什么同一线路票价不同？</span><br>
+			<br>
+			<br>
+			<span>答：车辆类型分为高三、高二、高一、中级、普通五个级别，同一线路可能由于车辆类型不同，而票价不同，车辆类型越高，票价越高。</span><br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<span>网上是否可购买保险？</span><br>
+			<br>
+			<br>
+			<span>答：目前网上可以直接购买保险，在购票时选择购票即可。部分车站暂不支持，请以实际查询下单结果为准。如需退保，请联系本网站客服处理。</span><br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<span>网上购票后在哪儿取票？</span><br>
+			<br>
+			<br>
+			<span>答：目前可通过以下几种方式取票：</span><br>
+			<br>
+			<br>
+			<span>方式一</span><br>
+			<br>
+			<br>
+			<span>使用乘车人二代身份证原件在始发车站自助取票机取票：</span><br>
+			<br>
+			<span>1、四川省内自助机支持使用取票验证码（可取订单中所有车票）;</span><br>
+			<br>
+			<span>2、贵州省内自助及支持使用取票验证码+取票密码取票（可取订单中所有车票）;</span><br>
+			<br>
+			<span>未配置自助取票机的车站选择方式二取票</span><br>
+			<br>
+			<br>
+			<span>方式二</span><br>
+			<br>
+			<br>
+			<span>综合窗口取票：四川省凭乘车人二代身份证原件和取票验证码在始发车站售票大厅综合窗口取票。</span><br>
+			<br>
+			<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贵州省凭乘车人二代身份证原件和取票验证码及取票密码在始发车站售票大厅综合窗口取票。</span><br>
+			<br>
+			<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;重庆市凭乘车人二代身份证原件到始发车站售票大厅综合窗口/服务台取票。</span><br>
+			<br>
+			<span>备注：如果您购买的车票在四川成都市区始发，可凭乘车人二代身份证原件或复印件（儿童半票凭取票验证码）在成都市区各代理网点取票。</span><br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<span>服务费标准是多少？</span><br>
+			<br>
+			<br>
+			<span>答：服务费4元/张汽车票。本售票渠道由我公司投资建设，采用自负盈亏的市场化机制运行，为了持续为旅客提供便捷服务，需要由使用购票服务的旅客收取一定的服务费。取票后可到车站</span><br>
+			<br>
+			<span>综合窗口或服务台领取发票。由于您已经使用了本项服务，因此您如果退票时，服务费是不退还的（包含但不限于车站停班、换班等情况）。</span><br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<span>收取的服务费有发票吗？</span><br>
+			<br>
+			<br>
+			<span>答：有，您可以在我们的手机APP内开具4元服务费电子发票。</span><br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+    </div>
+	
+</div>
+<!--<div class="bus_bannerDiv" style="background-color: #fff;" >
+<img  class='bus_img_box' style='cursor: pointer;'>
+</div>-->
+<div class="footer">
+    <div class="contains">
+        <div class="link_help">
+            <dl class="footer-item advantage">
+                <dt style="font-weight:bold;" id="newer_guidence_name">新手指南</dt>
+                <dd class="ft-link-item" id="newer_guidence">
+                </dd>
+            </dl>
+            <dl class="footer-item advantage">
+                <dt style="font-weight:bold;" id="ticket_notice_name">购票须知</dt>
+                <dd class="ft-link-item" id="ticket_notice">
+                </dd>
+            </dl>
+            <dl class="footer-item advantage">
+                <dt style="font-weight:bold;" id="faq_guidence_name">常见问题</dt>
+                <dd class="ft-link-item" id="faq_guidence">
+                </dd>
+            </dl>
+            <dl class="footer-item advantage">
+                <dt style="font-weight:bold;" id="ride_ins_name">乘车保险</dt>
+                <dd class="ft-link-item" id="ride_ins">
+                </dd>
+            </dl>
+            <dl class="footer-item advantage">
+                <dt style="font-weight:bold;" id="member_services_name">会员服务</dt>
+                <dd class="ft-link-item" id="member_services">
+                </dd>
+            </dl>
+
+            <dl class="footer-item advantage footer-abc footer-a1bc">
+                <dt></dt>
+                <dd class="ft-link-item">
+                    <img src="picture/erweima_21.png"/>
+                </dd>
+                <dd class="ft-link-title">扫描二维码<br>下载手机APP</dd>
+            </dl>
+
+            <dl class="footer-item advantage footer-abc">
+                <dt></dt>
+                <dd class="ft-link-item">
+                    <img src="picture/erweima2_21.png"/>
+                </dd>
+                <dd class="ft-link-title">扫描二维码<br>关注微信公众号</dd>
+            </dl>
+        </div>
+    </div>
+    <div class="linksDiv">
+        <!-- 				<div class="links"> -->
+        <!-- 					<div class="links_list" id = "links_list"> -->
+
+        <!-- 					</div> -->
+        <!-- 				</div> -->
+        <div class="copyright">
+            <p>增值电信业务经营许可证：川B2-20110154 <a target="_blank"
+                                           href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51019002001334"
+                                           style="color: #a3a3a3;font-size: 12px; line-height: 22px;margin-left: 7px;">
+                <img src="picture/ghs_21.png" style="top: -2px;position: relative;"/> 川公网安备 51019002001334号</a>
+                <span class="server_line" onclick="meiqia()">在线客服</span>
+                <span class="youmengBtn" style="float:right; position:relative; top:-10px; left: -5px;">
+							<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                            document.write(unescape("%3Cspan id='cnzz_stat_icon_1271582149'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1271582149%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+						</span>
+            </p>
+            <p>Copyright © 2012-2018 tz12306.com Inc. All Rights Reserved.
+                <a class="pay_icons first_icon_5"></a>  <!-- <img src="picture/bottom_ico_5_dark_21.png"> -->
+                <a class="pay_icons first_icon_4"></a>
+                <a class="pay_icons first_icon_3"></a>
+                <a class="pay_icons first_icon_2"></a>
+                <a class="pay_icons first_icon_1"></a>
+            </p>
+            <p><span>四川倍施特科技股份有限公司   </span>&nbsp;&nbsp;<img src="picture/phone_21.png" style="margin-top: -5px;">
+                &nbsp;<span>028-66878787</span><a href="https://www.tz12306.com/sitemap.xml"
+                                                  style="font-size: 12px;margin-left: 6px;color: #a3a3a3;"
+                                                  target="_blank">XML</a></p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    window.CTXXdomain = "https://www.tz12306.com";
+</script>
+<script src="js/footer_21.js" type="text/javascript"></script>
+<script src="js/meiqia_21.js" type="text/javascript"></script>
+</body>
+<script src="js/index_12.js" charset="utf-8"></script>
+</html>

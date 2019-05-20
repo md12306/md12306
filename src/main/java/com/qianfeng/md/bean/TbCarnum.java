@@ -13,6 +13,24 @@ public class TbCarnum {
   private String carnum;
   private String carnumType;
   private Integer ticketPrice;
+  private String carpai;
+
+  @Override
+  public String toString() {
+    return "TbCarnum{" +
+            "carnumId=" + carnumId +
+            ", routeId=" + routeId +
+            ", typeId=" + typeId +
+            ", stationId=" + stationId +
+            ", momentId=" + momentId +
+            ", driverName='" + driverName + '\'' +
+            ", driverTel='" + driverTel + '\'' +
+            ", carnum='" + carnum + '\'' +
+            ", carnumType='" + carnumType + '\'' +
+            ", ticketPrice=" + ticketPrice +
+            ", carpai='" + carpai + '\'' +
+            '}';
+  }
 
   public Integer getCarnumId() {
     return carnumId;
@@ -94,19 +112,11 @@ public class TbCarnum {
     this.ticketPrice = ticketPrice;
   }
 
-  @Override
-  public String toString() {
-    return "TbCarnum{" +
-            "carnumId=" + carnumId +
-            ", routeId=" + routeId +
-            ", typeId=" + typeId +
-            ", stationId=" + stationId +
-            ", momentId=" + momentId +
-            ", driverName='" + driverName + '\'' +
-            ", driverTel='" + driverTel + '\'' +
-            ", carnum='" + carnum + '\'' +
-            ", carnumType='" + carnumType + '\'' +
-            ", ticketPrice=" + ticketPrice +
-            '}';
+  public String getCarpai() {
+    return carpai;
+  }
+
+  public void setCarpai(String carpai) {
+    this.carpai = carpai;
   }
 }

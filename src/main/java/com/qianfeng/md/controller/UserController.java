@@ -1,19 +1,27 @@
 package com.qianfeng.md.controller;
 
 
+import com.qianfeng.md.bean.TbUser;
+import com.qianfeng.md.service.IUserService;
 import com.qianfeng.md.vo.JsonResultVO;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/user")//根目录
 public class UserController {
+    @Autowired
+    private IUserService iUserService;
 
     /**
      * 登录
@@ -36,6 +44,14 @@ public class UserController {
         /*重定向不会经过视图解析器*/
         //{code:1,msg:'登录成功'}，code是用来进行条件判断的，msg用来显示
         return jsonResultVO;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/alluser",method = RequestMethod.GET)
+        public List<TbUser> List(){
+        //所有线路
+        List<TbUser> userList = iUserService.queryAllUsers();
+        return userList;
     }
 
     /*@RequiresPermissions({"商品管理"})
@@ -70,4 +86,6 @@ public class UserController {
                 }
             });
     }*/
+
+
 }

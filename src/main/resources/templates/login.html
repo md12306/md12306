@@ -1,0 +1,334 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8" />
+	<base th:href="${#request.getContextPath()}+'/'"/>
+	<meta name="keywords" content="团子出行,长途汽车票,四川汽车票,贵州汽车票,云南汽车票,重庆汽车票,旅行,汽车时刻表,汽车站查询,汽车时刻表查询"/>
+	<meta name="description" content="团子出行，可为您提供云、贵、川、渝的汽车票查询、预订等服务，7*24小时服务热线：400-660-8787，预订有保障的官方汽车票尽在团子出行官网。"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>团子汽车票_原四川汽车票务网_贵州好行_成都汽车票务网_汽车票网上订票官网_汽车票查询_汽车票查询时刻表_汽车票预订登录</title>
+	<link rel="stylesheet" type="text/css" href="css/new_file_25.css" />
+<link rel="Shortcut Icon" href="https://image.tz12306.com/favicon.ico" type="image/x-icon" />
+<script src="js/jquery-1.6.min_25.js"></script>
+<script src="js/common_25.js"></script>
+<script type="text/javascript" src="js/zzsc_25.js"></script>
+<script src="js/validate_16.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/func_16.js"></script>
+	<script type="text/javascript">
+		G.domain = "https://www.tz12306.com";
+		var targetUrl = "";
+		var reg = new RegExp("targetUrl=(.*)");
+		var r = window.location.href.match(reg);
+		if (r != null)
+			targetUrl = r[1];
+		$(document).ready(function() {
+			//dplus.track("访问登录页面");//dplus统计用
+		});
+		window.OPENVERCODE = true;//验证码开关
+		window.OPENVERCODEFORLOGIN = true;//验证码开关
+		setInterval(func);
+	</script>
+	<script type="text/javascript"
+		src="js/login.js"></script>
+	<style type="text/css">
+	.login_box {
+		width: 412px;
+		height: auto;
+		float: right;
+		margin-top: 100px;
+		margin-right: 50px;
+	}
+
+	.login_box_title {
+		background: white;
+		text-align: center;
+		padding: 0 0 50px 0;
+	}
+
+	.simpleLogin {
+		background: #e3eefb;
+		text-align: center;
+		padding: 0px 0;
+		width: 206px;
+		height: 35px;
+		float: left;
+		background-color: white;
+		padding: 10px 0 10px 0;
+		cursor: pointer;
+		line-height: 35px;
+	}
+
+	.dynamicLogin {
+		background: #e3eefb;
+		text-align: center;
+		padding: 0px 0;
+		width: 206px;
+		height: 35px;
+		float: right;
+		padding: 10px 0 10px 0;
+		cursor: pointer;
+		line-height: 35px;
+	}
+
+	body {
+		background: #F5F5F5;
+		height: 100%
+	}
+
+	.head_font_I {
+		color: #3e3e3e;
+		font-size: 26px;
+		position: relative;
+		top: -1px;
+		padding: 24px;
+	}
+
+	.login_bg {
+		margin-top: 0px;
+		padding-bottom: 1rem;
+		background: url(images/login_bg5-9.png) -80px 0px
+			no-repeat;
+	}
+	.login_box_from input.user {
+		background: url(images/login_ico_username_13.png) 9px 9px
+			no-repeat;
+		padding-left: 40px;
+		box-sizing: border-box;
+	}
+
+	.login_box_from input.pwd {
+		background: url(images/login_ico_password_13.png) 9px 9px
+			no-repeat;
+		padding-left: 40px;
+		box-sizing: border-box;
+	}
+	.login_box_from input.userPhone {
+		background: url(images/login_ico_phonenumb.png)  9px 9px
+			no-repeat;
+		padding-left: 40px;
+		box-sizing: border-box;
+	}
+	.get_check {
+		color: #f5f5f5;
+		display: inline-block;
+		font-size: 14px;
+		background: #37A3F4;
+		padding: 10px 8px 10px 8px;
+		border-radius: 4px;
+		cursor: pointer;
+		box-sizing:border-box;
+		vertical-align: top;
+		height: 41px;
+		float:right;
+
+	}
+	.login_box_from input.phoneCode {
+		height: 41px;
+		width: 180px;
+		background: url(images/login_ico_password_13.png) 9px 9px
+			no-repeat;
+		padding-left: 40px;
+		box-sizing: border-box;
+		display: inline-block;
+	}
+	.btn_login_t {background: #F38F3E;cursor:pointer;}
+	.btn_login_t:HOVER {background: #f1ac33;}
+	.sawLine {
+		border-right: 1px solid #cccc;
+		padding: 10px;
+		position: relative;
+		top: -5px
+	}
+	.login_box_auto{margin:0 auto;;width: 300px}
+	.login_box_from div {
+		/* margin: 0px auto; */
+		margin-left: -6px;
+		text-align: left;
+		padding: 6px 0;
+		width: 300px;
+	}
+	.login_box_from div.err {position: relative; left: 9px;}
+	.contains {
+		width: 1300px;
+		margin: 0 auto;
+		clear: both;
+	}
+	</style>
+</head>
+<body>
+	<div class="" style="background: #fff">
+		<div class="login_header_logo" style="height: 80px">
+			<a href="https://www.tz12306.com"><img style="position: relative;top: 5px"
+				src="picture/-3.png" /></a> <span
+				class="sawLine"></span><span class="head_font_I">登录</span>
+		</div>
+	</div>
+	<div style="height: 700px;">
+		<div class="contains login_bg" style="height: 700px; margin: 0 anto">
+			<div class="login_box" style="background-color: white;">
+				<!-- 			<div class="login_box_title">会员登录</div><span>动态登录</span> -->
+					<div class="login_box_title">
+						<span id="simpleLogin" class="simpleLogin"><a
+							id="changeColor1" style="color: #3E3E3E">会员登录</a></span><span
+							id="dynamicLogin" class="dynamicLogin"><a
+							id="changeColor2" style="color: #97b7de">动态密码登录</a></span>
+					</div>
+				<div class="login_box_auto">
+					<div class="login_box_from" id="login_box_from1"
+						style="display: block">
+						<div class="err">
+							<label id="msg"></label>
+						</div>
+						<div class="userName">
+							<input type="text" name="uname" id="uname" value=""
+								maxlength="30" class="input user" placeholder="手机号/邮箱"
+								style="height: 41px" onblur="checkUserName()" />
+							<div class="err">
+								<label id="nameErr"></label>
+							</div>
+						</div>
+						<div class="passWord">
+							<input type="password" name="passwd" id="passwd" value=""
+								maxlength="30" class="input pwd" placeholder="请输入密码"
+								style="height: 41px" onblur="checkPwd()" />
+							<div class="err">
+								<label id="pwdErr"></label>
+							</div>
+						</div>
+						<div class="login_box_l"
+							>
+							<input type="text" maxlength="10" name="code" id="code" value=""
+								onblur="checkCode()" class="check pwd1 fl" placeholder="请输入验证码"
+								style="height: 35px" /> <img id="txt_check_code"
+								onclick="this.setAttribute('src','https://www.tz12306.com/common/checkCode.html?d='+Math.random());"
+								src="picture/checkcode_16.html" alt="验证码"
+								style="margin: 0 5px; height: 41px; width: 90px; cursor: pointer">
+							<a href="javascript:;" style="float: right; line-height: 41px;"
+								onclick="$(this).prev().attr('src','https://www.tz12306.com/common/checkCode.html?d='+Math.random());">换一张
+							</a>
+							<div class="err">
+								<label id="codeErr"></label>
+							</div>
+						</div>
+						<div class="login_box_l ft14">
+							<input type="checkbox" name="checkbox1" id="checkbox1"
+								class="checkbox" value="0" checked="checked"
+								style="cursor: pointer" />自动登录 <a
+								href="https://www.tz12306.com/user/resetPassword/index.html" class="fr forget">忘记密码?</a>
+						</div>
+						<div class="btn_login">
+							<button class="btn_login_t" onclick="sub()">立即登录</button>
+						</div>
+						<div class="tr ft14">
+							<a href="page/regist">立即注册</a>
+						</div>
+					</div>
+				</div>
+				<!-- ////////////////////////////////动态登陆////////////////////// -->
+				<div class="login_box_auto">
+					<div class="login_box_from" id="login_box_from2"
+						style="display: none">
+						<div class="err">
+							<label id="dynamicMsg"></label>
+						</div>
+						<div class="userName">
+							<input type="text" name="uname1" id="uname1" value=""
+								maxlength="11" style="height: 41px" class="input userPhone"
+								placeholder="请输入手机号码" onblur="checkUserName1()" />
+							<div class="err">
+								<label id="nameErr1"></label>
+							</div>
+						</div>
+
+						<input type="hidden" name="dxtoken" id="dxtoken" value="yqDbYcWYTIKIZyIxik"/>
+						<div class="login_box_l" id="imgCheckCode"
+							>
+							<input type="text" maxlength="10" name="checkCode1"
+								id="checkCode1" style="height: 35px" value=""
+								class="check pwd1 fl" placeholder="请输入验证码"
+								onblur="checkCode11()" /> <img id="txt_check_code1"
+								onclick="this.setAttribute('src','https://www.tz12306.com/common/checkCode.html.html?d='+Math.random());"
+								src="" alt="验证码"
+								style="margin: 0 5px; height: 41px; width: 90px; cursor: pointer">
+							<a href="javascript:;" style="float: right; line-height: 41px;"
+								onclick="$(this).prev().attr('src','https://www.tz12306.com/common/checkCode.html.html?d='+Math.random());">换一张
+							</a>
+
+							<div class="err">
+								<label id="codeErr1"></label>
+							</div>
+						</div>
+
+						<div class="login_box_l2">
+							<input class="input phoneCode" type="text" autocomplete="off"
+								maxlength="10" id="dynamicCode" name="dynamicCode"
+								placeholder="请输入动态密码" onblur="checkDynamicCode1()"> <span
+								class="get_check" onclick="login_message()" id="sendcode">获取动态密码</span>
+
+							<div class="err">
+								<span class="red" id='code_error'></span>
+							</div>
+						</div>
+
+						<div class="login_box_l ft14">
+							<input type="checkbox" name="checkbox2" id="checkbox2"
+								class="checkbox" value="1" checked="checked"
+								style="cursor: pointer" />自动登录
+							</div>
+						<div class="btn_login">
+							<button class="btn_login_t" onclick="dynamicLogin()">立即登录</button>
+						</div>
+						<div class="tr ft14">
+							<a href="https://www.tz12306.com/reg/index.html">立即注册</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="display: none;">
+		<input type="hidden" id="csrfmiddlewaretoken"
+			name="csrfmiddlewaretoken" value="">
+	</div>
+	<style>
+.footer {
+	position: relative;
+	margin-bottom: initial;
+	margin: 0 auto;
+	height: 100px;
+	bottom: 0px;
+	background-color: #F5F5F5;
+}
+</style>
+<div class="footer">
+	<div class="copyright">
+		<p>增值电信业务经营许可证：川B2-20110154 <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51019002001334" style="color: #a3a3a3;font-size: 12px; line-height: 22px;margin-left: 7px;"> <img src="picture/ghs_25.png" style="top: -2px;position: relative;" /> 川公网安备 51019002001334号</a>
+			<span class="server_line" onclick="meiqia()">在线客服</span>
+			<span class="youmengBtn" style="float:right; position:relative; top:-10px; left: -5px;" >
+				<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1271582149'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1271582149%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+			</span>
+		</p>
+		<p>Copyright © 2012-2018 tz12306.com Inc. All Rights Reserved.
+			<a class="pay_icons first_icon_5"></a>  <!-- <img src="picture/bottom_ico_5_dark_25.png"> -->
+			<a class="pay_icons first_icon_4"></a>
+			<a class="pay_icons first_icon_3"></a>
+			<a class="pay_icons first_icon_2"></a>
+			<a class="pay_icons first_icon_1"></a>
+		</p>
+		<p><span>四川倍施特科技股份有限公司   </span>&nbsp;&nbsp;<img src="picture/phone_25.png" style="margin-top: -5px;"> &nbsp;<span>028-66878787</span><a href="https://www.tz12306.com/sitemap.xml"  style="font-size: 12px;margin-left: 6px;color: #a3a3a3;" target="_blank">XML</a></p>
+	</div>
+</div>
+<script type="text/javascript">
+	window.CTXXdomain = "https://www.tz12306.com";
+	$.getJSON(window.CTXXdomain + "/footer.html?r=" + Math.random(), function(
+			json) {
+		$.each(json.data, function(key, value) {
+			$("#links_list").append(
+					"<a href=" + value +" target='_blank'><div class='linkAdress'>"
+							+ key + "</div></a>");
+		});
+	});
+</script>
+<script src="js/meiqia_25.js" type="text/javascript"></script></body>
+<script src="js/loginindex.js" type="text/javascript"></script>
+</html>

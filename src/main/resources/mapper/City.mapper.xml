@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qianfeng.md.dao.ICityMapper">
+    <resultMap id="baseResult" type="com.qianfeng.md.bean.TbCity">
+        <id property="cityId" column="city_id" javaType="java.lang.Integer"/>
+        <result property="provinceId" column="province_id" javaType="java.lang.Integer"/>
+        <result property="cityName" column="city_name" javaType="java.lang.String"/>
+    </resultMap>
+    <select id="selectCityByProvince" resultMap="baseResult">
+          select city_id,p.province_id ,city_name from tb_city c INNER JOIN tb_province p on  c.province_id=p.province_id  where p.province_name = #{provinceName};
+    </select>
+
+    <select id="selectAllCity" resultMap="baseResult">
+          select city_id,province_id ,city_name from tb_city;
+    </select>
+</mapper>

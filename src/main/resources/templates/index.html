@@ -1,0 +1,1014 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <base th:href="${#request.getContextPath()}+'/'"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="baidu-site-verification" content="qcNL0wHpsj"/>
+    <meta name="360-site-verification" content="f2ccc30cd1a3425308ec66fe213decbc"/>
+    <meta name="sogou_site_verification" content="vTlN8YSM1T"/>
+    <title>汽车票查询_网上订票_余票预定|团子出行【原四川汽车票务网】</title>
+    <meta name="keywords"
+          content="汽车票查询,汽车票网上订票,汽车票网上订票官网,车票, 汽车票,成都汽车票务网, 四川汽车票务网, 车票网上订票12306, 汽车票预定,汽车票余票查询, 重庆汽车票网上订票, 重庆汽车票, 汽车票预定官网, 汽车站时刻表查询, 成都票务网,成都汽车票,团子出行, 汽车订票,重庆汽车票查询,团子汽车票"/>
+    <meta name="description"
+          content="团子出行官网【原四川汽车票务网】可为您提供四川、云南、贵州、重庆的汽车查询，汽车票网上订票、提前预订车票等服务，7*24小时服务热线：4006608787，预订有保障就上团子出行。"/>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/home.css"/>
+    <link rel="stylesheet" type="text/css" href="css/new_file.css"/>
+    <!-- 相关第三方埋点 -->
+    <script src="js/hm.js" language="JavaScript"></script>
+    <script type="text/javascript" src="js/constants.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
+    <link rel="stylesheet" href="css/searchbus.css">
+    <link rel="stylesheet" href="css/kalendae.css">
+    <link rel="stylesheet" type="text/css" href="css/new_file.css"/>
+    <link rel="Shortcut Icon" href="https://image.tz12306.com/favicon.ico" type="image/x-icon"/>
+    <script src="js/jquery-1.6.min.js"></script>
+    <script src="js/common.js"></script>
+    <script type="text/javascript" src="js/zzsc.js"></script>
+    <script type="text/javascript"
+            src="js/wdatepicker.js"></script>
+    <script type="text/javascript"
+            src="js/jquery-3.1.1.js"></script>
+
+    <script type="text/javascript" src="js/cp.js"></script>
+    <script src="js/kalendae.standalone.js"></script>
+    <script src="js/common.js"></script>
+    <script type="text/javascript">
+        window.CTXXdomain = "https://www.tz12306.com";
+    </script>
+    <script src="js/searchbus.js"></script>
+    <script type="text/javascript" src="js/home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        G.domain = "https://www.tz12306.com";
+    </script>
+    <style type="text/css">
+        body {
+            padding-top: 50px;
+            font-size: 12px;
+        }
+
+        h2 {
+            margin: 0px;
+            padding: 0px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .bton {
+            border: 1px solid #CCC;
+            background: #DDD;
+        }
+
+        .cont {
+            padding: 10px;
+        }
+
+        #main {
+            width: 400px;
+            margin: 0px auto;
+        }
+
+        #selectItem {
+            background: #FFF;
+            position: absolute;
+            top: 0px;
+            left: center;
+            border: 1px solid #000;
+            overflow: hidden;
+            margin-top: 10px;
+            width: 400px;
+            z-index: 2;
+        }
+
+        #preview {
+            margin: 1px;
+            border: 1px solid #CCC;
+        }
+
+        #result {
+            border: 1px solid #CCC;
+            margin-top: 10px;
+        }
+
+        .tit {
+            line-height: 20px;
+            height: 20px;
+            margin: 1px;
+            padding-left: 10px;
+        }
+
+        .bgc_ccc {
+            background: #CCC;
+        }
+
+        .bgc_eee {
+            background: #eee;
+        }
+
+        .c_999 {
+            color: #999
+        }
+
+        .pointer {
+            cursor: pointer;
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .cls {
+            clear: both;
+            font-size: 0px;
+            height: 0px;
+            overflow: hidden;
+        }
+
+        #bg {
+            background: #CCC;
+            filter: alpha(opacity=70);
+            opacity: 0.7;
+            width: 100%;;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            display: none;
+            z-index: 1;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .move {
+            cursor: move;
+        }
+
+        .xzcfd {
+            background: #fff;
+            width: 200px;
+            height: 30px;
+            margin-left: 55px;
+        }
+    </style>
+
+</head>
+
+<link rel="stylesheet" href="css/picadaptive.css">
+<link rel="stylesheet" href="css/layui.css">
+<script src="js/jquery.kinslideshow-1.2.1.min.js" type="text/javascript"></script>
+<script src="js/cookie.js" type="text/javascript"></script>
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+<script>
+    (function () {
+        var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?c9beffc738813888c9e19ea250946a9f" : "https://jspassport.ssl.qhimg.com/11.0.1.js?c9beffc738813888c9e19ea250946a9f";
+        document.write('<script src="' + src + '" id="sozz"><\/script>');
+    })();
+</script>
+
+<div style="background-color: #fff;">
+    <div class="header" style="font-family: 'Microsoft YaHei'">
+        <div class="header_top">
+            <div class="nav">
+                <div id="logo">
+                    <a href="https://www.tz12306.com"><img id="provinceLogo" src="picture/-3.png"/></a>
+                </div>
+                <div id="region">
+                    <div style="float: left;position: relative; top:1px;" class="header-cityBox" id="headerCityBox">
+                    </div>
+                    <div style="float: left;" id="tzSelectBox">
+                        <a style="margin-left:0 !important;color:#00A2FF;" href="https://www.tz12306.com/qichepiao/"
+                           id="qichepiaoHead">汽车票</a>
+                        <a href="https://www.tz12306.com/chezhan/" id="qichezhanHead">汽车站</a>
+                        <a href="https://www.tz12306.com/help/" id="helpHead">帮助中心</a>
+                    </div>
+                </div>
+                <div class="head_user_msg_div" style="margin-right: -16px; padding-left: 22px;">
+                    <div id="head_user_msg" style='width: 145px;padding-top: 10px;'>
+                        <!-- <a href="#" class="btn_l b_login">登录</a>
+                        <a href="#" class="btn_l b_kszc">快速注册</a> -->
+                    </div>
+                    <div class="head_user_msg_data" style="margin-left:-22px; display: none">
+                        <a href="https://www.tz12306.com/user/index.html?type=busOrder" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center;"
+                           onmouseover="switchColor('#0483E5',this)" onmouseout="switchColor('black',this)">我的订单</a>
+                        <a href="https://www.tz12306.com/user/index.html?type=getContacts" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center; "
+                           onmouseover="switchColor('#0483E5',this)"
+                           onmouseout="switchColor('black',this)">常用乘车人管理</a>
+                        <a href="https://www.tz12306.com/user/index.html?type=userInfo" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center;"
+                           onmouseover="switchColor('#0483E5',this)"
+                           onmouseout="switchColor('black',this)">基本资料</a>
+                        <a href="https://www.tz12306.com/login/logout.html" class="btn_class"
+                           style="color:black;font-size: 16px;text-align:center;"
+                           onmouseover="switchColor('#0483E5',this)"
+                           onmouseout="switchColor('black',this)">退出登录</a>
+                    </div>
+                </div>
+                <div id="head_phone">
+                    <img src="picture/phone.png" style="margin-top: -5px;"/>
+                    <a class="ico_phone head_font_I" style="cursor:default">400-660-8787（可退保险）</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    window.CTXXdomain = "https://www.tz12306.com";
+    window.currCityInfoCityNo = "510000";
+    window.CTXXstaticdomain = "https://image.tz12306.com";
+    window.headLight = "0";
+</script>
+<script src="js/header.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var domain = "https://www.tz12306.com";
+    $(function () {
+        addEvent();
+        home();
+        var homeNoticeId = '20190514092519115286';
+        var homeNoticeText = '成都东站汽车站可使用身份证直接检票乘车！';
+        SearchBus.init({
+            dom: document.getElementById("datepk"),
+            noBtnLine: true,
+            btnClass: " ",
+            startWidth: "70",
+            lineClass: "test-line-class",
+            selectClass: ["input1", "input2", "input3"],
+            callback: function (value) {
+                var startNo = value.start.cityNo, startType = 1, startName = value.start.name,
+                    targetType = value.end.type, targetNo = ((targetType == 1) ? (value.end.cityNo) : (value.end.name)),
+                    targetName = value.end.name, drvTime = value.date;
+                window.location.href = "https://www.tz12306.com/ticket/search_" + startNo + "_" + encodeURIComponent(startName) + "_" + startType + "_" + encodeURIComponent(targetNo) + "_" + encodeURIComponent(targetName) + "_" + targetType + "_" + drvTime + ".html"
+
+            }, initCallback: function () {
+                var htmll = "<div id='dowbok' style='overflow:hidden;height:44px'><ul style='margin-top: 12px' >";
+                if (homeNoticeId != '') {
+                    htmll += '<li><a href="https://www.tz12306.com/article/code_' + homeNoticeId + '.html" data_flag=0 class="home_toas" id="curr_notice">' + homeNoticeText + '</a></li>';
+                }
+                htmll += "</ul></div>";
+                $(document.getElementById("datepk")).append(htmll);
+            }
+
+        });
+
+    })
+
+    function rollNotice() {
+        var data_flag = $("#curr_notice").attr("data_flag");
+        var curr_data_flag = parseInt(data_flag) + 1;
+        if ($("#notice_" + curr_data_flag).length <= 0) {
+            curr_data_flag = 0;
+        }
+        $("#curr_notice").html($("#notice_" + curr_data_flag).html());
+        $("#curr_notice").attr("data_flag", curr_data_flag);
+        $("#curr_notice").attr("href", 'https://www.tz12306.com/article/code_' + $("#notice_" + curr_data_flag).attr("data_code") + '.html');
+    }
+
+    var home_notice_length = '10';
+    if (parseInt(home_notice_length) > 1) {
+        setInterval(rollNotice, 5000);
+    }
+</script>
+<div style="display:none">
+    <a id="notice_0" data_flag=0 data_code="20190514092519115286">成都东站汽车站可使用身份证直接检票乘车！</a>
+    <a id="notice_1" data_flag=1 data_code="20190410111806727368">成都东站汽车客运站最新资讯</a>
+    <a id="notice_2" data_flag=2 data_code="20190319165754908578">石羊客运站即将开通泸沽湖专线班车</a>
+    <a id="notice_3" data_flag=3 data_code="20190311102311372737">重庆路、峨眉山、罗泉古镇旅游直通车开通啦</a>
+    <a id="notice_4" data_flag=4 data_code="20190225111322849103">茶店子客运站开行富顺高速直达班车啦！</a>
+    <a id="notice_5" data_flag=5 data_code="20190221113453442815">原五块石车站部分线路暂停运营公告</a>
+    <a id="notice_6" data_flag=6 data_code="20190220101724337700">石羊场开往嘉阳小火车活动开始啦</a>
+    <a id="notice_7" data_flag=7 data_code="20190215172122670521">北门汽车站开通成都到西昌班线车咯！</a>
+    <a id="notice_8" data_flag=8 data_code="20190212182146628584">五块石客运站即将关闭拆迁通知</a>
+    <a id="notice_9" data_flag=9 data_code="20190212131955060686">茶店子客运站开行西昌、攀枝花高速直达班车</a>
+</div>
+<div class="banner">
+    <div id="show1" class="banner_cont">
+        <div class="banner_contl">
+
+            <div class="banner_cont_right fl" style="background:#fff">
+                <div class="cont_list">
+                    <div class="cont_list_v">
+
+                        <div id="bus_search" class="search_box">
+                            <div id="datepk1">
+                                <div class="header-cityBoxEx">
+                                    <a style="margin-left:0 !important" id=""
+                                       href="https://www.tz12306.com/qichepiao/510000.html"></a>
+                                    <div th:each="province : ${provinceList}" style="float: left;margin-left:0px" >
+
+                                            <a th:href="'/province/list/'+${province.provinceName}" th:text="${province.provinceName}"></a>
+
+                                    </div>
+                                    <!--<a id="city520000" href="https://www.tz12306.com/qichepiao/520000.html">贵州</a>
+                                    <a id="city500000" href="https://www.tz12306.com/qichepiao/500000.html">重庆</a>
+                                    <a id="city530000" href="https://www.tz12306.com/qichepiao/530000.html">云南</a>-->
+                                </div>
+                                <div id="main">
+                                    <input name="button" type="button" class="xzcfd" value="请点击选择出发地和目的地"
+                                           onclick="openBg(1);openSelect(1)"/>
+                                    <!-- <div id="result">
+                                        <div class="tit bgc_eee">
+                                            <h2>您已选择的城市汇总</h2>
+                                        </div>
+                                        <div class="cont" id="makeSureItem"></div>
+                                    </div>-->
+                                </div>
+
+                                <div id="bg"></div>
+
+                                <div id="selectItem" class="hidden">
+                                    <div class="tit bgc_ccc move" onmousedown="drag(event,this)">
+                                        <h2 class="left">请选择城市</h2>
+                                        <span class="pointer right" onclick="makeSure();">[确定]</span>
+                                    </div>
+
+                                    <div class="cls"></div>
+
+                                    <div class="cont">
+                                        <div id="selectSub">
+                                            <select name="" onchange="showSelect(this.value)"
+                                                    style="margin-bottom:10px;">
+                                                <option value="0">出发城市</option>
+                                                <option value="1">到达城市</option>
+
+                                            </select>
+                                            <div id="c00">
+                                                 <div th:each="city : ${cityList}" style="float: left;margin-left:5px" >
+
+                                                 <input type="radio" name="ck00" onclick="addPreItem()" th:value="${city.cityName}"/><span th:text="${city.cityName}"></span>
+
+                                                 </div>
+                                                <!--<input type="radio" name="ck00" onclick="addPreItem()" value="北京"/>北京
+                                                <input type="radio" name="ck00" onclick="addPreItem()" value="福建"/>福建
+                                                <input type="radio" name="ck00" onclick="addPreItem()" value="四川"/>四川
+                                                <input type="radio" name="ck00" onclick="addPreItem()" value="江苏"/>江苏-->
+                                            </div>
+                                            <div id="c01">
+                                                <div th:each="city : ${cityList}"  style="float: left;margin-left:5px">
+                                                    <input type="radio" name="ck01" onclick="addPreEnd()" th:value="${city.cityName}"/><span th:text="${city.cityName}"></span>
+                                                    <!--<template v-for="(city,index) in cityList">
+                                                        <input type="radio" name="ck01" onclick="addPreEnd()" :value="city.cityName"/>{{city.cityName}}
+                                                    </template>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="preview">
+                                        <!-- <div class="tit bgc_eee c_999">
+                                            <h2>您已选择的城市</h2>
+
+                                        </div>  -->
+                                        <!--<div class="cont" id="previewItem"></div>-->
+                                    </div>
+
+                                </div>
+                                <br>
+                                出发城市<input type="text" style="width:200px;height:30px;" name="start"
+                                           placeholder="请填写出发地" value="" id="cf"/><br><br>
+                                到达城市<input type="text" style="width:200px;height:30px;" name="end" placeholder="请填写目的地"
+                                           value="" id="dd"/><br><br>
+                                选择时间<input type="date" style="width:200px;height:30px;" name="time" value="" id="time"/><br><br>
+                                <input type="button" name=""
+                                       style="width:200px;height:30px;color:red;text-align:center;margin-left:55px;"
+                                       value="立即搜索" onclick="ljss()"/>
+                                <div style="height:500px;"></div>
+                            </div>
+                        </div>
+                        <!-- </form> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <ul class="rslides" id="dowebok">
+            <li>
+                <a href="https://mp.weixin.qq.com/s/l170QxC5k1yMVKsFfXf32g" target="_blank" style="display: block;">
+                    <img src="picture/wkgjplxj5ukarcl6aaqj67edcpo408.jpg" height="278">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.tz12306.com/article/id_1333.html" style="display: block;">
+                    <img src="picture/wkgjplxj65wawoomabhgsuckicm795.jpg" height="278">
+                </a>
+            </li>
+        </ul>
+        <div class="abc"></div>
+    </div>
+
+</div>
+<div >
+    <div id="show"class="dataDisDiv">
+        <a>
+            <div class="dataDisList" style="cursor:default;">
+                <div class="avilibleSite"></div>
+                <div class="avilibleSiteDiv">
+                    <div class="avilibleSiteDiv_site">开通车站</div>
+                    <div class="avilibleSiteDiv_site_num">{{stationList.length}}<span>个</span></div>
+                </div>
+            </div>
+        </a>
+        <a>
+            <div class="dataDisList lineList" style="cursor:default;">
+                <div class="avilibleSite lineSite"></div>
+                <div class="avilibleSiteDiv lineSiteDiv">
+                    <div class="avilibleSiteDiv_site lineSiteDiv_site">开通线路</div>
+                    <div class="avilibleSiteDiv_site_num lineSiteDiv_site_num">{{hotRouteList.length}}<span>条</span></div>
+                </div>
+            </div>
+        </a>
+        <a>
+            <div class="dataDisList carList" style="cursor:default;">
+                <div class="avilibleSite carSite"></div>
+                <div class="avilibleSiteDiv carSiteDiv">
+                    <div class="avilibleSiteDiv_site carSiteDiv_site">销售汽车票</div>
+                    <div class="avilibleSiteDiv_site_num carSiteDiv_site_num">70000000+ <span>张</span></div>
+                </div>
+            </div>
+        </a>
+        <a>
+            <div class="dataDisList servceList" style="cursor:default;padding-right:0px">
+                <div class="avilibleSite servceSite"></div>
+                <div class="avilibleSiteDiv servceSiteDiv">
+                    <div class="avilibleSiteDiv_site servceSiteDiv_site">服务人次</div>
+                    <div class="avilibleSiteDiv_site_num servceSiteDiv_site_num">{{userList.length}}+ <span>人/次</span></div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--特色线路-->
+    <div style="background-color: #f5f5f5">
+        <div id="show2" class="con_tsxl contains">
+            <div class="con_tsxl_left" style="background-color: #f5f5f5">
+                <p>
+                    热门路线
+                </p>
+                <ul>
+                    <template v-for="(hotRoute,index) in hotRouteList">
+                    <li>
+                        <a href="https://www.tz12306.com/ticket/search_510100_成都_1_511900_巴中_1_2019-05-15.html ">
+                            <img :src="'picture/'+hotRoute.hotImg"/>
+                            <p class="title">{{hotRoute.routeStart}} - {{hotRoute.routeEnd}}</p>
+                            <p class="con_price">￥{{hotRoute.ticketPrice}}<span class="qiIcon">起</span></p>
+                        </a></li>
+                    </template>
+<!--
+                    <li>
+                    <a href="https://www.tz12306.com/ticket/search_510100_成都_1_511900_巴中_1_2019-05-15.html "><img
+                            src="picture/wkgjpvwgsbeaph5paaoyfsq80mi261.png"/>
+                        <p class="title">成都 - 巴中</p>
+                        <p class="con_price">￥118.00<span class="qiIcon">起</span></p>
+                    </a></li>-->
+
+                   <!-- <li>
+                        <a href="https://www.tz12306.com/ticket/search_520400_安顺_1_黄果树（高速）_黄果树（高速）_0_2019-05-15.html "><img
+                                src="picture/wkgjplwgsamarcwlaakrphlwsr8124.png"/>
+                            <p class="title">安顺 - 黄果树（高速）</p>
+                            <p class="con_price">￥22.00<span class="qiIcon">起</span></p>
+                        </a></li>
+                    <li>
+                        <a href="https://www.tz12306.com/ticket/search_520100_贵阳_1_520400_安顺_1_2019-05-15.html "><img
+                                src="picture/wkgjpvwgr_2auem1aahg8pd0uue537.png"/>
+                            <p class="title">贵阳 - 安顺</p>
+                            <p class="con_price">￥65.00<span class="qiIcon">起</span></p>
+                        </a></li>
+                    <li>
+                        <a href="https://www.tz12306.com/ticket/search_520600_铜仁_1_梵净山_梵净山_0_2019-05-15.html "><img
+                                src="picture/wkgjplwgr_gaqrmaaahygcyzuci991.png"/>
+                            <p class="title">铜仁 - 梵净山</p>
+                            <p class="con_price">￥32.00<span class="qiIcon">起</span></p>
+                        </a></li>
+                    <li>
+                        <a href="https://www.tz12306.com/ticket/search_510100_成都_1_雅安碧峰峡_雅安碧峰峡_0_2019-05-15.html "><img
+                                src="picture/wkgjpvwgr-wacc6oaajsllowxiu414.png"/>
+                            <p class="title">成都 - 雅安碧峰峡</p>
+                            <p class="con_price">￥48.00<span class="qiIcon">起</span></p>
+                        </a></li>
+                    <li>
+                        <a href="https://www.tz12306.com/ticket/search_510100_成都_1_苍溪_苍溪_0_2019-05-15.html "><img
+                                src="picture/wkgjplwgr9qay03jaahx-pdtr9g829.png"/>
+                            <p class="title">成都 - 苍溪</p>
+                            <p class="con_price">￥92.00<span class="qiIcon">起</span></p>
+                        </a></li>
+                    <li>
+                        <a href="https://www.tz12306.com/ticket/search_510100_成都_1_511921_通江_1_2019-05-15.html "><img
+                                src="picture/wkgjpvwgr8maj13yaake0ecjsk8511.png"/>
+                            <p class="title">成都 - 通江</p>
+                            <p class="con_price">￥143.00<span class="qiIcon">起</span></p>
+                        </a></li>
+                    <li>
+                        <a href="https://www.tz12306.com/ticket/search_510100_成都_1_510800_广元_1_2019-05-15.html "><img
+                                src="picture/wkgjplwgr76asrrcaakwczkorz4158.png"/>
+                            <p class="title">成都 - 广元</p>
+                            <p class="con_price">￥90.00<span class="qiIcon">起</span></p>
+                        </a></li>
+                    <li>
+                        <a href="https://www.tz12306.com/ticket/search_510100_成都_1_510181_都江堰_1_2019-05-15.html "><img
+                                src="picture/wkgjpvwgr7kafbz2aajpaq-jyym555.png"/>
+                            <p class="title">成都 - 都江堰</p>
+                            <p class="con_price">￥17.00<span class="qiIcon">起</span></p>
+                        </a></li>
+                    <li>
+                        <a href="https://www.tz12306.com/ticket/search_510100_成都_1_513401_西昌_1_2019-05-15.html "><img
+                                src="picture/wkgjplwgr6wacjbtaaiv_kpnp-k874.png"/>
+                            <p class="title">成都 - 西昌</p>
+                            <p class="con_price">￥190.00<span class="qiIcon">起</span></p>
+                        </a></li>
+                    <li>
+                        <a href="https://www.tz12306.com/ticket/search_510100_成都_1_510500_泸州_1_2019-05-15.html "><img
+                                src="picture/wkgjpvwgr5wagtqjaakxnqmjkg8424.png"/>
+                            <p class="title">成都 - 泸州</p>
+                            <p class="con_price">￥81.00<span class="qiIcon">起</span></p>
+                        </a></li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="contains">
+    <!--合作伙伴-->
+    <div  class="con_sever">
+        <div class="con_tsxl_left" style="padding-bottom: 60px; ">
+            <p>
+                合作伙伴
+            </p>
+            <ul class="sever_ul">
+                <li class="sever_li" style="cursor:default;"><a style="cursor: default;"><img
+                        class="sever_img" src="picture/wkgjjfphu2yaeewgaaaudo40gjw879.jpg"/>
+                </a>
+                </li>
+                <li class="sever_li" style="cursor:default;"><a style="cursor: default;"><img
+                        class="sever_img" src="picture/wkgjjfphu3aajgwbaaaplqbqvtk931.jpg"/>
+                </a>
+                </li>
+                <li class="sever_li" style="cursor:default;"><a style="cursor: default;"><img
+                        class="sever_img" src="picture/wkgjjfreqw-ay3myaaalaawujuc303.jpg"/>
+                </a>
+                </li>
+                <li class="sever_li" style="cursor:default;"><a style="cursor: default;"><img
+                        class="sever_img" src="picture/wkgjjfrenhwan-mtaaaj-hzkbpm610.jpg"/>
+                </a>
+                </li>
+                <li class="sever_li" style="cursor:default;"><a style="cursor: default;"><img
+                        class="sever_img" src="picture/wkgjjfot6oyaajv5aaa7dhz-rrg600.jpg"/>
+                </a>
+                </li>
+                <li class="sever_li" style="cursor:default;margin-right:0;"><a style="cursor: default;"><img
+                        class="sever_img" src="picture/wkgjjfoql9iaqjgaaaachjqnk5a991.png"/>
+                </a></li>
+                <li class="sever_li" style="cursor:default;margin-top:24px;"><a style="cursor: default;"><img
+                        class="sever_img" src="picture/wkgjjfrenk2acm-eaaau7_kt2z0814.jpg"/>
+                </a>
+                </li>
+                <li class="sever_li" style="cursor:default;margin-top:24px;"><a style="cursor: default;"><img
+                        class="sever_img" src="picture/wkgjjfot6yeaxhceaaakotx8ddo249.jpg"/>
+                </a>
+                </li>
+                <li class="sever_li" style="cursor:default;margin-top:24px;"><a style="cursor: default;"><img
+                        class="sever_img" src="picture/wkgjjfot8pyago-6aaa1yr-q2g8502.jpg"/>
+                </a>
+                </li>
+                <li class="sever_li" style="cursor:default;margin-top:24px;"><a style="cursor: default;"><img
+                        class="sever_img" src="picture/wkgjjfot98oap40zaaawgb2phky996.jpg"/>
+                </a>
+                </li>
+                <li class="sever_li" style="cursor:default;margin-top:24px;"><a style="cursor: default;"><img
+                        class="sever_img" src="picture/wkgjjfounquanvrhaaaxn9stghs110.jpg"/>
+                </a>
+                </li>
+                <li class="sever_li" style="cursor:default;margin-right:0;margin-top:24px;"><a style="cursor: default;"><img
+                        class="sever_img" src="picture/wkgjjfot_vcazgcnaaat1fufutk222.jpg"/>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="footer">
+    <div class="contains">
+        <div class="link_help">
+            <dl class="footer-item advantage">
+                <dt style="font-weight:bold;" id="newer_guidence_name">新手指南</dt>
+                <dd class="ft-link-item" id="newer_guidence">
+                </dd>
+            </dl>
+            <dl class="footer-item advantage">
+                <dt style="font-weight:bold;" id="ticket_notice_name">购票须知</dt>
+                <dd class="ft-link-item" id="ticket_notice">
+                </dd>
+            </dl>
+            <dl class="footer-item advantage">
+                <dt style="font-weight:bold;" id="faq_guidence_name">常见问题</dt>
+                <dd class="ft-link-item" id="faq_guidence">
+                </dd>
+            </dl>
+            <dl class="footer-item advantage">
+                <dt style="font-weight:bold;" id="ride_ins_name">乘车保险</dt>
+                <dd class="ft-link-item" id="ride_ins">
+                </dd>
+            </dl>
+            <dl class="footer-item advantage">
+                <dt style="font-weight:bold;" id="member_services_name">会员服务</dt>
+                <dd class="ft-link-item" id="member_services">
+                </dd>
+            </dl>
+            <dl class="footer-item advantage footer-abc footer-a1bc">
+                <dt></dt>
+                <dd class="ft-link-item">
+                    <img src="picture/erweima.png"/>
+                </dd>
+                <dd class="ft-link-title">扫描二维码<br>下载手机APP</dd>
+            </dl>
+            <dl class="footer-item advantage footer-abc">
+                <dt></dt>
+                <dd class="ft-link-item">
+                    <img src="picture/erweima2.png"/>
+                </dd>
+                <dd class="ft-link-title">扫描二维码<br>关注微信公众号</dd>
+            </dl>
+        </div>
+    </div>
+    <div class="linksDiv">
+        <div class="links">
+            <div class="links_list" id="links_list">
+                <a>
+                    <div class='linkAdress'><a href="http://www.cdjt.gov.cn/" target='_blank'>成都交通运输局</a></div>
+                </a>
+                <a>
+                    <div class='linkAdress'><a href="https://www.tz12306.com/lines.html" target='_blank'>汽车票网上订票</a>
+                    </div>
+                </a>
+                <a>
+                    <div class='linkAdress'><a href="http://www.023yts.com/" target='_blank'>重庆旅行社</a></div>
+                </a>
+                <a>
+                    <div class='linkAdress'><a href="http://www.cngaosu.com/" target='_blank'>中国高速网</a></div>
+                </a>
+                <a>
+                    <div class='linkAdress'><a href="https://www.tz12306.com/qichepiao/" target='_blank'>汽车票网上订票</a>
+                    </div>
+                </a>
+                <a>
+                    <div class='linkAdress'><a href="https://www.tz12306.com" target='_blank'>四川汽车票务网</a></div>
+                </a>
+                <a>
+                    <div class='linkAdress'><a href="https://www.tz12306.com/chezhan/" target='_blank'>汽车站</a></div>
+                </a>
+                <a>
+                    <div class='linkAdress'><a href="http://www.gwyou.com" target='_blank'>云南旅游</a></div>
+                </a>
+                <a>
+                    <div class='linkAdress'><a href="http://www.3xiayou.com" target='_blank'>三峡旅游网</a></div>
+                </a>
+                <a>
+                    <div class='linkAdress'><a href="http://www.zqlgw.net/" target='_blank'>重庆青年旅行社</a></div>
+                </a>
+                <a>
+                    <div class='linkAdress'><a href="http://www.caoyuanfeng.com" target='_blank'>坝上草原农家院</a></div>
+                </a>
+                <a>
+                    <div class='linkAdress'><a href="http://www.bashang.net" target='_blank'>坝上草原旅游网</a></div>
+                </a>
+                <a>
+                    <div class='linkAdress'><a href="http://www.161580.com" target='_blank'>12306订机票</a></div>
+                </a>
+                <a>
+                    <div class='linkAdress'><a href="http://www.12306air.cn/" target='_blank'>飞机票预订12306</a></div>
+                </a>
+                <a>
+                    <div class='linkAdress'><a href="http://www.aoyou.com/" target='_blank'>中青旅遨游网</a></div>
+                </a>
+                <a>
+                    <div class='linkAdress'><a href="http://www.aiketour.com" target='_blank'>成都户外徒步</a></div>
+                </a>
+                <a>
+                    <div class='linkAdress'><a href="https://chengdu.8684.cn" target='_blank'>成都公交查询</a></div>
+                </a>
+                <a>
+                    <div class='linkAdress'><a href="http://www.hanyouwang.com/" target='_blank'>韩游网</a></div>
+                </a>
+                <a>
+                    <div class='linkAdress'><a href="http://www.xbaixing.net/" target='_blank'>百姓网</a></div>
+                </a>
+                <a>
+                    <div class='linkAdress'><a href="http://www.cnair.com" target='_blank'>中国航空旅游网</a></div>
+                </a>
+                <a>
+                    <div class='linkAdress'><a href="http://www.9935china-air.com/" target='_blank'>特价机票一折格查询</a></div>
+                </a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>增值电信业务经营许可证：川B2-20110154 <a target="_blank"
+                                           href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51019002001334"
+                                           style="color: #a3a3a3;font-size: 12px; line-height: 22px;margin-left: 7px;">
+                <img src="picture/ghs.png" style="top: -2px;position: relative;"/> 川公网安备 51019002001334号</a>
+                <span class="server_line" onclick="meiqia()">在线客服</span>
+                <span class="youmengBtn" style="float:right; position:relative; top:-10px; left: -5px;">
+							<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                            document.write(unescape("%3Cspan id='cnzz_stat_icon_1271582149'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1271582149%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+						</span>
+            </p>
+            <p>Copyright ? 2012-2018 tz12306.com Inc. All Rights Reserved.
+                <a class="pay_icons first_icon_5"></a>  <!-- <img src="picture/bottom_ico_5_dark.png"> -->
+                <a class="pay_icons first_icon_4"></a>
+                <a class="pay_icons first_icon_3"></a>
+                <a class="pay_icons first_icon_2"></a>
+                <a class="pay_icons first_icon_1"></a>
+            </p>
+            <p><span>四川倍施特科技股份有限公司   </span>&nbsp;&nbsp;<img src="picture/phone.png" style="margin-top: -5px;">
+                &nbsp;<span>028-66878787</span><a href="https://www.tz12306.com/sitemap.xml"
+                                                  style="font-size: 12px;margin-left: 6px;color: #a3a3a3;"
+                                                  target="_blank">XML</a></p>
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript">
+    window.CTXXdomain = "https://www.tz12306.com";
+</script>
+<script src="js/footer.js" type="text/javascript"></script>
+<script src="js/meiqia.js" type="text/javascript"></script>
+<script src="js/responsiveslides.min.js"
+        type="text/javascript" charset="utf-8"></script>
+<script src="js/show_city.js"
+        type="text/javascript"></script>
+<script src="js/city.js"
+        type="text/javascript"></script>
+<script src="js/homeex.js"
+        type="text/javascript"></script>
+<script>
+
+</script>
+
+<script type="text/javascript">
+    /* ------使用说明----- */
+    /*
+     添加城市方法：
+         添加组：找到id 是 "selectSub"中select标签下，添加option标签 value属性递增，找到 id 是 "selectSub",按照原有格式添加div,其id属性递增
+     添加二级傅选矿选项
+      复制 id 是 "selectSub" 下任意input标签，粘贴在需要添加的位置。
+    */
+    var grow = $("selectSub").getElementsByTagName("option").length; //组数
+    var showGrow = 0;//已打开组
+    var selectCount = 0; //已选数量
+    showSelect(showGrow);
+    var items = $("selectSub").getElementsByTagName("input");
+    //alert(maxItem);
+    //var lenMax = 2;
+    //alert(1);
+    function $(o) { //获取对象
+        if (typeof(o) == "string")
+            return document.getElementById(o);
+        return o;
+    }
+
+    function openBg(state) { //遮照打开关闭控制
+        if (state == 1) {
+            $("bg").style.display = "block";
+            var h = document.body.offsetHeight > document.documentElement.offsetHeight ? document.body.offsetHeight : document.documentElement.offsetHeight;
+            //alert(document.body.offsetHeight);
+            //alert(document.documentElement.offsetHeight);
+            $("bg").style.height = h + "px";
+        }
+        else {
+            $("bg").style.display = "none";
+        }
+    }
+
+    function openSelect(state) { //选择城市层关闭打开控制
+        if (state == 1) {
+            $("selectItem").style.display = "block";
+            $("selectItem").style.left = ($("bg").offsetWidth - $("selectItem").offsetWidth) / 2 + "px";
+            $("selectItem").style.top = document.body.scrollTop + 100 + "px";
+        }
+        else {
+            $("selectItem").style.display = "none";
+        }
+    }
+
+    function showSelect(id) {
+        for (var i = 0; i < grow; i++) {
+            $("c0" + i).style.display = "none";
+        }
+        $("c0" + id).style.display = "block";
+        showGrow = id;
+    }
+
+    function open(id, state) { //显示隐藏控制
+        if (state == 1)
+            $(id).style.display = "block";
+        $(id).style.diaplay = "none";
+    }
+
+    function makeSure() {
+        //alert(1);
+        //$("makeSureItem").innerHTML = $("previewItem").innerHTML;
+        openBg(0);
+        openSelect(0);
+        copyItem("previewItem", "makeSureItem")
+    }
+
+    function copyHTML(id1, id2) {
+        $(id2).innerHTML = $("id1").innerHTML;
+    }
+
+    function copyItem(id1, id2) {
+
+        var mes = "";
+        var items2 = $(id1).getElementsByTagName("input");
+        for (var i = 0; i < items2.length; i++) {
+            if (items2[i].checked == true) {
+                mes += "<input type='checkbox' checked='true' value='" + items2[i].value + "' onclick='copyItem(\"" + id2 + "\",\"" + id1 + "\");same(this);'>" + items2[i].value;
+            }
+        }
+        $(id2).innerHTML = "";
+        $(id2).innerHTML += mes;
+        //alert($(id2).innerHTML);
+    }
+
+    function same(ck) {
+        for (var i = 0; i < items.length; i++) {
+            if (ck.value == items[i].value) {
+                items[i].checked = ck.checked;
+            }
+        }
+    }
+
+    /* 鼠标拖动 */
+    var oDrag = "";
+    var ox, oy, nx, ny, dy, dx;
+
+    function drag(e, o) {
+        var e = e ? e : event;
+        var mouseD = document.all ? 1 : 0;
+        if (e.button == mouseD) {
+            oDrag = o.parentNode;
+            //alert(oDrag.id);
+            ox = e.clientX;
+            oy = e.clientY;
+        }
+    }
+
+    function dragPro(e) {
+        if (oDrag != "") {
+            var e = e ? e : event;
+            //$(oDrag).style.left = $(oDrag).offsetLeft + "px";
+            //$(oDrag).style.top = $(oDrag).offsetTop + "px";
+            dx = parseInt($(oDrag).style.left);
+            dy = parseInt($(oDrag).style.top);
+            //dx = $(oDrag).offsetLeft;
+            //dy = $(oDrag).offsetTop;
+            nx = e.clientX;
+            ny = e.clientY;
+            $(oDrag).style.left = (dx + (nx - ox)) + "px";
+            $(oDrag).style.top = (dy + (ny - oy)) + "px";
+            ox = nx;
+            oy = ny;
+        }
+    }
+
+    document.onmouseup = function () {
+        oDrag = "";
+    }
+    document.onmousemove = function (event) {
+        dragPro(event);
+    }
+
+
+    function addPreItem() {
+        //$("previewItem").innerHTML = "";
+        var len = 0;
+        for (var i = 0; i < items.length; i++) {
+            if (items[i].checked == true) {
+                if (items[i].name == "ck00") {
+                    document.getElementById("cf").value = items[i].value
+                }
+                ;
+            }
+        }
+    }
+
+    function addPreEnd() {
+        //$("previewItem").innerHTML = "";
+        var len = 0;
+        for (var i = 0; i < items.length; i++) {
+            if (items[i].checked == true) {
+                if (items[i].name == "ck01") {
+                    document.getElementById("dd").value = items[i].value
+
+                }
+            }
+        }
+    }
+
+
+    function ljss() {
+
+        var routeStart = document.getElementById("cf").value;
+        var routeEnd = document.getElementById("dd").value;
+        var startDate = document.getElementById("time").value;
+        if (document.getElementById("cf").value == "") {
+            alert("请选择出发地");
+        } else if (document.getElementById("dd").value == "") {
+            alert("请选择目的地");
+        } else if (document.getElementById("time").value == "") {
+            alert("请选择时间");
+        } else {
+            alert("出发地:" + document.getElementById("cf").value + "目的地:" + document.getElementById("dd").value + "时间:" + document.getElementById("time").value)
+
+           /* axios.get(baseUrl+"/station/allstation")
+                .then(response => {this.stateInfos = response.data})*/
+
+                window.location.href='order/xz/'+routeStart+'/'+routeEnd+'/'+startDate;
+
+        }
+
+    }
+    var baseUrl="http://localhost:8080";
+
+
+    new Vue({
+        el:"#show",
+        data:{
+            hotRouteList:null,
+            userList:null,
+            stationList:null
+
+        },
+        methods:{
+            /*pay:function(){
+                axios.get(baseUrl+"/count/pay")
+                    .then(response => {this.msg = response.data})
+                alert(msg==('1'))
+                if(msg==null){
+                    window.location.href=baseUrl+"login.html";
+                }else{
+                    window.location.href=baseUrl+"/html/cart.html";
+                }
+
+            },*/
+            /*delete1:function(index){
+                axios.get(baseUrl+"/count/delete/"+index)
+                    .then(response => {this.stateInfos = response.data})
+            }*/
+        },
+        mounted(){
+            axios.get(baseUrl+"/route/allroute")
+                .then(response => {this.hotRouteList = response.data})
+            axios.get(baseUrl+"/user/alluser")
+                .then(response => {this.userList = response.data})
+            axios.get(baseUrl+"/station/allstation")
+                .then(response => {this.stationList = response.data})
+        }
+    });
+
+    new Vue({
+        el:"#show2",
+        data:{
+            stationList:null,
+            hotRouteList:null
+        },
+        methods:{
+        },
+        mounted(){
+            axios.get(baseUrl+"/station/allstation")
+                .then(response => {this.stationList = response.data})
+            axios.get(baseUrl+"/route/hotRoute")
+                .then(response => {this.hotRouteList = response.data})
+        }
+    });
+
+
+
+
+</script>
+
+</body>
+</html>
