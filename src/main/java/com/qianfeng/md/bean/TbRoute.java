@@ -3,22 +3,32 @@ package com.qianfeng.md.bean;
 
 public class TbRoute {
 
-  private long routeId;
+  private Integer routeId;
   private String routeStart;
   private String routeEnd;
-  private long hotNum;
+  private Integer hotNum;
   private String hotImg;
-  private long routeDistance;
+  private String routeDistance;
 
+  @Override
+  public String toString() {
+    return "TbRoute{" +
+            "routeId=" + routeId +
+            ", routeStart='" + routeStart + '\'' +
+            ", routeEnd='" + routeEnd + '\'' +
+            ", hotNum=" + hotNum +
+            ", hotImg='" + hotImg + '\'' +
+            ", routeDistance='" + routeDistance + '\'' +
+            '}';
+  }
 
-  public long getRouteId() {
+  public Integer getRouteId() {
     return routeId;
   }
 
-  public void setRouteId(long routeId) {
+  public void setRouteId(Integer routeId) {
     this.routeId = routeId;
   }
-
 
   public String getRouteStart() {
     return routeStart;
@@ -28,7 +38,6 @@ public class TbRoute {
     this.routeStart = routeStart;
   }
 
-
   public String getRouteEnd() {
     return routeEnd;
   }
@@ -37,15 +46,13 @@ public class TbRoute {
     this.routeEnd = routeEnd;
   }
 
-
-  public long getHotNum() {
+  public Integer getHotNum() {
     return hotNum;
   }
 
-  public void setHotNum(long hotNum) {
+  public void setHotNum(Integer hotNum) {
     this.hotNum = hotNum;
   }
-
 
   public String getHotImg() {
     return hotImg;
@@ -55,13 +62,11 @@ public class TbRoute {
     this.hotImg = hotImg;
   }
 
-
-  public long getRouteDistance() {
+  public String getRouteDistance() {
     return routeDistance;
   }
 
-  public void setRouteDistance(long routeDistance) {
+  public void setRouteDistance(String routeDistance) {
     this.routeDistance = routeDistance;
   }
-
 }

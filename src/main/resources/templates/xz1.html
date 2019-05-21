@@ -120,7 +120,7 @@
           /*  var pricePerTicked = 300;//单价*/
             price
             var pricePerTicked = document.getElementById("price").value;//单价
-            var maximumSeats = 1;//预定座位数目的最大限制
+            var maximumSeats = 2;//预定座位数目的最大限制
 
             $('#bookNowButton').hide(); // 隐藏预定按钮
 
@@ -299,13 +299,10 @@
 </div>
 <script type="text/javascript">
     function yd() {
-
         var carpai =document.getElementById("carpai").value;
         var seatnumber=document.getElementById("seatnumber").value;
         alert(seatnumber+carpai);
         window.location.href='order/change/'+seatnumber+'/'+carpai;
-
-
     }
 
 

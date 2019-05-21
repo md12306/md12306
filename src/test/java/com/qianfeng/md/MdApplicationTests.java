@@ -77,7 +77,7 @@ public class MdApplicationTests {
 //配置登录密码
         jedis.auth("123456");
 //存储字符串
-        jedis.set("qianfeng","angsan");
+        jedis.set("川66662","");
 
 //取出缓存中数据
         String username = jedis.get("qianfeng");

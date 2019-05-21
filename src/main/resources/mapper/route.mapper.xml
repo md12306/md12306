@@ -20,7 +20,7 @@
         <result property="routeEnd" column="route_end" javaType="java.lang.String"/>
         <result property="hotNum" column="hot_num" javaType="java.lang.Integer"/>
         <result property="hotImg" column="hot_img" javaType="java.lang.String"/>
-        <result property="routeDistance" column="route_distance" javaType="java.lang.Integer"/>
+        <result property="routeDistance" column="route_distance" javaType="java.lang.String"/>
     </resultMap>
 
     <!--热门线路查询-->
